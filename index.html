@@ -2,13 +2,164 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>wwf_report_inte</title>
   <link rel="stylesheet" href="dist/asset/css/styles.min.css">
 </head>
 <body>
   
+  <!-- POPUP MESSAGE -->
+  <div class="popup">
+    <div class="popup__msg">
+      <span>La découverte de la faune vous intéresse ?</span></br>Parcourez la planète avec nous, à travers notre rapport sur la vie animale dans le monde !
+    </div>
+    <div class="popup__control">
+      <a id="popup-close" href="#"><img src="dist/asset/img/icon_cross.svg" ></a>
+      <a href="#"><img src="dist/asset/img/icon_arrow-right.svg" ></a>
+    </div>
+  </div>
+  <!-- END POPUP MESSAGE -->
+  
+  <nav class="navigation">
+    <div class="nav-content">
+      <img class="nav-wwf-logo" src="dist/asset/img/logo_wwf.png">
+      <div class="partner-container">
+        <img src="dist/asset/img/logo_biodiversity.png">
+        <img src="dist/asset/img/logo_museum.png">
+        <img src="dist/asset/img/logo_natuurpunt.png">
+        <img src="dist/asset/img/logo_natagora.png">
+      </div>
+      <div class="nav-items">
+        <ul class="nav-lang">
+          <li><a href="#fr">FR</a></li>
+          <li><a href="#nl">NL</a></li>
+        </ul>
+        <a href="#network">
+          <img src="dist/asset/img/icon_social.svg">
+        </a>
+        <div class="toggler">
+          <div class="toggler-bar bar-top"></div>
+          <div class="toggler-bar bar-middle"></div>
+          <div class="toggler-bar bar-bottom"></div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-button">
+      <a href="#" class="button button--nav button--primary">
+        <img src="dist/asset/img/icon_download.svg">
+        <span class="d-none d-sm-none d-md-inline">Télécharger notre rapport</span>
+      </a>
+    </div>
+  </nav>
+  
+  <header>
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-xl-4 col-lg-5 col-sm-7 my-auto header-col align-self-center">
+          <h1>Connaître notre biodiversité  pour mieux la préserver !</h1>
+          <p>La nature en Belgique : découvrez le</br>« Rapport Planète Vivante »</p>
+          <a id="header-download" href="test.html" class="button button--primary">
+            <img src="dist/asset/img/icon_download.svg">
+            Télécharger notre rapport
+          </a>
+        </div>
+      </div>
+    </div>
+    <span class="copyright-tag">© Ph Moës</span>
+  </header>
 
+  <video controls width="100%">
+    <source src="dist/asset/videos/video-placeholder.mp4"
+            type="video/mp4">
+  </video>
+
+  <section class="backstage">
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <img class="img-fluid my-2" src="dist/asset/img/squirrel.png">
+          <img class="img-fluid my-2" src="dist/asset/img/bee.png">
+        </div>
+        <div class="col-md-4 pr-0">
+
+          <h2>Les coulisses du Rapport Planète vivante</h2>
+          <div id="mini-navbar-first" class="mb-4">
+            <ul class="nav">
+              <li class="slide1"></li>
+              <li class="slide2"></li>
+              <li><a id="sh-why" class="active" href="#/">Pourquoi ?</a></li>
+              <li><a id="sh-how" href="#/">Comment ?</a></li>
+            </ul>
+          </div>
+
+          <div id="why">
+            <p class="hit bold">L’état de la biodiversité et celui de notre santé sont inextricablement liés. La pandémie de coronavirus nous l’a violemment rappelé.</p>
+            <p>Ce nouveau rapport « Planète Vivante – La nature en Belgique » est un document de référence unique sur lequel les décideurs politiques pourront s’appuyer pour relever leurs ambitions et collaborer avec tous les acteurs de la société, afin de mieux connaitre et de mieux protéger notre nature.</p>
+            <p>Car il est urgent de réaliser que prendre soin de la nature, c’est prendre soin de nous - et il n’y a pas de meilleur endroit pour s’atteler à la tâche que chez nous. Le WWF- Belgique vous propose de découvrir ce rapport inédit en exclusivité.</p>
+            <a href="#" class="button button--primary">
+              <img src="dist/asset/img/icon_download.svg">
+              Télécharger notre rapport
+            </a>
+          </div>
+          <div id="how">
+            <p>Le « Rapport Planète Vivante – La nature en Belgique » est le fruit d’une collaboration de près de 2 ans entre des acteurs clés du monde scientifique et de la protection de la biodiversité.</p>
+            <p>5 organisations de référence - Natagora, Natuurpunt, l’Institut Royal des Sciences Naturelles de Belgique, et la Plate-forme belge pour la biodiversité - ont uni leurs forces et réuni de nombreux experts pour garantir la pertinence d’un rapport sans précédent.</p>
+            <a class="link" href="#a">Un immense merci à celles et ceux qui ont rendu possible ce projet hors normes.</a>
+            <a href="#" class="button mt-4">
+              Accédez à notre méthodologie complète
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="biodiversity">
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <img class="img-fluid my-2" src="dist/asset/img/squirrel.png">
+          <img class="img-fluid my-2" src="dist/asset/img/bee.png">
+        </div>
+        <div class="col-md-4 pr-0">
+
+          <h2>Vous avez dit biodiversité ?</h2>
+          <div id="mini-navbar-second" class="mb-4">
+            <ul class="nav">
+              <li class="slide1"></li>
+              <li class="slide2"></li>
+              <li><a id="sh-importance" class="active" href="#/">L’importance</br>de la biodiversité</a></li>
+              <li><a id="sh-what" href="#/">Qu’est-ce que</br>la biodiversité ?</a></li>
+            </ul>
+          </div>
+
+          <div id="importance">
+            <p>Toutes nos activités économiques et même l’ensemble de la société dépendent de « services écosystémiques » - fertilisation des sols, environnement sain avec de l’air pur et de l’eau potable, nourriture, matières premières… - absolument vitaux.</p>
+            <p class="hit bold primary font-35">Plus la biodiversité est riche, plus l’humanité bénéficie de ces services essentiels.</p>
+            <p>Mais au-delà de ces bienfaits, la nature a une valeur intrinsèque. Il serait plus que judicieux d’envisager l’humain comme pleinement intégré à son environnement naturel qui, comme le soulignent de plus en plus d’études scientifiques, joue un rôle déterminant sur sa santé physique et mentale.</p>
+          </div>
+          <div id="what">
+            <p><span class="hit bold">Contraction des mots « biologie » et « diversité », la biodiversité représente l’extraordinaire diversité de la vie sur Terre.</span></br>Elle englobe les différents animaux, végétaux, champignons et micro-organismes, mais aussi leurs populations et leurs habitats naturels. On distingue trois niveaux de biodiversité :</p>
+            <ol>
+              <li>La diversité génétique ou la diversité des individus au sein d’une même espèce.</li>
+              <li>La diversité des espèces ou la diversité de toutes les espèces de plantes, d’animaux et de micro-organismes.</li>
+              <li>La diversité des écosystèmes, qui reflète les différentes interactions des populations entre elles et avec leur milieu physique.</li>
+            </ol>
+            <p>Les espèces et les espaces de chacun de ces niveaux sont en constante évolution et interagissent entre eux. Une grande diversité génétique permet ainsi aux espèces de s’adapter plus facilement aux modifications de leur environnement. En Belgique, par exemple, les espèces capables de s’adapter à des conditions plus sèches ont plus de chances de survivre au changement climatique.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="d-none">
+
+  </section>
+  
+  
   <script src="dist/asset/js/scripts.min.js"></script>
 </body>
 </html>
