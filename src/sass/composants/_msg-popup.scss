@@ -1,0 +1,44 @@
+.popup {
+  @include flex-row;
+  position: fixed;
+  width: 343px;
+  height: 70px;
+  background-color: $color-white;
+  border-radius: 13px;
+  box-shadow: 0 3px 4px 1px rgba(0, 0, 0, .1);
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+  @media (max-width: 768px) {
+    @include flex-row-center;
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+    width: 100%;
+  }
+  &__msg {
+    font-size: 12px;
+    margin: 7px 15px;
+    width: 270px;
+    & span {
+      font-weight: 800;
+    }
+  }
+  &__control {
+    @include flex-column-center;
+    justify-content: space-between;
+    padding: 7px 0 10px;
+    position: relative;
+    width: 30px;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 50px;
+      width: 1px;
+      border-radius: 10px;
+      left: -7px;
+      top: 10px;
+      background-color: $color-disable;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.button {
+  @include flex-row-center;
+  display: inline-flex;
+  font-family: 'WWF', sans-serif;
+  color: $color-black;
+  border: 2px solid lighten($color: $color-black, $amount: 80%);
+  padding: 15px 30px;
+  font-size: 17px;
+  text-transform: uppercase;
+  & img {
+    margin-right: 10px;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $color-black;
+  }
+  &--primary {
+    font-size: 22px;
+    padding: 10px 20px;
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: $color-white;
+    &:hover {
+      color: $color-white;
+    }
+  }
+  &--light {
+    font-size: 22px;
+    padding: 10px 20px;
+    background-color: none;
+    border-color: $color-white;
+    color: $color-white;
+    &:hover {
+      color: $color-white;
+    }
+  } 
+  &--nav {
+    display: block;
+    position: absolute;
+    padding: 13px 20px;
+    right: 0;
+    height: 100%;
+    transition: all .50s;
+    span {
+      margin-left: 10px;
+    }
+    img {
+      margin-right: 0;
+      margin-top: -5px;
+    }
+  }
+}
