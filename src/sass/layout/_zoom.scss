@@ -1,0 +1,40 @@
+.zoom {
+  position: relative;
+  height: 732px;
+  width: 100%;
+  transition: all .50s;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  &__background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 732px;
+    object-fit: cover;
+    transition: all .50s;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  h2 {
+    font-family: "WWF", sans-serif;
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 45px;
+    line-height: 41px;
+  }
+  p {
+    color: $color-white;
+    font-size: 16px;
+    margin: 0;
+    padding-right: 50px;
+  }
+  .link {
+    color: $color-white;
+    text-decoration: underline;
+    padding-right: 50px;
+    &:hover {
+      color: darken($color: $color-white, $amount: 20%);
+    }
+  }
+}

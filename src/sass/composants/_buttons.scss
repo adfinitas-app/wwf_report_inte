@@ -7,12 +7,22 @@
   padding: 15px 30px;
   font-size: 17px;
   text-transform: uppercase;
+  @media (max-width: 576px) {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+  }
   & img {
     margin-right: 10px;
   }
   &:hover {
     text-decoration: none;
     color: $color-black;
+  }
+  &--block {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
   }
   &--primary {
     font-size: 22px;
@@ -26,14 +36,14 @@
   }
   &--light {
     font-size: 22px;
-    padding: 10px 20px;
+    padding: 20px 20px;
     background-color: none;
     border-color: $color-white;
     color: $color-white;
     &:hover {
       color: $color-white;
     }
-  } 
+  }
   &--nav {
     display: block;
     position: absolute;

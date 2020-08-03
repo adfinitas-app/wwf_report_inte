@@ -1,6 +1,14 @@
 body {
   // background-color: gray;
   font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+body:after{
+  position:absolute; z-index:-1;
+  opacity: 0;
+  top: 0;
+  content: url('../img/rainette-verte.png') url('../img/loup.png') url('../img/alouette-des-champs.png');
 }
 
 a.link {
@@ -19,8 +27,6 @@ ol {
 
 ol > li {
   margin: 0;
-  padding: 0 0 0 2em;
-  text-indent: -2em;
   list-style-type: none;
   counter-increment: item;
 }
