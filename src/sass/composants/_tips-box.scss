@@ -1,0 +1,29 @@
+.tips-box {
+  @include flex-column-center;
+  background-color: $color-disable;
+  height: 341px;
+  .tips-icon {
+    margin-bottom: 20px;
+  }
+  .tips-content {
+    width: 80%;
+    text-align: center;
+    @media (min-width: 992px) {
+      width: 60%;
+    }
+    @media (min-width: 1200px) {
+      width: 50%;
+    }
+  }
+}
+.tips-box--noback {
+  background-color: $color-white;
+  .tips-content {
+    h2 {
+      font-family: "WWF", sans-serif;
+      font-size: 45px;
+      line-height: 41px;
+      text-transform: uppercase;
+    }
+  }
+}
