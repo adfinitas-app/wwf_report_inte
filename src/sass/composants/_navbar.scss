@@ -7,6 +7,9 @@
   background-color: $color-white;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, .5);
   z-index: 100;
+  @media (max-width: 576px) {
+    padding: 0 0 0 70px;
+  }
   .nav-content {
     @include flex-row;
     .nav-wwf-logo {
@@ -15,15 +18,34 @@
       left: 25px;
       height: 79.09px;
       width: 70.63px;
+      @media (max-width: 576px) {
+        box-shadow: none;
+        height: 100%;
+        width: auto;
+        left: 5px;
+      }
     }
     .partner-container {
       margin: 15px 0;
       img {
+        height: 100%;
         margin: 0 5px;
+      }
+      @media (max-width: 576px) {
+        img {
+          margin-top: 8px;
+          height: 50%;
+        }
       }
     }
     .nav-items {
       @include flex-row-center;
+      .nav-desktop {
+        @include flex-row-center;
+        @media (max-width: 576px) {
+          display: none;
+        }
+      }
       position: absolute;
       right: 20px;
       margin: 20px 0;
@@ -31,7 +53,7 @@
       &.with-button {
         right: 295px;
         @media (max-width: 768px) {
-        right: 80px;
+          right: 80px;
         }
       }
       .nav-lang {
@@ -58,6 +80,89 @@
         height: 2px;
         width: 100%;
         background-color: $color-black;
+        transition: all .25s;
+      }
+      &.active {
+        .top {
+          transform: rotate(45deg) translate(5px,8px);
+          width: 102%;
+        }
+        .middle {
+          display: none;
+        }
+        .bottom {
+          transform: rotate(-45deg) translate(4px,-7px);
+          width: 102%;
+        }
+      }
+    }
+  }
+  &__collapse {
+    @include flex-column;
+    position: absolute;
+    right: 0;
+    top: 66px;
+    height: calc(100vh - 66px);
+    width: 100%;
+    background-color: $color-white;
+    @media (min-width: 768px) {
+      width: 400px;
+    }
+    .nav-lang {
+      @include flex-row;
+      border-bottom: 1px solid $color-black;
+      border-top: 1px solid $color-black;
+      width: 100%;
+      list-style: none;
+      padding: 15px 25px;
+      margin: 0;
+      li {
+        margin: 0 10px;
+        a {
+          color: $color-black;
+        }
+      }
+    }
+    .nav-menu {
+      border-bottom: 1px solid $color-black;
+      width: 100%;
+      padding: 15px 0;
+      height: 100%;
+      ul {
+        list-style: none;
+        padding: 10px 20px;
+        margin: 0;
+        li {
+          margin: 0 10px;
+          a {
+            color: $color-black;
+            font-size: 15px;
+          }
+          .title {
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: "WWF", sans-serif;
+          }
+        }
+      }
+    }
+    .nav-socials {
+      @include flex-row;
+      list-style: none;
+      padding: 15px 20px;
+      margin: 0;
+      li {
+        margin: 0 10px;
+      }
+    }
+    .button--nav {
+      width: 100%;
+      height: 70px;
+      margin-bottom: 0;
+      position: relative;
+      span {
+        display: inline-block !important;
       }
     }
   }
