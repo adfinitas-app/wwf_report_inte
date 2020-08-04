@@ -7,7 +7,7 @@
   padding: 15px 30px;
   font-size: 17px;
   text-transform: uppercase;
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     display: block;
     text-align: center;
     margin-bottom: 30px;
@@ -69,4 +69,10 @@
       margin-top: -5px;
     }
   }
+}
+
+.btn-animals.active {
+  transition: all .30s;
+  transform: scale(1.05);
+  background-color: transparentize($color: $color-black, $amount: .8);
 }

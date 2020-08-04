@@ -1,0 +1,21 @@
+.chart {
+  h2 {
+    font-family: "WWF", sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  p {
+    padding: 0 30%;
+    @media (max-width: 578px) {
+      padding: 0 15%;
+    }
+  }
+  &.cycle {
+    canvas {
+      @media (max-width: 576px) {
+        width: 88% !important;
+        height: auto !important;
+      }
+    }
+  }
+}

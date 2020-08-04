@@ -1,4 +1,5 @@
 .testimonials {
+  padding: 100px 0;
   .profile-menu {
     @include flex-row-center;
     list-style: none;
@@ -26,15 +27,16 @@
   &__content {
     position: relative;
     padding: 0 70px;
+    height: 200px;
     .quote {
       position: absolute;
       &.open {
-        left: 0;
+        left: 20px;
         top: 0;
       }
       &.close {
-        right: 0;
-        bottom: 0;
+        right: 40px;
+        bottom: 50px;
       }
     }
     .testimonials-text {
