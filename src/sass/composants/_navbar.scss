@@ -172,5 +172,10 @@
         display: inline-block !important;
       }
     }
+    &.popup-active {
+      @media (max-width: 576px) {
+        height: calc(100vh - 66px - 70px);
+      }
+    }
   }
 }

@@ -14,9 +14,12 @@ footer {
       }
     }
     .social-container {
-      margin: auto 30px;
+      margin: 38px 30px;
       img {
         margin: 0 5px ;
+      }
+      @media (max-width: 576px) {
+        margin: 0 30px;
       }
     }
     @media (max-width: 576px) {
