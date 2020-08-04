@@ -6,9 +6,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>wwf_report_inte</title>
   <link rel="stylesheet" href="dist/asset/css/styles.min.css">
-</head>
-<body>
   
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+  
+  <!-- TENDANCE IPV ANIMATION  -->
+  <script>
+    var canvas_c, stage, exportRoot_c, anim_container_c, dom_overlay_container_c, fnStartAnimation_c;
+    var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+    function init_ipv() {
+      canvas = document.getElementById("canvas_ipv");
+      anim_container = document.getElementById("animation_container_ipv");
+      dom_overlay_container = document.getElementById("dom_overlay_container_ipv");
+      var comp=AdobeAn.getComposition("F961DBA2F3CC440497BAE7A4CEF54ABE");
+      var lib=comp.getLibrary();
+      var loader = new createjs.LoadQueue(false);
+      loader.addEventListener("fileload", function(evt){handleFileLoad_ipv(evt,comp)});
+      loader.addEventListener("complete", function(evt){handleComplete_ipv(evt,comp)});
+      var lib=comp.getLibrary();
+      loader.loadManifest(lib.properties.manifest);
+    }
+    function handleFileLoad_ipv(evt, comp) {
+      var images=comp.getImages();	
+      if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+    }
+    function handleComplete_ipv(evt,comp) {
+      //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+      var lib=comp.getLibrary();
+      var ss=comp.getSpriteSheet();
+      var queue = evt.target;
+      var ssMetadata = lib.ssMetadata;
+      for(i=0; i<ssMetadata.length; i++) {
+        ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+      }
+      exportRoot = new lib.DataTendancesIPV();
+      stage = new lib.Stage(canvas);	
+      //Registers the "tick" event listener.
+      fnStartAnimation = function() {
+        stage.addChild(exportRoot);
+        createjs.Ticker.framerate = lib.properties.fps;
+        createjs.Ticker.addEventListener("tick", stage);
+      }	    
+      //Code to support hidpi screens and responsive scaling.
+      AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+      AdobeAn.compositionLoaded(lib.properties.id);
+      fnStartAnimation();
+    }
+  </script>
+  <!-- END TENDANCE IPV ANIMATION -->
+  
+  <!-- INTERACTIONS ANIMATION  -->
+  <script>
+    var canvas_c, stage, exportRoot_c, anim_container_c, dom_overlay_container_c, fnStartAnimation_c;
+    function init_cycle() {
+      canvas_c = document.getElementById("canvas_cycle");
+      anim_container_c = document.getElementById("animation_container_cycle");
+      dom_overlay_container_c = document.getElementById("dom_overlay_container_cycle");
+      var comp=AdobeAn.getComposition("145FF931A6424EB9A014F105A132B87E");
+      var lib=comp.getLibrary();
+      createjs.MotionGuidePlugin.install();
+      var loader = new createjs.LoadQueue(false);
+      loader.addEventListener("fileload", function(evt){handleFileLoad_cycle(evt,comp)});
+      loader.addEventListener("complete", function(evt){handleComplete_cycle(evt,comp)});
+      var lib=comp.getLibrary();
+      loader.loadManifest(lib.properties_c.manifest);
+    }
+    function handleFileLoad_cycle(evt, comp) {
+      var images=comp.getImages();	
+      if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+    }
+    function handleComplete_cycle(evt,comp) {
+      //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+      var lib=comp.getLibrary();
+      var ss=comp.getSpriteSheet();
+      var queue = evt.target;
+      var ssMetadata = lib.ssMetadata;
+      for(i=0; i<ssMetadata.length; i++) {
+        ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+      }
+      exportRoot_c = new lib.DataInteractions();
+      stage = new lib.Stage(canvas_c);	
+      //Registers the "tick" event listener.
+      fnStartAnimation = function() {
+        stage.addChild(exportRoot_c);
+        createjs.Ticker.framerate = lib.properties_c.fps;
+        createjs.Ticker.addEventListener("tick", stage);
+      }	    
+      //Code to support hidpi screens and responsive scaling.
+      AdobeAn.makeResponsive(false,'both',false,1,[canvas_c,anim_container_c,dom_overlay_container_c]);	
+      AdobeAn.compositionLoaded(lib.properties_c.id);
+      fnStartAnimation();
+    }
+  </script>
+  <!-- END INTERACTIONS ANIMATION -->
+  
+</head>
+<body onload="init_cycle();">
+  
+  <!-- MOBILE WRAPPER -->
   <div class="mobile-wrapper">
     
     <!-- NAVIGATION DESKTOP & MOBILE -->
@@ -103,17 +197,17 @@
     <!-- END VIDEO -->
     
     <!-- BACKSTAGE DESKTOP & MOBILE -->
-    <section class="backstage">
+    <section class="backstage my-5">
       <div class="container mt-5">
         <div class="row justify-content-center">
           <div class="col-md-5">
-            <img class="d-none d-sm-block img-fluid my-2" src="dist/asset/img/squirrel.png">
-            <img class="d-none d-sm-block img-fluid my-2" src="dist/asset/img/bee.png">
+            <img class="d-none d-md-block img-fluid my-2" src="dist/asset/img/squirrel.png">
+            <img class="d-none d-md-block img-fluid my-2" src="dist/asset/img/bee.png">
           </div>
-          <div class="col-md-4 pr-sm-0">
+          <div class="col-md-4 pr-md-0">
             
             <h2>Les coulisses du Rapport Planète vivante</h2>
-            <div id="mini-navbar-first" class="d-none d-sm-inline-block mb-4">
+            <div id="mini-navbar-first" class="d-none d-md-inline-block mb-4">
               <ul class="nav">
                 <li class="slide1"></li>
                 <li class="slide2"></li>
@@ -123,7 +217,7 @@
             </div>
             
             <div id="why">
-              <h3 class="d-block d-sm-none">Pourquoi ?</h3>
+              <h3 class="d-block d-md-none">Pourquoi ?</h3>
               <p class="hit bold">L’état de la biodiversité et celui de notre santé sont inextricablement liés. La pandémie de coronavirus nous l’a violemment rappelé.</p>
               <p>Ce nouveau rapport « Planète Vivante – La nature en Belgique » est un document de référence unique sur lequel les décideurs politiques pourront s’appuyer pour relever leurs ambitions et collaborer avec tous les acteurs de la société, afin de mieux connaitre et de mieux protéger notre nature.</p>
               <p>Car il est urgent de réaliser que prendre soin de la nature, c’est prendre soin de nous - et il n’y a pas de meilleur endroit pour s’atteler à la tâche que chez nous. Le WWF- Belgique vous propose de découvrir ce rapport inédit en exclusivité.</p>
@@ -131,17 +225,17 @@
                 <img src="dist/asset/img/icon_download.svg">
                 Télécharger notre rapport
               </a>
-              <img class="d-block d-sm-none img-fluid my-2" src="dist/asset/img/squirrel.png">
+              <img class="d-block d-md-none img-fluid my-2" src="dist/asset/img/squirrel.png">
             </div>
-            <div id="how" class="d-block d-sm-none">
-              <h3 class="d-block d-sm-none mt-5">Comment ?</h3>
+            <div id="how" class="d-block d-md-none">
+              <h3 class="d-block d-md-none mt-5">Comment ?</h3>
               <p>Le « Rapport Planète Vivante – La nature en Belgique » est le fruit d’une collaboration de près de 2 ans entre des acteurs clés du monde scientifique et de la protection de la biodiversité.</p>
               <p>5 organisations de référence - Natagora, Natuurpunt, l’Institut Royal des Sciences Naturelles de Belgique, et la Plate-forme belge pour la biodiversité - ont uni leurs forces et réuni de nombreux experts pour garantir la pertinence d’un rapport sans précédent.</p>
               <a class="link" href="#a">Un immense merci à celles et ceux qui ont rendu possible ce projet hors normes.</a>
               <a href="#" class="button mt-4">
                 Accédez à notre méthodologie complète
               </a>
-              <img class="d-block d-sm-none img-fluid my-2" src="dist/asset/img/bee.png">
+              <img class="d-block d-md-none img-fluid my-2" src="dist/asset/img/bee.png">
             </div>
             
           </div>
@@ -149,13 +243,13 @@
       </div>
     </section>
     <!-- END BACKSTAGE -->
-
+    
     <!-- TESTIMONIALS DESKTOP -->
-    <section class="testimonials d-none d-md-block my-5">
+    <section class="testimonials my-5 d-none d-md-block">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-
+            
             <ul class="profile-menu">
               <li class="profile-item active" data-target="HE">
                 <img src="dist/asset/img/Hilde Eggermont.png">
@@ -173,7 +267,7 @@
                 <img src="dist/asset/img/Olga Szczodry.png">
               </li>
             </ul>
-
+            
           </div>
         </div>
         <div class="row mt-5 justify-content-center">
@@ -185,27 +279,27 @@
                 <p>En plus d’apporter des informations essentielles sur l’état actuel et les tendances de la biodiversité en Belgique, le “Raport Planète Vivante - La nature en Belgique” a également donné une impulsion majeure à la coopération et à un dialogue renforcé entre les différentes organisations et parties prenantes à travers le pays.</p>
                 <small>Hilde Eggermont, Belgian Biodiversity Platform</small>
               </div>
-
+              
               <div class="testimonials-text" id="HS">
                 <p>Ce “Rapport Planète Vivante” envoie un message concret, scientifiquement fondé et indépendant, qui démontre à quel point il est nécessaire d’agir plus et mieux, si nous voulons nous engager à véritablement relever la courbe de la perte de biodiversité.</p>
                 <small>Hendrik Segers, Institut royal des Sciences naturelles de Belgique</small>
               </div>
-
+              
               <div class="testimonials-text" id="JYP">
                 <p>Le “Rapport Planète Vivante – La nature en Belgique” est un magnifique exemple de mobilisation des données récoltées sur le terrain par les naturalistes afin de mieux comprendre comment évolue la nature dans notre pays.</p>
                 <small>Jean-Yves Paquet, Natagora</small>
               </div>
-
+              
               <div class="testimonials-text" id="MH">
                 <p>Rassembler toutes les données disponibles (et moins disponibles) sur la biodiversité et essayer d'en tirer les meilleures tendances pour créer un Index Planète Vivante était le plus grand défi de ce projet.</p>
                 <small>Marc Herremans, Natuurpunt</small>
               </div>
-
+              
               <div class="testimonials-text" id="OS">
                 <p>L’élaboration du “Rapport Planète Vivante – La nature en Belgique” est une belle démonstration de volonté de travailler ensemble pour améliorer l’état de la biodiversité en Belgique. Ce rapport sans précédent est un premier pas dans cette direction.</p>
                 <small>Olga Szczodry, WWF-Belgique</small>
               </div>
-
+              
               <img class="quote close" src="dist/asset/img/quote-close.png">
             </div>
           </div>
@@ -213,36 +307,36 @@
       </div>
     </section>
     <!-- END TESTIMONIALS -->
-
+    
     <!-- BIODIVERSITY DESKTOP & MOBILE -->
     <section class="biodiversity">
       <div class="container mt-5">
         <div class="row justify-content-center">
           <div class="col-md-5">
-            <img class="d-none d-sm-block img-fluid my-2" src="dist/asset/img/swamp.png">
-            <img class="d-none d-sm-block img-fluid my-2" src="dist/asset/img/seal.png">
+            <img class="d-none d-md-block img-fluid my-2" src="dist/asset/img/swamp.png">
+            <img class="d-none d-md-block img-fluid my-2" src="dist/asset/img/seal.png">
           </div>
-          <div class="col-md-4 pr-sm-0">
+          <div class="col-md-4 pr-md-0">
             
             <h2>Vous avez dit biodiversité ?</h2>
-            <div id="mini-navbar-second" class="d-none d-sm-inline-block mb-4">
+            <div id="mini-navbar-second" class="d-none d-md-inline-block mb-4">
               <ul class="nav">
                 <li class="slide1"></li>
                 <li class="slide2"></li>
                 <li><a id="sh-importance" class="active" href="#/">L’importance</br>de la biodiversité</a></li>
                 <li><a id="sh-what" href="#/">Qu’est-ce que</br>la biodiversité ?</a></li>
               </ul>
-              <img class="d-block d-sm-none img-fluid my-2" src="dist/asset/img/swamp.png">
             </div>
             
             <div id="importance">
-              <h3 class="d-block d-sm-none">L’importance de la biodiversité</h3>
+              <h3 class="d-block d-md-none">L’importance de la biodiversité</h3>
               <p>Toutes nos activités économiques et même l’ensemble de la société dépendent de « services écosystémiques » - fertilisation des sols, environnement sain avec de l’air pur et de l’eau potable, nourriture, matières premières… - absolument vitaux.</p>
               <p class="hit bold primary font-wwf font-30">Plus la biodiversité est riche, plus l’humanité bénéficie de ces services essentiels.</p>
               <p>Mais au-delà de ces bienfaits, la nature a une valeur intrinsèque. Il serait plus que judicieux d’envisager l’humain comme pleinement intégré à son environnement naturel qui, comme le soulignent de plus en plus d’études scientifiques, joue un rôle déterminant sur sa santé physique et mentale.</p>
+              <img class="d-block d-md-none img-fluid my-2" src="dist/asset/img/swamp.png">
             </div>
-            <div id="what" class="d-block d-sm-none">
-              <h3 class="d-block d-sm-none mt-5">Qu’est-ce que la biodiversité ?</h3>
+            <div id="what" class="d-block d-md-none">
+              <h3 class="d-block d-md-none mt-5">Qu’est-ce que la biodiversité ?</h3>
               <p><span class="hit bold">Contraction des mots « biologie » et « diversité », la biodiversité représente l’extraordinaire diversité de la vie sur Terre.</span></br>Elle englobe les différents animaux, végétaux, champignons et micro-organismes, mais aussi leurs populations et leurs habitats naturels. On distingue trois niveaux de biodiversité :</p>
               <ol>
                 <li>La diversité génétique ou la diversité des individus au sein d’une même espèce.</li>
@@ -250,7 +344,7 @@
                 <li>La diversité des écosystèmes, qui reflète les différentes interactions des populations entre elles et avec leur milieu physique.</li>
               </ol>
               <p>Les espèces et les espaces de chacun de ces niveaux sont en constante évolution et interagissent entre eux. Une grande diversité génétique permet ainsi aux espèces de s’adapter plus facilement aux modifications de leur environnement. En Belgique, par exemple, les espèces capables de s’adapter à des conditions plus sèches ont plus de chances de survivre au changement climatique.</p>
-              <img class="d-block d-sm-none img-fluid my-2" src="dist/asset/img/seal.png">
+              <img class="d-block d-md-none img-fluid my-2" src="dist/asset/img/seal.png">
             </div>
             
           </div>
@@ -269,7 +363,7 @@
             <a href="#/" class="button button--block button--light btn-animals" data-image="faucon">
               Le Faucon Pelerin
             </a>
-            <a href="#/" class="button button--block button--light btn-animals" data-image="rainette">
+            <a href="#/" class="button button--block button--light btn-animals active" data-image="rainette">
               La Rainette Verte
             </a>
             <a href="#/" class="button button--block button--light btn-animals" data-image="loup">
@@ -325,8 +419,31 @@
     </section>
     <!-- END ZOOM -->
     
+    <!-- BAR CHARTS DESKTOP & MOBILE -->
+    <section id="ipv" class="chart mt-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <h2 class="mb-5 text-center">Tendances par groupe taxonomique de 283 espèces composant l’ipv belge</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center overflow-auto">
+          <div class="col-md-12 px-4 d-flex justify-content-center overflow-auto">
+
+            <div id="animation_container_ipv" style="background-color:rgba(255, 255, 255, 1.00); width:600px; height:380px">
+              <canvas id="canvas_ipv" width="600" height="380" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+              <div id="dom_overlay_container_ipv" style="pointer-events:none; overflow:hidden; width:600px; height:380px; position: absolute; left: 0px; top: 0px; display: block;">
+              </div>
+            </div>
+
+          </div>          
+        </div>
+      </div>
+    </section>
+    <!-- END BAR CHART -->
+    
     <!-- TIPS BOX DESKTOP & MOBILE -->
-    <section class="tips my-5">
+    <section class="tips mb-5">
       <div class="container">
         <div class="row">
           <div class="col-md-6 mt-4">
@@ -373,6 +490,28 @@
     </section>
     <!-- END TIPS BOX -->
     
+    <!-- CYCLE CHART DESKTOP & MOBILE -->
+    <section class="chart cycle my-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 mb-5">
+          <h2 class="text-center">Intéractions entre climat et biodiversité</h2>
+          <p class="text-center">Le changement climatique à un impact sur la biodiversité, et vice versa.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-12 px-4 d-flex justify-content-center">
+
+          <div id="animation_container_cycle" style="background-color:rgba(255, 255, 255, 1.00); width:620px; height:530px">
+            <canvas id="canvas_cycle" width="620" height="530" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+            <div id="dom_overlay_container_cycle" style="pointer-events:none; overflow:hidden; width:620px; height:530px; position: absolute; left: 0px; top: 0px; display: block;">
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <!-- END CYCLE CHART -->
+    
     <!-- FOOTER DESKTOP & MOBILE -->
     <footer>
       <div class="footer-top">
@@ -395,19 +534,20 @@
     </footer>
     <!-- END FOOTER -->
     
-    <!-- POPUP MESSAGE -->
+    <!-- POPUP MESSAGE DESKTOP & MOBILE -->
     <div class="popup">
       <div class="popup__msg">
         <span>La découverte de la faune vous intéresse ?</span></br>Parcourez la planète avec nous, à travers notre rapport sur la vie animale dans le monde !
       </div>
       <div class="popup__control">
-        <a id="popup-close" href="#"><img src="dist/asset/img/icon_cross.svg" ></a>
-        <a href="#"><img src="dist/asset/img/icon_arrow-right.svg" ></a>
+        <a id="popup-close" href="#close"><img src="dist/asset/img/icon_cross.svg" ></a>
+        <a href="#/"><img src="dist/asset/img/icon_arrow-right.svg" ></a>
       </div>
     </div>
     <!-- END POPUP MESSAGE -->
     
   </div>
+  <!-- END MOBILE WRAPPER -->
   
   <script src="dist/asset/js/scripts.min.js"></script>
 </body>

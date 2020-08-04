@@ -1,5 +1,7 @@
 $('.nav-button').hide();
 let headOffSet = $('#header-download')[0].offsetTop;
+let ipvOffset = $('#ipv')[0].offsetTop - $('#ipv')[0].offsetHeight;
+let done = false;
 window.onscroll = function() {
   if (window.pageYOffset > headOffSet) {
     $('.nav-items').addClass('with-button');
@@ -7,6 +9,13 @@ window.onscroll = function() {
   } else {
     $('.nav-items').removeClass('with-button');
     $('.nav-button').hide();
+  }
+  console.log(ipvOffset + ' / ' + window.pageYOffset);
+  console.log(done);
+  if (window.pageYOffset > ipvOffset && done != true) {
+    done = true;
+    console.error('Activate');
+    init_ipv();
   }
 };
 

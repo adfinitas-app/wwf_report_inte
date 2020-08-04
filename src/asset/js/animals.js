@@ -16,10 +16,14 @@ $('.btn-animals').each(function(index) {
   $(this).mouseenter(function() {
     let index = this.dataset['image'];
     if (zoom.attr('src') != images[index]) {
-      zoom.fadeOut(400, function() {
+      zoom.fadeOut(200, function() {
         zoom.attr('src', images[index]);
       })
-      .fadeIn(500);
+      .fadeIn(200);
+      $('.btn-animals').each(function() {
+        $(this).removeClass('active');
+      });
+      $(this).addClass('active');
     }
   });
 
