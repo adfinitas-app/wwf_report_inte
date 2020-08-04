@@ -15,6 +15,7 @@
     left: 0;
     border-radius: 0;
     width: 100%;
+    height: 95px;
   }
   &__msg {
     font-size: 12px;
@@ -23,6 +24,10 @@
     & span {
       font-weight: 800;
     }
+    @media (max-width: 768px) {
+      font-size: 13px;
+      width: 285px
+    }
   }
   &__control {
     @include flex-column-center;
@@ -30,6 +35,7 @@
     padding: 7px 0 10px;
     position: relative;
     width: 30px;
+    height: 80%;
     &:before {
       content: '';
       position: absolute;
@@ -39,6 +45,19 @@
       left: -7px;
       top: 10px;
       background-color: $color-disable;
+    }
+    @media (max-width: 768px) {
+      width: 50px;
+      padding: 5px 0;
+      a img {
+        height: 20px;
+      }
+      a:nth-child(2) img {
+        height: 25px;
+      }
+      &:before {
+        display: none;
+      }
     }
   }
 }

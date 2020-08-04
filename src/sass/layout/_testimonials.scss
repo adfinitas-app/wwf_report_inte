@@ -1,0 +1,53 @@
+.testimonials {
+  .profile-menu {
+    @include flex-row-center;
+    list-style: none;
+    .profile-item {
+      margin: 0 15px;
+      img {
+        opacity: .5;
+        height: 97px;
+        width: 97px;
+        transition: all .25s;
+      }
+      &.active {
+        img {
+          opacity: 1;
+          transform: scale(1.4);
+        }
+      }
+      &:hover {
+        img {
+          transform: scale(1.4);
+        }
+      }
+    }
+  }
+  &__content {
+    position: relative;
+    padding: 0 70px;
+    .quote {
+      position: absolute;
+      &.open {
+        left: 0;
+        top: 0;
+      }
+      &.close {
+        right: 0;
+        bottom: 0;
+      }
+    }
+    .testimonials-text {
+      p {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      small {
+        display: flex;
+        justify-content: center;
+        color: lighten($color: $color-black, $amount: 50%);
+      }
+    }
+  }
+}

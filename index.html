@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="dist/asset/css/styles.min.css">
 </head>
 <body>
+  
+  <div class="mobile-wrapper">
     
-  <!-- NAVIGATION DESKTOP & MOBILE -->
+    <!-- NAVIGATION DESKTOP & MOBILE -->
     <nav class="navigation">
       <div class="nav-content">
         <img class="nav-wwf-logo" src="dist/asset/img/logo_wwf.png">
@@ -67,7 +69,7 @@
           <li><a href="#/"><img src="dist/asset/img/icon_facebook.svg"></a></li>
           <li><a href="#/"><img src="dist/asset/img/icon_linkedin.svg"></a></li>
         </ul>
-        <a href="#" class="button button--nav button--primary">
+        <a href="#" class="button button--block button--nav button--primary">
           <img src="dist/asset/img/icon_download.svg">
           <span class="d-none d-sm-none d-md-inline">Télécharger notre rapport</span>
         </a>
@@ -147,7 +149,71 @@
       </div>
     </section>
     <!-- END BACKSTAGE -->
-    
+
+    <!-- TESTIMONIALS DESKTOP -->
+    <section class="testimonials d-none d-md-block my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+            <ul class="profile-menu">
+              <li class="profile-item active" data-target="HE">
+                <img src="dist/asset/img/Hilde Eggermont.png">
+              </li>
+              <li class="profile-item" data-target="HS">
+                <img src="dist/asset/img/Hendrik Segers.png">
+              </li>
+              <li class="profile-item" data-target="JYP">
+                <img src="dist/asset/img/Jean-Yves Paquet.png">
+              </li>
+              <li class="profile-item" data-target="MH">
+                <img src="dist/asset/img/Marc Herremans.png">
+              </li>
+              <li class="profile-item" data-target="OS">
+                <img src="dist/asset/img/Olga Szczodry.png">
+              </li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="row mt-5 justify-content-center">
+          <div class="col-md-12 col-lg-10">
+            <div class="testimonials__content">
+              <img class="quote open" src="dist/asset/img/quote-open.png">
+              
+              <div class="testimonials-text" id="HE">
+                <p>En plus d’apporter des informations essentielles sur l’état actuel et les tendances de la biodiversité en Belgique, le “Raport Planète Vivante - La nature en Belgique” a également donné une impulsion majeure à la coopération et à un dialogue renforcé entre les différentes organisations et parties prenantes à travers le pays.</p>
+                <small>Hilde Eggermont, Belgian Biodiversity Platform</small>
+              </div>
+
+              <div class="testimonials-text" id="HS">
+                <p>Ce “Rapport Planète Vivante” envoie un message concret, scientifiquement fondé et indépendant, qui démontre à quel point il est nécessaire d’agir plus et mieux, si nous voulons nous engager à véritablement relever la courbe de la perte de biodiversité.</p>
+                <small>Hendrik Segers, Institut royal des Sciences naturelles de Belgique</small>
+              </div>
+
+              <div class="testimonials-text" id="JYP">
+                <p>Le “Rapport Planète Vivante – La nature en Belgique” est un magnifique exemple de mobilisation des données récoltées sur le terrain par les naturalistes afin de mieux comprendre comment évolue la nature dans notre pays.</p>
+                <small>Jean-Yves Paquet, Natagora</small>
+              </div>
+
+              <div class="testimonials-text" id="MH">
+                <p>Rassembler toutes les données disponibles (et moins disponibles) sur la biodiversité et essayer d'en tirer les meilleures tendances pour créer un Index Planète Vivante était le plus grand défi de ce projet.</p>
+                <small>Marc Herremans, Natuurpunt</small>
+              </div>
+
+              <div class="testimonials-text" id="OS">
+                <p>L’élaboration du “Rapport Planète Vivante – La nature en Belgique” est une belle démonstration de volonté de travailler ensemble pour améliorer l’état de la biodiversité en Belgique. Ce rapport sans précédent est un premier pas dans cette direction.</p>
+                <small>Olga Szczodry, WWF-Belgique</small>
+              </div>
+
+              <img class="quote close" src="dist/asset/img/quote-close.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END TESTIMONIALS -->
+
     <!-- BIODIVERSITY DESKTOP & MOBILE -->
     <section class="biodiversity">
       <div class="container mt-5">
@@ -172,7 +238,7 @@
             <div id="importance">
               <h3 class="d-block d-sm-none">L’importance de la biodiversité</h3>
               <p>Toutes nos activités économiques et même l’ensemble de la société dépendent de « services écosystémiques » - fertilisation des sols, environnement sain avec de l’air pur et de l’eau potable, nourriture, matières premières… - absolument vitaux.</p>
-              <p class="hit bold primary font-30">Plus la biodiversité est riche, plus l’humanité bénéficie de ces services essentiels.</p>
+              <p class="hit bold primary font-wwf font-30">Plus la biodiversité est riche, plus l’humanité bénéficie de ces services essentiels.</p>
               <p>Mais au-delà de ces bienfaits, la nature a une valeur intrinsèque. Il serait plus que judicieux d’envisager l’humain comme pleinement intégré à son environnement naturel qui, comme le soulignent de plus en plus d’études scientifiques, joue un rôle déterminant sur sa santé physique et mentale.</p>
             </div>
             <div id="what" class="d-block d-sm-none">
@@ -195,10 +261,10 @@
     
     <!-- ZOOM DESKTOP -->
     <section class="zoom d-none d-md-block mt-5">
-      <img class="zoom__background " src="dist/asset/img/rainette-verte.png">
+      <img class="zoom__background h-100" src="dist/asset/img/rainette-verte.png">
       <div class="container h-100">
         <div class="row h-100">
-          <div class="col-xl-4 col-lg-5 col-sm-7 my-auto align-self-center">
+          <div class="col-xl-4 col-lg-5 col-sm-7 align-self-center custom-breakpoint">
             <h2 class="mb-5">Zoom sur</br>la faune belge</h2>
             <a href="#/" class="button button--block button--light btn-animals" data-image="faucon">
               Le Faucon Pelerin
@@ -267,7 +333,7 @@
             <div class="tips-box tips-box--noback">
               <div class="tips-content">
                 <h2>Des astuces pour  préserver la  biodiversité !</h2>
-                <a href="#/" class="button button--secondary d-none d-md-block mt-2">
+                <a href="#/" class="button button--secondary d-none d-md-block mt-3">
                   Découvrez toutes nos astuces
                 </a>
               </div>
@@ -306,7 +372,7 @@
       </div>
     </section>
     <!-- END TIPS BOX -->
-
+    
     <!-- FOOTER DESKTOP & MOBILE -->
     <footer>
       <div class="footer-top">
@@ -328,7 +394,7 @@
       </div>
     </footer>
     <!-- END FOOTER -->
-
+    
     <!-- POPUP MESSAGE -->
     <div class="popup">
       <div class="popup__msg">
@@ -341,6 +407,8 @@
     </div>
     <!-- END POPUP MESSAGE -->
     
-    <script src="dist/asset/js/scripts.min.js"></script>
-  </body>
-  </html>
+  </div>
+  
+  <script src="dist/asset/js/scripts.min.js"></script>
+</body>
+</html>

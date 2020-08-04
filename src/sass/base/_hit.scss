@@ -5,6 +5,9 @@
   &.primary {
     color: $color-primary;
   }
+  &.font-wwf {
+    font-family: "WWF", sans-serif;
+  }
   &.font-30 {
     font-size: 30px;
     line-height: 35px;

@@ -16,4 +16,8 @@ $(document).ready(function(){
   $('.left-panel').css({left: -panelWidth})
   let navWidth = $('.navigation__collapse').parent().outerWidth();
   $('.navigation__collapse').css({left: +navWidth})
+  $('.testimonials-text').each(function() {
+    $(this).hide();
+  });
+  $('#HE').show();
 });
