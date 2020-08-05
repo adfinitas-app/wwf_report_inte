@@ -13,3 +13,34 @@ $('.profile-item').each(function(index) {
     }
   });
 });
+
+let slideId = ["M-HE", "M-HS", "M-JYP", "M-MH", "M-OS"];
+
+$('#testimonials-slick').slick({
+  infinite: false,
+  "slidesToShow": 1,
+  "slidesToScroll": 1,
+  "centerMode": true,
+  "mobileFirst": true,
+  "nextArrow": null,
+  "prevArrow": null
+});
+
+let old = null;
+let caret = true;
+$('#testimonials-slick').on('afterChange', function(event, slick, currentSlide, nextSlide){
+  if (old != currentSlide) {
+    $('.testimonials-text.mob').each(function() {
+      $(this).hide();
+    });
+    $('#' + slideId[currentSlide]).fadeIn(200)
+    if (caret == true || currentSlide != 0) {
+      $('#testimonials-caret').fadeOut(100);
+      caret = false;
+    } else {
+      $('#testimonials-caret').fadeIn(100);
+      caret = true;
+    }
+    old = currentSlide;
+  }
+});

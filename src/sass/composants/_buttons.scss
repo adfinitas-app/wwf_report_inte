@@ -69,10 +69,9 @@
       margin-top: -5px;
     }
   }
-}
-
-.btn-animals.active {
-  transition: all .30s;
-  transform: scale(1.05);
-  background-color: transparentize($color: $color-black, $amount: .8);
+  &.btn-animals.active {
+    transition: all .30s;
+    transform: scale(1.05);
+    background-color: transparentize($color: $color-black, $amount: .8);
+  }
 }
