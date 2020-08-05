@@ -28,9 +28,7 @@ $('.btn-animals').each(function(index) {
   });
   
   $(this).click(function() {
-    let index = this.dataset['image']
-    .parent()
-    .outerWidth();
+    let index = this.dataset['image'];
     $('.content').hide();
     $('.content-' + index).show();
     $('.left-panel').animate({
