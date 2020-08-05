@@ -84,3 +84,117 @@
     }
   }
 }
+
+.zoom-mobile {
+  position: relative;
+  h2 {
+    font-family: "WWF", sans-serif;
+    font-size: 30px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: $color-black;
+    width: 50%;
+  }
+  .zoom-slick-container {
+    .zoom-slide {
+      width: 100%;
+      text-decoration: none;
+      &__img {
+        width: 95%;
+        margin-bottom: 10px;
+      }
+      h3 {
+        font-family: "WWF", sans-serif;
+        font-size: 20px;
+        line-height: 32px;
+        text-transform: uppercase;
+        color: $color-primary;
+      }
+      p {
+        font-size: 16px;
+        color: $color-black;
+        width: 60%;
+        a {
+          color: $color-black;
+          text-decoration: underline;
+        }
+      }
+      &.slide-link {
+        padding: 0 0 0 35px;
+      }
+    }
+  }
+  .zoom-col {
+    position: relative;
+    .caret {
+      z-index: -10;
+      position: absolute;
+      height: 20px;
+      &.right {
+        right: 15px;
+        top: 180px;
+      }
+      &.left {
+        left: 15px;
+        top: 180px;
+      }
+    }
+  }
+  &.panel-open {
+    height: 100vh;
+  }
+  .zoom-panel-mobile {
+    position: fixed;
+    background-color: $color-white;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    .content {
+      height: 100%;
+      padding: 20px;
+      overflow: auto;
+      h3 {
+        font-family: "WWF", sans-serif;
+        font-size: 30px;
+        line-height: 20px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        color: $color-black;
+      }
+      small {
+        font-size: 16px;
+      }
+      p {
+        margin-top: 25px;
+      }
+      .zoom-mobile-close {
+        cursor: pointer;
+        margin: 20px 0;
+      }
+      &__text {
+        padding-bottom: 100px;
+      }
+      &__img {
+        background-size: cover;
+        position: relative;
+        height: 300px;
+        object-fit: cover;
+        margin: -20px -20px 0;
+        &.faucon {
+          background-image: url('https://via.placeholder.com/1300x732');
+        }
+        &.rainette {
+          background-image: url('../img/rainette-verte.png');
+        }
+        &.loup {
+          background-image: url('../img/loup.png');
+        }
+        &.alouette {
+          background-image: url('../img/alouette-des-champs.png');
+        }
+      }
+    }
+  }
+}

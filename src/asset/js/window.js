@@ -1,5 +1,4 @@
 $(window).resize(function() {
-  // todo: Rework panel animation on window resize
   let panelWidth = $('.close').parent().outerWidth();
   $('.left-panel').css({left: -panelWidth})
   
@@ -14,10 +13,16 @@ $(window).resize(function() {
 $(document).ready(function(){
   let panelWidth = $('.close').parent().outerWidth();
   $('.left-panel').css({left: -panelWidth})
+  let panelZoomMobileWidth = $('.zoom-panel-mobile').outerWidth();
+  $('.zoom-panel-mobile').css({left: -panelZoomMobileWidth});
   let navWidth = $('.navigation__collapse').parent().outerWidth();
   $('.navigation__collapse').css({left: +navWidth})
   $('.testimonials-text').each(function() {
-    $(this).hide();
+    if (!$(this).is('#M-HE'))
+      $(this).hide();
   });
   $('#HE').show();
+  if ($(window).width() < 768) {
+    init_ipv();
+  }
 });

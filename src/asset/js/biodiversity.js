@@ -4,14 +4,14 @@ $(document).ready(function(){
   $('#sh-importance').click((event) => {
     event.preventDefault();
     $('#what').hide();
-    $('#what').addClass('d-sm-none');
+    $('#what').addClass('d-md-none');
     $('#importance').fadeIn(500);
   })
   
   $('#sh-what').click((event) => {
     event.preventDefault();
     $('#importance').hide();
-    $('#what').removeClass('d-sm-none');
+    $('#what').removeClass('d-md-none');
     $('#what').fadeIn(500);
   })
 });

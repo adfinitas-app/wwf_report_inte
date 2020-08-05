@@ -13,6 +13,7 @@ let path = {
   style: {
     src: [
       'node_modules/bootstrap/dist/css/bootstrap.min.css',
+      'node_modules/slick-carousel/slick/slick.css',
       'src/sass/*.scss',
       'src/sass/**/*.scss'
     ],
@@ -22,6 +23,7 @@ let path = {
     src: [
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/bootstrap/dist/js/bootstrap.min.js',
+      'node_modules/slick-carousel/slick/slick.js',
       'src/asset/js/**/*.js'
     ],
     dest: 'dist/asset/js'

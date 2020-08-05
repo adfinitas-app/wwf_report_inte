@@ -6,9 +6,18 @@
   width: 100%;
   background-color: $color-white;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, .5);
-  z-index: 100;
+  z-index: 9999;
   @media (max-width: 768px) {
     padding: 0 0 0 70px;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 45px;
+      left: 65px;
+      top: 10px;
+      background-color: $color-black;
+    }
   }
   .nav-content {
     @include flex-row;
