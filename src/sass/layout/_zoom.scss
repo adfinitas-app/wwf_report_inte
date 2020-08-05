@@ -84,6 +84,20 @@
     }
   }
 }
+.btn-roll-over {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background-color: $color-black;
+}
 
 .zoom-mobile {
   position: relative;

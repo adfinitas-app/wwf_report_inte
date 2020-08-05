@@ -70,8 +70,12 @@
     }
   }
   &.btn-animals.active {
+    position: relative;
     transition: all .30s;
     transform: scale(1.05);
-    background-color: transparentize($color: $color-black, $amount: .8);
+    background-color: transparentize($color: $color-black, $amount: .7);
+    &:hover .btn-roll-over {
+      display: flex;
+    }
   }
 }
