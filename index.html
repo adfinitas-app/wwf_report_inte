@@ -194,10 +194,14 @@
     <!-- END HEADER -->
     
     <!-- VIDEO DESKTOP & MOBILE -->
-    <video controls width="100%">
+    <!-- <video controls width="100%">
       <source src="dist/asset/videos/video-placeholder.mp4"
       type="video/mp4">
-    </video>
+    </video> -->
+    <div class="h_iframe">
+      <img class="ratio" src="http://placehold.it/16x9"/>
+      <iframe width="100%" src="https://www.youtube-nocookie.com/embed/F-1weFCiYBA?start=8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
     <!-- END VIDEO -->
     
     <!-- BACKSTAGE DESKTOP & MOBILE -->
@@ -247,6 +251,39 @@
       </div>
     </section>
     <!-- END BACKSTAGE -->
+
+    <!-- IPV CHART -->
+    <section class="chart mt-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h2>IPV Belge</h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 d-flex justify-content-center">
+            <div class="ipv-controls">
+              <ul class="ipv-menu">
+                <li><img src="dist/asset/img/icon-ipv-all.svg"></li>
+                <li class="active"><img src="dist/asset/img/icon-ipv-humidity.svg"></li>
+                <li><img src="dist/asset/img/icon-ipv-tree.svg"></li>
+                <li><img src="dist/asset/img/icon-ipv-wheet.svg"></li>
+              </ul>
+              <img id="ipv-help" src="dist/asset/img/icon-question.svg">
+            </div>
+          </div>
+        </div>
+        <div class="row d-none d-sm-block">
+          <div class="col-12 d-flex justify-content-center">
+            <img src="dist/asset/img/ipv-chart-humidity.svg">
+          </div>
+        </div>
+        <div class="row d-block d-sm-none">
+          <div class="col-12 d-flex justify-content-center">
+            <img src="dist/asset/img/ipv-chart-humidity-m.svg">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END IPV CHART -->
     
     <!-- TESTIMONIALS DESKTOP -->
     <section class="testimonials my-5 d-none d-md-block">

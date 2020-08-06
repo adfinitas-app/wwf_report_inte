@@ -1,0 +1,39 @@
+.ipv-controls {
+  position: relative;
+  width: 100%;
+  @include flex-row-center;
+  .ipv-menu {
+    list-style: none;
+    @include flex-row-center;
+    width: 234px;
+    padding: 0;
+    border: 1px solid lighten($color: $color-black, $amount: 85%);
+    li {
+      @include flex-row-center;
+      cursor: pointer;
+      width: 58.5px;
+      padding: 10px 0;
+      border-right: 1px solid lighten($color: $color-black, $amount: 85%);
+      transition: all .15s;
+      img {
+        opacity: .3;
+      }
+      &:last-child {
+        border: none;
+      }
+      &:hover {
+        background-color: lighten($color: $color-black, $amount: 90%);
+      }
+      &.active {
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  #ipv-help {
+    cursor: pointer;
+    margin-bottom: 45px;
+    margin-left: 10px;
+  }
+}
