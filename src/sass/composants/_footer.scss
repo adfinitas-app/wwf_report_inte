@@ -50,8 +50,13 @@ footer {
     height: 72px;
     width: 100%;
     background-color: $color-black;
-    color: $color-white;
     text-align: center;
     font-size: 12px;
+    a {
+      color: $color-white;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 }

@@ -50,15 +50,38 @@
     }
     .nav-items {
       @include flex-row-center;
+      margin: 15px 0;
+      height: 35px;
       .nav-desktop {
         @include flex-row-center;
         @media (max-width: 768px) {
           display: none;
         }
+        .social-container {
+          @include flex-row-center;
+          transition: all .50s;
+          .links {
+            display: none;
+            a {
+              margin: 0 2px;
+              &:last-child {
+                margin: 0 0 0 2px;
+              }
+            }
+            a img {
+              height: 30px;
+            }
+          }
+          &:hover .links {
+            display: inline-block;
+          }
+          &:hover .view-socials {
+            display: none;
+          }
+        }
       }
       position: absolute;
       right: 20px;
-      margin: 20px 0;
       transition: all .50s;
       &.with-button {
         right: 295px;

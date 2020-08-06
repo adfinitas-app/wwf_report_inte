@@ -1,6 +1,13 @@
 $(window).resize(function() {
-  let panelWidth = $('.close').parent().outerWidth();
-  $('.left-panel').css({left: -panelWidth})
+  if ($('.close').parent().position().left != 0) {
+    let panelWidth = $('.close').parent().outerWidth();
+    $('.left-panel').css({left: -panelWidth})
+  }
+
+  if ($('.zoom-panel-mobile').position().left != 0) {
+    let panelZoomMobileWidth = $('.zoom-panel-mobile').outerWidth();
+    $('.zoom-panel-mobile').css({left: -panelZoomMobileWidth});
+  }
   
   let navWidth = $('.navigation__collapse').parent().outerWidth();
   let collapseWidth = $('.navigation__collapse').outerWidth();

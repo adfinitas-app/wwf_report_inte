@@ -7,6 +7,7 @@
   padding: 15px 30px;
   font-size: 17px;
   text-transform: uppercase;
+  transition: all .30s;
   @media (max-width: 768px) {
     display: block;
     text-align: center;
@@ -18,6 +19,7 @@
   &:hover {
     text-decoration: none;
     color: $color-black;
+    background-color: darken($color: $color-white, $amount: 5%);
   }
   &--block {
     display: block;
@@ -30,7 +32,10 @@
     background-color: $color-primary;
     border-color: $color-primary;
     color: $color-white;
+    transition: all .30s;
     &:hover {
+      background-color: darken($color: $color-primary, $amount: 10%);
+      border-color: darken($color: $color-primary, $amount: 10%);
       color: $color-white;
     }
   }
@@ -40,7 +45,10 @@
     background-color: $color-secondary;
     border-color: $color-secondary;
     color: $color-white;
+    transition: all .30s;
     &:hover {
+      background-color: darken($color: $color-secondary, $amount: 10%);
+      border-color: darken($color: $color-secondary, $amount: 10%);
       color: $color-white;
     }
   }
@@ -50,6 +58,7 @@
     background-color: none;
     border-color: $color-white;
     color: $color-white;
+    transition: all .30s;
     &:hover {
       color: $color-white;
     }
@@ -74,8 +83,12 @@
     transition: all .30s;
     transform: scale(1.05);
     background-color: transparentize($color: $color-black, $amount: .7);
+    &:hover {
+      color: transparent;
+    }
     &:hover .btn-roll-over {
       display: flex;
+      color: $color-white;
     }
   }
 }
