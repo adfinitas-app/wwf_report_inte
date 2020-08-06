@@ -107,7 +107,7 @@
     <!-- NAVIGATION DESKTOP & MOBILE -->
     <nav class="navigation">
       <div class="nav-content">
-        <img class="nav-wwf-logo" src="dist/asset/img/logo_wwf.png">
+        <a href="https://wwf.be/fr/" target="_blank"><img class="nav-wwf-logo" src="dist/asset/img/logo_wwf.png"></a>
         <div class="partner-container">
           <img src="dist/asset/img/logo_biodiversity.png">
           <img src="dist/asset/img/logo_museum.png">
@@ -120,9 +120,14 @@
               <li><a href="#fr">FR</a></li>
               <li><a href="#nl">NL</a></li>
             </ul>
-            <a href="#network">
-              <img src="dist/asset/img/icon_social.svg">
-            </a>
+            <div class="social-container">
+              <div class="links">
+                <a href="#/"><img src="dist/asset/img/icon_twitter.svg"></a>
+                <a href="#/"><img src="dist/asset/img/icon_facebook.svg"></a>
+                <a href="#/"><img src="dist/asset/img/icon_linkedin.svg"></a>       
+              </div>
+              <img class="view-socials" src="dist/asset/img/icon_social.svg">
+            </div>
           </div>
           <div class="toggler">
             <div class="toggler-bar top"></div>
@@ -144,17 +149,17 @@
         </ul>
         <div class="nav-menu">
           <ul>
-            <li><a class="title" href="#back">Les coulisses du Rapport Planète vivante</a></li>
+            <li><a data-mobile-href="#back" class="title" href="#back">Les coulisses du Rapport Planète vivante</a></li>
             <li><a data-mobile-href="#why" href="#back">Pourquoi ?</a></li>
             <li><a data-mobile-href="#how" href="#back">Comment ?</a></li>
           </ul>
           <ul>
-            <li><a class="title" href="#bio">Vous avez Dit biodiversité ?</a></li>
+            <li><a data-mobile-href="#bio" class="title" href="#bio">Vous avez Dit biodiversité ?</a></li>
             <li><a data-mobile-href="#importance" href="#bio">L’importance de la biodiversité</a></li>
             <li><a data-mobile-href="#what" href="#bio">Qu’est-ce que la biodiversité ?</a></li>
           </ul>
           <ul>
-            <li><a class="title" href="#tips">Des astuces pour préserver la biodiversité !</a></li>
+            <li><a data-mobile-href="#tips" class="title" href="#tips">Des astuces pour préserver la biodiversité !</a></li>
           </ul>
         </div>
         <ul class="nav-socials">
@@ -503,25 +508,25 @@
             <h2 class="mb-4">Zoom sur</br>la faune belge</h2>
 
             <div id="zoom-slick" class="zoom-slick-container">
-              <a href="#/" class="zoom-slide" data-target="faucon">
+              <a href="#faucon-zoom-mobile" class="zoom-slide" data-target="faucon">
                 <img class="zoom-slide__img" src="https://via.placeholder.com/1300x732">
                 <h3>Le Faucon Pelerin</h3>
                 <p>En 1973, le dernier faucon pèlerin nicheur a disparu de Belgique… Qu’en est-il aujourd’hui ?</p>
               </a>
-              <a href="#/" class="zoom-slide" data-target="rainette">
+              <a href="#rainette-zoom-mobile" class="zoom-slide" data-target="rainette">
                 <img class="zoom-slide__img" src="dist/asset/img/rainette-verte.png">
-                <h3>Le Faucon Pelerin</h3>
-                <p>En 1973, le dernier faucon pèlerin nicheur a disparu de Belgique… Qu’en est-il aujourd’hui ?</p>
+                <h3>La Rainette Verte</h3>
+                <p>Quelles actions ont été mises en place pour la sauver de l’extinction ?</p>
               </a>
-              <a href="#/" class="zoom-slide" data-target="loup">
+              <a href="#loup-zoom-mobile" class="zoom-slide" data-target="loup">
                 <img class="zoom-slide__img" src="dist/asset/img/loup.png">
-                <h3>Le Faucon Pelerin</h3>
-                <p>En 1973, le dernier faucon pèlerin nicheur a disparu de Belgique… Qu’en est-il aujourd’hui ?</p>
+                <h3>Le Loup</h3>
+                <p>Saviez-vous qu’après plus d’un siècle, y a une première meute en Belgique ? Découvrez son histoire !</p>
               </a>
-              <a href="#/" class="zoom-slide" data-target="alouette">
+              <a href="#alouette-zoom-mobile" class="zoom-slide" data-target="alouette">
                 <img class="zoom-slide__img" src="dist/asset/img/alouette-des-champs.png">
-                <h3>Le Faucon Pelerin</h3>
-                <p>En 1973, le dernier faucon pèlerin nicheur a disparu de Belgique… Qu’en est-il aujourd’hui ?</p>
+                <h3>L'Alouette des champs</h3>
+                <p>Pourquoi sa population a-t-elle diminué de 70% en 40 ans ?</p>
               </a>
               <div class="zoom-slide slide-link">
                 <p>Allez plus loin et découvrez toute la richesse de la faune belge !</p>
@@ -700,7 +705,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        ©Tous droits réservés WWF
+        <a href="https://wwf.be/fr/copyright/" target="_blank">©Tous droits réservés WWF</a>
       </div>
     </footer>
     <!-- END FOOTER -->
