@@ -32,4 +32,7 @@ $(document).ready(function(){
   if ($(window).width() < 768) {
     init_ipv();
   }
+  hideChart();
+  $('.ipv-all').show();
+  $('.ipv-btn.first').addClass('active');
 });
