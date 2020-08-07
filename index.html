@@ -262,25 +262,68 @@
           <div class="col-12 d-flex justify-content-center">
             <div class="ipv-controls">
               <ul class="ipv-menu">
-                <li><img src="dist/asset/img/icon-ipv-all.svg"></li>
-                <li class="active"><img src="dist/asset/img/icon-ipv-humidity.svg"></li>
-                <li><img src="dist/asset/img/icon-ipv-tree.svg"></li>
-                <li><img src="dist/asset/img/icon-ipv-wheet.svg"></li>
+                <li data-target="all" class="ipv-btn first active"><img src="dist/asset/img/icon-ipv-all.svg"></li>
+                <li data-target="humidity" class="ipv-btn"><img src="dist/asset/img/icon-ipv-humidity.svg"></li>
+                <li data-target="forest" class="ipv-btn"><img src="dist/asset/img/icon-ipv-tree.svg"></li>
+                <li data-target="field" class="ipv-btn"><img src="dist/asset/img/icon-ipv-wheet.svg"></li>
               </ul>
               <img id="ipv-help" src="dist/asset/img/icon-question.svg">
             </div>
           </div>
         </div>
-        <div class="row d-none d-sm-block">
-          <div class="col-12 d-flex justify-content-center">
-            <img src="dist/asset/img/ipv-chart-humidity.svg">
+
+        <div class="ipv-chart ipv-all">
+          <div class="row d-none d-sm-block">
+            <div class="col-12 p-0 d-flex justify-content-center">
+              <img src="dist/asset/img/ipv-chart-all.svg">
+            </div>
+          </div>
+          <div class="row d-block d-sm-none">
+            <div class="col-12 p-0 d-flex justify-content-center">
+              <img src="dist/asset/img/ipv-chart-all-m.svg">
+            </div>
           </div>
         </div>
-        <div class="row d-block d-sm-none">
-          <div class="col-12 d-flex justify-content-center">
-            <img src="dist/asset/img/ipv-chart-humidity-m.svg">
+
+        <div class="ipv-chart ipv-humidity">
+          <div class="row d-none d-sm-block">
+            <div class="col-12 p-0 d-flex justify-content-center">
+              <img src="dist/asset/img/ipv-chart-humidity.svg">
+            </div>
+          </div>
+          <div class="row d-block d-sm-none">
+            <div class="col-12 p-0 d-flex justify-content-center">
+              <img src="dist/asset/img/ipv-chart-humidity-m.svg">
+            </div>
           </div>
         </div>
+
+        <div class="ipv-chart ipv-forest">
+          <div class="row d-none d-sm-block">
+            <div class="col-12 p-0 d-flex justify-content-center">
+              <img src="dist/asset/img/ipv-chart-forest.svg">
+            </div>
+          </div>
+          <div class="row d-block d-sm-none">
+            <div class="col-12 p-0 d-flex justify-content-center">
+              <img src="dist/asset/img/ipv-chart-forest-m.svg">
+            </div>
+          </div>
+        </div>
+
+        <div class="ipv-chart ipv-field">
+          <div class="row d-none d-sm-block">
+            <div class="col-12 p-0 d-flex justify-content-center">
+              <img src="dist/asset/img/ipv-chart-field.svg">
+            </div>
+          </div>
+          <div class="row d-block d-sm-none">
+            <div class="col-12 p-0 d-flex justify-content-center">
+              <img src="dist/asset/img/ipv-chart-field-m.svg">
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
     <!-- END IPV CHART -->
