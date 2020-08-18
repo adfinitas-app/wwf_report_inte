@@ -1574,7 +1574,7 @@
     color: "#FFFFFF",
     opacity: 1.00,
     manifest: [
-      {src:"dist/asset/img/Data_Tendances IPV_atlas_1.png", id:"Data _ Tendances IPV_atlas_1"}
+      {src:"../dist/asset/img/Data_Tendances IPV_atlas_1.png", id:"Data _ Tendances IPV_atlas_1"}
     ],
     preloads: []
   };
