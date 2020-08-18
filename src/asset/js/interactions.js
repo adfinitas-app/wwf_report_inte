@@ -641,7 +641,7 @@
     color: "#FFFFFF",
     opacity: 1.00,
     manifest: [
-      {src:"dist/asset/img/Data_Interactions_atlas_1.png?1595316017768", id:"Data _ Interactions_atlas_1"}
+      {src:"../dist/asset/img/Data_Interactions_atlas_1.png?1595316017768", id:"Data _ Interactions_atlas_1"}
     ],
     preloads: []
   };
