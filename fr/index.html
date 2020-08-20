@@ -3,12 +3,12 @@
 <head>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WZPGWR');</script>
   <!-- End Google Tag Manager -->
-
+  
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -127,10 +127,10 @@
       <div class="nav-content">
         <a href="https://wwf.be/fr/" target="_blank"><img class="nav-wwf-logo" src="../dist/asset/img/logo_wwf.png"></a>
         <div class="partner-container">
-          <img src="../dist/asset/img/logo_museum.png">
-          <img src="../dist/asset/img/logo_natagora.png">
-          <img src="../dist/asset/img/logo_natuurpunt.png">
-          <img src="../dist/asset/img/logo_biodiversity.png">
+          <a href="https://www.naturalsciences.be/fr" target="_blank"><img src="../dist/asset/img/logo_museum.png"></a>
+          <a href="https://www.natagora.be/" target="_blank"><img src="../dist/asset/img/logo_natagora.png"></a>
+          <a href="https://www.natuurpunt.be/" target="_blank"><img src="../dist/asset/img/logo_natuurpunt.png"></a>
+          <a href="http://www.biodiversity.be/" target="_blank"><img src="../dist/asset/img/logo_biodiversity.png"></a>
         </div>
         <div class="nav-items">
           <div class="nav-desktop">
@@ -212,10 +212,12 @@
     <!-- END HEADER -->
     
     <!-- VIDEO DESKTOP & MOBILE -->
-    <!-- <video controls width="100%">
-      <source src="../dist/asset/videos/video-placeholder.mp4"
-      type="video/mp4">
-    </video> -->
+    <!-- <video></video>
+      <video controls width="100%">
+        <source src="../dist/asset/videos/video-placeholder.mp4"
+        type="video/mp4">
+      </video> 
+    -->
     <div class="h_iframe">
       <img class="ratio" src="http://placehold.it/16x9"/>
       <iframe width="100%" src="https://www.youtube-nocookie.com/embed/F-1weFCiYBA?start=8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -267,382 +269,299 @@
           
         </div>
       </div>
-    </div>
-  </section>
-  <!-- END BACKSTAGE -->
-  
-  <!-- IPV CHART -->
-  <section class="chart mt-5">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h2>IPV Belge</h2>
+    </section>
+    <!-- END BACKSTAGE -->
+    
+    <!-- IPV CHART -->
+    <section class="chart mt-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h2>IPV Belge</h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 d-flex justify-content-center">
+            <div class="ipv-controls">
+              <ul class="ipv-menu">
+                <li data-target="all" class="ipv-btn first active"><img src="../dist/asset/img/icon-ipv-all.svg"></li>
+                <li data-target="humidity" class="ipv-btn"><img src="../dist/asset/img/icon-ipv-humidity.svg"></li>
+                <li data-target="forest" class="ipv-btn"><img src="../dist/asset/img/icon-ipv-tree.svg"></li>
+                <li data-target="field" class="ipv-btn"><img src="../dist/asset/img/icon-ipv-wheet.svg"></li>
+              </ul>
+              <img id="ipv-help" src="../dist/asset/img/icon-question.svg">
+            </div>
+          </div>
+        </div>
+        
+        <div class="ipv-chart ipv-all">
+          <div class="row d-none d-sm-block">
+            <div class="col-12 p-0 d-flex justify-content-center">
+              <img src="../dist/asset/img/ipv-chart-all.svg">
+            </div>
+          </div>
+          <div class="row d-block d-sm-none">
+            <div class="col-12 p-0 d-flex justify-content-center">
+              <img src="../dist/asset/img/ipv-chart-all-m.svg">
+            </div>
+          </div>
+        </div>
+        
+        <div class="ipv-chart ipv-humidity">
+          <div class="row d-none d-sm-block">
+            <div class="col-12 p-0 d-flex justify-content-center">
+              <img src="../dist/asset/img/ipv-chart-humidity.svg">
+            </div>
+          </div>
+          <div class="row d-block d-sm-none">
+            <div class="col-12 p-0 d-flex justify-content-center">
+              <img src="../dist/asset/img/ipv-chart-humidity-m.svg">
+            </div>
+          </div>
+        </div>
+        
+        <div class="ipv-chart ipv-forest">
+          <div class="row d-none d-sm-block">
+            <div class="col-12 p-0 d-flex justify-content-center">
+              <img src="../dist/asset/img/ipv-chart-forest.svg">
+            </div>
+          </div>
+          <div class="row d-block d-sm-none">
+            <div class="col-12 p-0 d-flex justify-content-center">
+              <img src="../dist/asset/img/ipv-chart-forest-m.svg">
+            </div>
+          </div>
+        </div>
+        
+        <div class="ipv-chart ipv-field">
+          <div class="row d-none d-sm-block">
+            <div class="col-12 p-0 d-flex justify-content-center">
+              <img src="../dist/asset/img/ipv-chart-field.svg">
+            </div>
+          </div>
+          <div class="row d-block d-sm-none">
+            <div class="col-12 p-0 d-flex justify-content-center">
+              <img src="../dist/asset/img/ipv-chart-field-m.svg">
+            </div>
+          </div>
+        </div>
+        
       </div>
-      <div class="row justify-content-center">
-        <div class="col-12 d-flex justify-content-center">
-          <div class="ipv-controls">
-            <ul class="ipv-menu">
-              <li data-target="all" class="ipv-btn first active"><img src="../dist/asset/img/icon-ipv-all.svg"></li>
-              <li data-target="humidity" class="ipv-btn"><img src="../dist/asset/img/icon-ipv-humidity.svg"></li>
-              <li data-target="forest" class="ipv-btn"><img src="../dist/asset/img/icon-ipv-tree.svg"></li>
-              <li data-target="field" class="ipv-btn"><img src="../dist/asset/img/icon-ipv-wheet.svg"></li>
+    </section>
+    <!-- END IPV CHART -->
+    
+    <!-- TESTIMONIALS DESKTOP -->
+    <section class="testimonials my-5 d-none d-md-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            
+            <ul class="profile-menu">
+              <li class="profile-item active" data-target="HE">
+                <img src="../dist/asset/img/Hilde Eggermont.png">
+              </li>
+              <li class="profile-item" data-target="HS">
+                <img src="../dist/asset/img/Hendrik Segers.png">
+              </li>
+              <li class="profile-item" data-target="JYP">
+                <img src="../dist/asset/img/Jean-Yves Paquet.png">
+              </li>
+              <li class="profile-item" data-target="MH">
+                <img src="../dist/asset/img/Marc Herremans.png">
+              </li>
+              <li class="profile-item" data-target="OS">
+                <img src="../dist/asset/img/Olga Szczodry.png">
+              </li>
             </ul>
-            <img id="ipv-help" src="../dist/asset/img/icon-question.svg">
-          </div>
-        </div>
-      </div>
-      
-      <div class="ipv-chart ipv-all">
-        <div class="row d-none d-sm-block">
-          <div class="col-12 p-0 d-flex justify-content-center">
-            <img src="../dist/asset/img/ipv-chart-all.svg">
-          </div>
-        </div>
-        <div class="row d-block d-sm-none">
-          <div class="col-12 p-0 d-flex justify-content-center">
-            <img src="../dist/asset/img/ipv-chart-all-m.svg">
-          </div>
-        </div>
-      </div>
-      
-      <div class="ipv-chart ipv-humidity">
-        <div class="row d-none d-sm-block">
-          <div class="col-12 p-0 d-flex justify-content-center">
-            <img src="../dist/asset/img/ipv-chart-humidity.svg">
-          </div>
-        </div>
-        <div class="row d-block d-sm-none">
-          <div class="col-12 p-0 d-flex justify-content-center">
-            <img src="../dist/asset/img/ipv-chart-humidity-m.svg">
-          </div>
-        </div>
-      </div>
-      
-      <div class="ipv-chart ipv-forest">
-        <div class="row d-none d-sm-block">
-          <div class="col-12 p-0 d-flex justify-content-center">
-            <img src="../dist/asset/img/ipv-chart-forest.svg">
-          </div>
-        </div>
-        <div class="row d-block d-sm-none">
-          <div class="col-12 p-0 d-flex justify-content-center">
-            <img src="../dist/asset/img/ipv-chart-forest-m.svg">
-          </div>
-        </div>
-      </div>
-      
-      <div class="ipv-chart ipv-field">
-        <div class="row d-none d-sm-block">
-          <div class="col-12 p-0 d-flex justify-content-center">
-            <img src="../dist/asset/img/ipv-chart-field.svg">
-          </div>
-        </div>
-        <div class="row d-block d-sm-none">
-          <div class="col-12 p-0 d-flex justify-content-center">
-            <img src="../dist/asset/img/ipv-chart-field-m.svg">
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </section>
-  <!-- END IPV CHART -->
-  
-  <!-- TESTIMONIALS DESKTOP -->
-  <section class="testimonials my-5 d-none d-md-block">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          
-          <ul class="profile-menu">
-            <li class="profile-item active" data-target="HE">
-              <img src="../dist/asset/img/Hilde Eggermont.png">
-            </li>
-            <li class="profile-item" data-target="HS">
-              <img src="../dist/asset/img/Hendrik Segers.png">
-            </li>
-            <li class="profile-item" data-target="JYP">
-              <img src="../dist/asset/img/Jean-Yves Paquet.png">
-            </li>
-            <li class="profile-item" data-target="MH">
-              <img src="../dist/asset/img/Marc Herremans.png">
-            </li>
-            <li class="profile-item" data-target="OS">
-              <img src="../dist/asset/img/Olga Szczodry.png">
-            </li>
-          </ul>
-          
-        </div>
-      </div>
-      <div class="row mt-5 justify-content-center">
-        <div class="col-md-12 col-lg-10">
-          <div class="testimonials__content">
-            <img class="quote q-open" src="../dist/asset/img/quote-open.png">
             
-            <div class="testimonials-text" id="HE">
-              <p>En plus d’apporter des informations essentielles sur l’état actuel et les tendances de la biodiversité en Belgique, le “Raport Planète Vivante - La nature en Belgique” a également donné une impulsion majeure à la coopération et à un dialogue renforcé entre les différentes organisations et parties prenantes à travers le pays.</p>
-              <small>Hilde Eggermont, Belgian Biodiversity Platform</small>
+          </div>
+        </div>
+        <div class="row mt-5 justify-content-center">
+          <div class="col-md-12 col-lg-10">
+            <div class="testimonials__content">
+              <img class="quote q-open" src="../dist/asset/img/quote-open.png">
+              
+              <div class="testimonials-text" id="HE">
+                <p>En plus d’apporter des informations essentielles sur l’état actuel et les tendances de la biodiversité en Belgique, le “Raport Planète Vivante - La nature en Belgique” a également donné une impulsion majeure à la coopération et à un dialogue renforcé entre les différentes organisations et parties prenantes à travers le pays.</p>
+                <small>Hilde Eggermont, Belgian Biodiversity Platform</small>
+              </div>
+              
+              <div class="testimonials-text" id="HS">
+                <p>Ce “Rapport Planète Vivante” envoie un message concret, scientifiquement fondé et indépendant, qui démontre à quel point il est nécessaire d’agir plus et mieux, si nous voulons nous engager à véritablement relever la courbe de la perte de biodiversité.</p>
+                <small>Hendrik Segers, Institut royal des Sciences naturelles de Belgique</small>
+              </div>
+              
+              <div class="testimonials-text" id="JYP">
+                <p>Le “Rapport Planète Vivante – La nature en Belgique” est un magnifique exemple de mobilisation des données récoltées sur le terrain par les naturalistes afin de mieux comprendre comment évolue la nature dans notre pays.</p>
+                <small>Jean-Yves Paquet, Natagora</small>
+              </div>
+              
+              <div class="testimonials-text" id="MH">
+                <p>Rassembler toutes les données disponibles (et moins disponibles) sur la biodiversité et essayer d'en tirer les meilleures tendances pour créer un Index Planète Vivante était le plus grand défi de ce projet.</p>
+                <small>Marc Herremans, Natuurpunt</small>
+              </div>
+              
+              <div class="testimonials-text" id="OS">
+                <p>L’élaboration du “Rapport Planète Vivante – La nature en Belgique” est une belle démonstration de volonté de travailler ensemble pour améliorer l’état de la biodiversité en Belgique. Ce rapport sans précédent est un premier pas dans cette direction.</p>
+                <small>Olga Szczodry, WWF-Belgique</small>
+              </div>
+              
+              <img class="quote q-close" src="../dist/asset/img/quote-close.png">
             </div>
-            
-            <div class="testimonials-text" id="HS">
-              <p>Ce “Rapport Planète Vivante” envoie un message concret, scientifiquement fondé et indépendant, qui démontre à quel point il est nécessaire d’agir plus et mieux, si nous voulons nous engager à véritablement relever la courbe de la perte de biodiversité.</p>
-              <small>Hendrik Segers, Institut royal des Sciences naturelles de Belgique</small>
-            </div>
-            
-            <div class="testimonials-text" id="JYP">
-              <p>Le “Rapport Planète Vivante – La nature en Belgique” est un magnifique exemple de mobilisation des données récoltées sur le terrain par les naturalistes afin de mieux comprendre comment évolue la nature dans notre pays.</p>
-              <small>Jean-Yves Paquet, Natagora</small>
-            </div>
-            
-            <div class="testimonials-text" id="MH">
-              <p>Rassembler toutes les données disponibles (et moins disponibles) sur la biodiversité et essayer d'en tirer les meilleures tendances pour créer un Index Planète Vivante était le plus grand défi de ce projet.</p>
-              <small>Marc Herremans, Natuurpunt</small>
-            </div>
-            
-            <div class="testimonials-text" id="OS">
-              <p>L’élaboration du “Rapport Planète Vivante – La nature en Belgique” est une belle démonstration de volonté de travailler ensemble pour améliorer l’état de la biodiversité en Belgique. Ce rapport sans précédent est un premier pas dans cette direction.</p>
-              <small>Olga Szczodry, WWF-Belgique</small>
-            </div>
-            
-            <img class="quote q-close" src="../dist/asset/img/quote-close.png">
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- END TESTIMONIALS -->
-  
-  <!-- TESTIMONIALS MOBILE -->
-  <section class="testimonials-mobile mt-5 d-block d-md-none">
-    <div class="container p-0">
-      <div class="row justify-content-center">
-        <div class="col-12 col-testimonials">
-          
-          <div id="testimonials-slick" class="picture-container">
-            <div class="profile-item-m">
-              <img src="../dist/asset/img/Hilde Eggermont.png">
+    </section>
+    <!-- END TESTIMONIALS -->
+    
+    <!-- TESTIMONIALS MOBILE -->
+    <section class="testimonials-mobile mt-5 d-block d-md-none">
+      <div class="container p-0">
+        <div class="row justify-content-center">
+          <div class="col-12 col-testimonials">
+            
+            <div id="testimonials-slick" class="picture-container">
+              <div class="profile-item-m">
+                <img src="../dist/asset/img/Hilde Eggermont.png">
+              </div>
+              <div class="profile-item-m">
+                <img src="../dist/asset/img/Hendrik Segers.png">
+              </div>
+              <div class="profile-item-m">
+                <img src="../dist/asset/img/Jean-Yves Paquet.png">
+              </div>
+              <div class="profile-item-m">
+                <img src="../dist/asset/img/Marc Herremans.png">
+              </div>
+              <div class="profile-item-m">
+                <img src="../dist/asset/img/Olga Szczodry.png">
+              </div>
             </div>
-            <div class="profile-item-m">
-              <img src="../dist/asset/img/Hendrik Segers.png">
-            </div>
-            <div class="profile-item-m">
-              <img src="../dist/asset/img/Jean-Yves Paquet.png">
-            </div>
-            <div class="profile-item-m">
-              <img src="../dist/asset/img/Marc Herremans.png">
-            </div>
-            <div class="profile-item-m">
-              <img src="../dist/asset/img/Olga Szczodry.png">
+            <img id="testimonials-caret" class="caret" src="../dist/asset/img/caret-right.svg">
+            
+          </div>
+        </div>
+        <div class="row mt-5 justify-content-center p-2">
+          <div class="col-12">
+            <div class="testimonials-mobile__content">
+              <img class="quote q-open" src="../dist/asset/img/quote-open.png">
+              
+              <div class="testimonials-text mob" id="M-HE">
+                <p>En plus d’apporter des informations essentielles sur l’état actuel et les tendances de la biodiversité en Belgique, le “Raport Planète Vivante - La nature en Belgique” a également donné une impulsion majeure à la coopération et à un dialogue renforcé entre les différentes organisations et parties prenantes à travers le pays.</p>
+                <small>Hilde Eggermont, Belgian Biodiversity Platform</small>
+              </div>
+              
+              <div class="testimonials-text mob" id="M-HS">
+                <p>Ce “Rapport Planète Vivante” envoie un message concret, scientifiquement fondé et indépendant, qui démontre à quel point il est nécessaire d’agir plus et mieux, si nous voulons nous engager à véritablement relever la courbe de la perte de biodiversité.</p>
+                <small>Hendrik Segers, Institut royal des Sciences naturelles de Belgique</small>
+              </div>
+              
+              <div class="testimonials-text mob" id="M-JYP">
+                <p>Le “Rapport Planète Vivante – La nature en Belgique” est un magnifique exemple de mobilisation des données récoltées sur le terrain par les naturalistes afin de mieux comprendre comment évolue la nature dans notre pays.</p>
+                <small>Jean-Yves Paquet, Natagora</small>
+              </div>
+              
+              <div class="testimonials-text mob" id="M-MH">
+                <p>Rassembler toutes les données disponibles (et moins disponibles) sur la biodiversité et essayer d'en tirer les meilleures tendances pour créer un Index Planète Vivante était le plus grand défi de ce projet.</p>
+                <small>Marc Herremans, Natuurpunt</small>
+              </div>
+              
+              <div class="testimonials-text mob" id="M-OS">
+                <p>L’élaboration du “Rapport Planète Vivante – La nature en Belgique” est une belle démonstration de volonté de travailler ensemble pour améliorer l’état de la biodiversité en Belgique. Ce rapport sans précédent est un premier pas dans cette direction.</p>
+                <small>Olga Szczodry, WWF-Belgique</small>
+              </div>
+              
+              <img class="quote q-close" src="../dist/asset/img/quote-close.png">
             </div>
           </div>
-          <img id="testimonials-caret" class="caret" src="../dist/asset/img/caret-right.svg">
-          
         </div>
       </div>
-      <div class="row mt-5 justify-content-center p-2">
-        <div class="col-12">
-          <div class="testimonials-mobile__content">
-            <img class="quote q-open" src="../dist/asset/img/quote-open.png">
+    </section>
+    <!-- END TESTIMONIALS -->
+    
+    <!-- BIODIVERSITY DESKTOP & MOBILE -->
+    <section id="bio" class="biodiversity">
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <img class="d-none d-md-block img-fluid my-2 mx-auto" src="../dist/asset/img/swamp.png">
+            <img class="d-none d-md-block img-fluid my-2 mx-auto" src="../dist/asset/img/seal.png">
+          </div>
+          <div class="col-md-5 pr-md-0">
             
-            <div class="testimonials-text mob" id="M-HE">
-              <p>En plus d’apporter des informations essentielles sur l’état actuel et les tendances de la biodiversité en Belgique, le “Raport Planète Vivante - La nature en Belgique” a également donné une impulsion majeure à la coopération et à un dialogue renforcé entre les différentes organisations et parties prenantes à travers le pays.</p>
-              <small>Hilde Eggermont, Belgian Biodiversity Platform</small>
+            <h2>Vous avez dit biodiversité ?</h2>
+            <div id="mini-navbar-second" class="d-none d-md-inline-block mb-4">
+              <ul class="nav">
+                <li class="slide1"></li>
+                <li class="slide2"></li>
+                <li><a id="sh-importance" class="active" href="#/">L’importance</br>de la biodiversité</a></li>
+                <li><a id="sh-what" href="#/">Qu’est-ce que</br>la biodiversité ?</a></li>
+              </ul>
             </div>
             
-            <div class="testimonials-text mob" id="M-HS">
-              <p>Ce “Rapport Planète Vivante” envoie un message concret, scientifiquement fondé et indépendant, qui démontre à quel point il est nécessaire d’agir plus et mieux, si nous voulons nous engager à véritablement relever la courbe de la perte de biodiversité.</p>
-              <small>Hendrik Segers, Institut royal des Sciences naturelles de Belgique</small>
+            <div id="importance">
+              <h3 class="d-block d-md-none">L’importance de la biodiversité</h3>
+              <p>Toutes nos activités économiques et même l’ensemble de la société dépendent de « services écosystémiques » - fertilisation des sols, environnement sain avec de l’air pur et de l’eau potable, nourriture, matières premières… - absolument vitaux.</p>
+              <p class="hit bold primary font-wwf font-30">Plus la biodiversité est riche, plus l’humanité bénéficie de ces services essentiels.</p>
+              <p>Mais au-delà de ces bienfaits, la nature a une valeur intrinsèque. Il serait plus que judicieux d’envisager l’humain comme pleinement intégré à son environnement naturel qui, comme le soulignent de plus en plus d’études scientifiques, joue un rôle déterminant sur sa santé physique et mentale.</p>
+              <img class="d-block d-md-none img-fluid my-2" src="../dist/asset/img/swamp.png">
+            </div>
+            <div id="what" class="d-block d-md-none">
+              <h3 class="d-block d-md-none mt-5">Qu’est-ce que la biodiversité ?</h3>
+              <p><span class="hit bold">Contraction des mots « biologie » et « diversité », la biodiversité représente l’extraordinaire diversité de la vie sur Terre.</span></br>Elle englobe les différents animaux, végétaux, champignons et micro-organismes, mais aussi leurs populations et leurs habitats naturels. On distingue trois niveaux de biodiversité :</p>
+              <ol>
+                <li>La diversité génétique ou la diversité des individus au sein d’une même espèce.</li>
+                <li>La diversité des espèces ou la diversité de toutes les espèces de plantes, d’animaux et de micro-organismes.</li>
+                <li>La diversité des écosystèmes, qui reflète les différentes interactions des populations entre elles et avec leur milieu physique.</li>
+              </ol>
+              <p>Les espèces et les espaces de chacun de ces niveaux sont en constante évolution et interagissent entre eux. Une grande diversité génétique permet ainsi aux espèces de s’adapter plus facilement aux modifications de leur environnement. En Belgique, par exemple, les espèces capables de s’adapter à des conditions plus sèches ont plus de chances de survivre au changement climatique.</p>
+              <img class="d-block d-md-none img-fluid my-2" src="../dist/asset/img/seal.png">
             </div>
             
-            <div class="testimonials-text mob" id="M-JYP">
-              <p>Le “Rapport Planète Vivante – La nature en Belgique” est un magnifique exemple de mobilisation des données récoltées sur le terrain par les naturalistes afin de mieux comprendre comment évolue la nature dans notre pays.</p>
-              <small>Jean-Yves Paquet, Natagora</small>
-            </div>
-            
-            <div class="testimonials-text mob" id="M-MH">
-              <p>Rassembler toutes les données disponibles (et moins disponibles) sur la biodiversité et essayer d'en tirer les meilleures tendances pour créer un Index Planète Vivante était le plus grand défi de ce projet.</p>
-              <small>Marc Herremans, Natuurpunt</small>
-            </div>
-            
-            <div class="testimonials-text mob" id="M-OS">
-              <p>L’élaboration du “Rapport Planète Vivante – La nature en Belgique” est une belle démonstration de volonté de travailler ensemble pour améliorer l’état de la biodiversité en Belgique. Ce rapport sans précédent est un premier pas dans cette direction.</p>
-              <small>Olga Szczodry, WWF-Belgique</small>
-            </div>
-            
-            <img class="quote q-close" src="../dist/asset/img/quote-close.png">
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- END TESTIMONIALS -->
-  
-  <!-- BIODIVERSITY DESKTOP & MOBILE -->
-  <section id="bio" class="biodiversity">
-    <div class="container mt-5">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <img class="d-none d-md-block img-fluid my-2 mx-auto" src="../dist/asset/img/swamp.png">
-          <img class="d-none d-md-block img-fluid my-2 mx-auto" src="../dist/asset/img/seal.png">
-        </div>
-        <div class="col-md-5 pr-md-0">
-          
-          <h2>Vous avez dit biodiversité ?</h2>
-          <div id="mini-navbar-second" class="d-none d-md-inline-block mb-4">
-            <ul class="nav">
-              <li class="slide1"></li>
-              <li class="slide2"></li>
-              <li><a id="sh-importance" class="active" href="#/">L’importance</br>de la biodiversité</a></li>
-              <li><a id="sh-what" href="#/">Qu’est-ce que</br>la biodiversité ?</a></li>
-            </ul>
-          </div>
-          
-          <div id="importance">
-            <h3 class="d-block d-md-none">L’importance de la biodiversité</h3>
-            <p>Toutes nos activités économiques et même l’ensemble de la société dépendent de « services écosystémiques » - fertilisation des sols, environnement sain avec de l’air pur et de l’eau potable, nourriture, matières premières… - absolument vitaux.</p>
-            <p class="hit bold primary font-wwf font-30">Plus la biodiversité est riche, plus l’humanité bénéficie de ces services essentiels.</p>
-            <p>Mais au-delà de ces bienfaits, la nature a une valeur intrinsèque. Il serait plus que judicieux d’envisager l’humain comme pleinement intégré à son environnement naturel qui, comme le soulignent de plus en plus d’études scientifiques, joue un rôle déterminant sur sa santé physique et mentale.</p>
-            <img class="d-block d-md-none img-fluid my-2" src="../dist/asset/img/swamp.png">
-          </div>
-          <div id="what" class="d-block d-md-none">
-            <h3 class="d-block d-md-none mt-5">Qu’est-ce que la biodiversité ?</h3>
-            <p><span class="hit bold">Contraction des mots « biologie » et « diversité », la biodiversité représente l’extraordinaire diversité de la vie sur Terre.</span></br>Elle englobe les différents animaux, végétaux, champignons et micro-organismes, mais aussi leurs populations et leurs habitats naturels. On distingue trois niveaux de biodiversité :</p>
-            <ol>
-              <li>La diversité génétique ou la diversité des individus au sein d’une même espèce.</li>
-              <li>La diversité des espèces ou la diversité de toutes les espèces de plantes, d’animaux et de micro-organismes.</li>
-              <li>La diversité des écosystèmes, qui reflète les différentes interactions des populations entre elles et avec leur milieu physique.</li>
-            </ol>
-            <p>Les espèces et les espaces de chacun de ces niveaux sont en constante évolution et interagissent entre eux. Une grande diversité génétique permet ainsi aux espèces de s’adapter plus facilement aux modifications de leur environnement. En Belgique, par exemple, les espèces capables de s’adapter à des conditions plus sèches ont plus de chances de survivre au changement climatique.</p>
-            <img class="d-block d-md-none img-fluid my-2" src="../dist/asset/img/seal.png">
-          </div>
-          
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- END BIODIVERSITY -->
-  
-  <!-- ZOOM DESKTOP -->
-  <section class="zoom d-none d-md-block mt-5">
-    <img class="zoom__background h-100" src="../dist/asset/img/rainette-verte.png">
-    <div class="container h-100">
-      <div class="row h-100">
-        <div class="col-xl-4 col-lg-5 col-sm-7 align-self-center custom-breakpoint">
-          <h2 class="mb-5">Zoom sur</br>la faune belge</h2>
-          <a href="#/" class="button button--block button--light btn-animals" data-image="faucon">
-            Le Faucon Pelerin
-            <div class="btn-roll-over">
-              En 1973, le dernier faucon pèlerin nicheur a disparu de Belgique... Qu’en est-il aujourd’hui ?
-            </div>
-          </a>
-          <a href="#/" class="button button--block button--light btn-animals active" data-image="rainette">
-            La Rainette Verte
-            <div class="btn-roll-over">
-              Quelles actions ont été mises en place pour la sauver de l’extinction ?
-            </div>
-          </a>
-          <a href="#/" class="button button--block button--light btn-animals" data-image="loup">
-            Le Loup
-            <div class="btn-roll-over">
-              Saviez-vous qu’après plus d’un siècle, y a une première meute en Belgique ? Découvrez son histoire !  
-            </div>
-          </a>
-          <a href="#/" class="button button--block button--light btn-animals" data-image="alouette">
-            L'Alouette des Champs
-            <div class="btn-roll-over">
-              Pourquoi sa population a-t-elle diminué de 70% en 40 ans ?
-            </div>
-          </a>
-          <p>Allez plus loin et découvrez toute la richesse de la faune belge !</p>
-          <a class="link" href="#/">Téléchargez notre rapport et l’ensemble de nos études de la vie sauvage.</a>
-        </div>
-      </div>
-    </div>
-    <div class="left-panel">
-      <img class="close" src="../dist/asset/img/icon-close.png">
-      
-      <div class="content content-faucon">
-        <h3>Le Faucon Pelerin</h3>
-        <small>Falco peregrinus</small>
-        <p>Le faucon pèlerin est un véritable acrobate des airs. Son corps aérodynamique et sa très grande agilité lui permettent de fendre l’air avec des pointes à plus de 200 km/h. Ces prouesses aériennes font de lui l’oiseau le plus rapide au monde.</p>
-        <p>Au début du 20e siècle, les faucons pèlerins ont été intensivement chassés. Pendant la Seconde Guerre mondiale, ils étaient systématiquement abattus pour protéger les pigeons porteurs de messages. L’usage intensif de pesticides comme le DDT (dans les années 1950-1970) a entraîné un déclin important de leurs populations.</p>
-        <p>En 1973, le dernier faucon pèlerin nicheur a disparu de Belgique, ce qui incita les défenseurs de la nature à tirer la sonnette d’alarme. Une directive européenne assure désormais la protection de l’espèce au sein de l’Union, les pesticides les plus dangereux ont été bannis, plusieurs programmes d’élevage et de réintroduction ont été lancés et des nichoirs ont été installés dans de nombreux endroits. Tous ces efforts ont porté leurs fruits. Depuis les années 1990, le faucon pèlerin a commencé à réapparaître dans le ciel belge. Aujourd’hui, on compte un peu plus de 80 couples nicheurs en Belgique.</p>
-        <p>Ce rapace niche sur des parois rocheuses ou sur de hauts bâtiments, comme des tours de refroidissement, des églises ou des cathédrales. À Bruxelles, un couple s’est installé depuis 2004 sur la Cathédrale Saints-Michel-et-Gudule. L’Institut Royal des Sciences naturelles de Belgique y a installé des webcams. Durant la période de nidification, les passants peuvent ainsi suivre en direct les images du nid, situé 50 m plus haut.</p>
-        <p>Le faucon pèlerin se porte donc bien en Belgique. Avec un bémol toutefois : ses effectifs réduits le rendent vulnérable face aux menaces futures, la survie de l’espèce n’est donc pas garantie.</p>
-      </div>
-      
-      <div class="content content-rainette">
-        <h3>La Rainette Verte</h3>
-        <small>Hyla arborea</small>
-        <p>La rainette verte est une petite grenouille de couleur vert pomme, avec une bande sombre qui sépare le dos du ventre. Elle vit à proximité des mares et des étangs bordés de buissons. En journée, elle somnole, blottie sur une branche exposée au soleil. En fonction de la température, sa couleur peut varier du vert au jaune en passant par le brun. Au crépuscule et pendant la nuit, elle s’active et part à la chasse aux insectes. </p>
-        <p>Jusqu’aux années 1980, la rainette verte était très répandue en Belgique. L’espèce a ensuite connu une baisse spectaculaire de sa population. À l’aube du 21e siècle, la situation était tout simplement dramatique. On dénombrait à peine 200 mâles chanteurs en Flandre. En Wallonie, l’espèce s’est même éteinte.</p>
-        <p>Les autorités, les associations de protection de la nature et les gestionnaires des derniers terrains où l’espèce est présente mettent désormais tout en œuvre pour la sauver de l’extinction. Avec succès : les effectifs sont en progression grâce à la création d’étangs et de mares, à une gestion adéquate des plans d’eau et aux aménagements spécifiques dans les milieux environnants. Certains sites en Flandre, notamment au Limbourg, abritent désormais des populations stables de rainettes vertes, allant de quelques centaines à plusieurs milliers d’individus. À partir de ces sites, l’espèce pourra étendre son aire de répartition, notamment grâce à l’aménagement de corridors naturels. Ce réseau écologique favorisera les échanges d’individus et donc de matériel génétique entre les différentes populations. Grâce au maintien d’une large base génétique, les populations seront plus résistantes face aux perturbations du milieu.</p>  
-      </div>
-      
-      <div class="content content-loup">
-        <h3>Le Loup</h3>
-        <small>Canis lupus</small>
-        <p>Le loup est de retour en Belgique. En 2017, la louve Naya a quitté sa meute en Allemagne pour s’établir à plus de 500 kilomètres de là, dans la province du Limbourg. Elle fut la première louve de retour en Belgique après plus de 100 ans d’absence. En 2018, on comptait au moins trois autres loups en Belgique. Le plus célèbre, le loup August, formait un couple avec Naya. En 2019 et 2020 également, plusieurs loups ont été observés chez nous, en provenance des pays voisins où le nombre de meutes augmente. Avec la naissance des louveteaux de Noëlla et d'August, une première meute est maintenant officiellement établie dans notre pays : une première depuis plus de 100 ans.</p>
-        <p>Son retour est une très bonne nouvelle pour la nature : il joue un rôle clé au sein d’un écosystème naturel, équilibrant les populations de proies et de prédateurs. Le loup contribue à la bonne santé des populations qu’il cible, à savoir les herbivores, en chassant ses proies parmi les animaux malades ou affaiblis. En cas de présence de loups, les herbivores évitent certaines zones dans la forêt. À ces endroits, l’herbe n’est plus broutée, ce qui permet à la végétation et à la forêt de se régénérer. </p>
-        <p>Mais tout n’est pas rose pour autant. Les éleveurs s’inquiètent pour leurs troupeaux. Après 100 ans d’absence, nous avons oublié comment cohabiter avec le loup. En 2019, Naya et ses louveteaux (à naître?) ont ainsi très probablement été tués délibérément. Il est crucial d’améliorer l’information et la communication avec les différents acteurs. Les associations Natuurpunt, Natagora et le WWF, ont créé la « Wolf Fencing Team », un réseau de bénévoles qui aide les éleveurs à mettre en place des mesures adéquates, en installant par exemple des clôtures pour protéger les troupeaux des attaques de loups. Ceci pour qu’une cohabitation harmonieuse soit possible.</p>
-      </div>
-      
-      <div class="content content-alouette">
-        <h3>L’Alouette des Champs</h3>
-        <small>Alauda arvensis</small>
-        <p>L’alouette des champs est une des espèces emblématiques des milieux agricoles. En vous promenant dans les champs par une belle journée d’été, vous apercevrez peut-être un passereau s’élever dans les airs tout en chantant, jusqu’à une centaine de mètres de haut, avant de se laisser retomber tel un parachute. Ce petit oiseau affectionne particulièrement les espaces ouverts, loin des alignements d’arbres, bosquets et haies. Il construit son nid au sol en le dissimulant parmi la végétation, au sein même des cultures, dans les céréales et les hautes herbes.</p>
-        <p>Jusqu’en 1970, l’alouette des champs était une espèce très abondante, mais en quarante ans, elle a perdu 70 % de ses effectifs belges. En cause : l’augmentation de la taille des parcelles cultivées et l’intensification de l’agriculture. L’alouette des champs a besoin de différents couverts végétaux, proches les uns des autres, qui diffèrent par leur structure et leur période de croissance, afin qu’elle trouve toujours suffisamment de nourriture et une végétation optimale pour la nidification. Avec l’uniformisation des cultures, l’alouette ne parvient plus à avoir ses deux à trois couvées par saison, indispensables au maintien des populations. Les chaumes, qui constituent un excellent garde-manger, deviennent également de plus en plus rares. La chasse et la capture des oiseaux dans les pays où l’alouette des champs hiverne, constituent une menace supplémentaire.</p>
-        <p>Afin de rompre la monotonie des paysages agricoles, certains agriculteurs maintiennent de larges bandes végétalisées avec différentes espèces de graminées et d’herbes. Les premiers résultats sont déjà très concluants : en bordure des champs, les insectes, dont raffolent les oisillons, sont trois fois plus nombreux qu’au milieu des cultures.</p>
-      </div>
-      
-    </div>
-  </section>
-  <!-- END ZOOM -->
-  
-  <!-- ZOOM MOBILE -->
-  <section class="zoom-mobile d-block d-md-none mt-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 zoom-col">
-          <h2 class="mb-4">Zoom sur</br>la faune belge</h2>
-          
-          <div id="zoom-slick" class="zoom-slick-container">
-            <a href="#faucon-zoom-mobile" class="zoom-slide" data-target="faucon">
-              <img class="zoom-slide__img" src="../dist/asset/img/faucon-pelerin.png">
-              <h3>Le Faucon Pelerin</h3>
-              <p>En 1973, le dernier faucon pèlerin nicheur a disparu de Belgique… Qu’en est-il aujourd’hui ?</p>
+    </section>
+    <!-- END BIODIVERSITY -->
+    
+    <!-- ZOOM DESKTOP -->
+    <section class="zoom d-none d-md-block mt-5">
+      <img class="zoom__background h-100" src="../dist/asset/img/rainette-verte.png">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-xl-4 col-lg-5 col-sm-7 align-self-center custom-breakpoint">
+            <h2 class="mb-5">Zoom sur</br>la faune belge</h2>
+            <a href="#/" class="button button--block button--light btn-animals" data-image="faucon">
+              Le Faucon Pelerin
+              <div class="btn-roll-over">
+                En 1973, le dernier faucon pèlerin nicheur a disparu de Belgique... Qu’en est-il aujourd’hui ?
+              </div>
             </a>
-            <a href="#rainette-zoom-mobile" class="zoom-slide" data-target="rainette">
-              <img class="zoom-slide__img" src="../dist/asset/img/rainette-verte.png">
-              <h3>La Rainette Verte</h3>
-              <p>Quelles actions ont été mises en place pour la sauver de l’extinction ?</p>
+            <a href="#/" class="button button--block button--light btn-animals active" data-image="rainette">
+              La Rainette Verte
+              <div class="btn-roll-over">
+                Quelles actions ont été mises en place pour la sauver de l’extinction ?
+              </div>
             </a>
-            <a href="#loup-zoom-mobile" class="zoom-slide" data-target="loup">
-              <img class="zoom-slide__img" src="../dist/asset/img/loup.png">
-              <h3>Le Loup</h3>
-              <p>Saviez-vous qu’après plus d’un siècle, y a une première meute en Belgique ? Découvrez son histoire !</p>
+            <a href="#/" class="button button--block button--light btn-animals" data-image="loup">
+              Le Loup
+              <div class="btn-roll-over">
+                Saviez-vous qu’après plus d’un siècle, y a une première meute en Belgique ? Découvrez son histoire !  
+              </div>
             </a>
-            <a href="#alouette-zoom-mobile" class="zoom-slide" data-target="alouette">
-              <img class="zoom-slide__img" src="../dist/asset/img/alouette-des-champs.png">
-              <h3>L'Alouette des champs</h3>
-              <p>Pourquoi sa population a-t-elle diminué de 70% en 40 ans ?</p>
+            <a href="#/" class="button button--block button--light btn-animals" data-image="alouette">
+              L'Alouette des Champs
+              <div class="btn-roll-over">
+                Pourquoi sa population a-t-elle diminué de 70% en 40 ans ?
+              </div>
             </a>
-            <div class="zoom-slide slide-link">
-              <p>Allez plus loin et découvrez toute la richesse de la faune belge !</p>
-              <p><a href="#/">Téléchargez notre rapport et l’ensemble de nos études de la vie sauvage.</a></p>
-            </div>
+            <p>Allez plus loin et découvrez toute la richesse de la faune belge !</p>
+            <a class="link" href="#/">Téléchargez notre rapport et l’ensemble de nos études de la vie sauvage.</a>
           </div>
-          <img id="zoom-caret-r" class="caret right" src="../dist/asset/img/caret-right.svg">
-          <img id="zoom-caret-l" class="caret left" src="../dist/asset/img/caret-left.svg">
-          
         </div>
       </div>
-    </div>
-    <div class="zoom-panel-mobile">
-      
-      <div class="content content-faucon">
-        <div class="content__img faucon"></div>
-        <img class="zoom-mobile-close" src="../dist/asset/img/icon-arrow-left.svg">
-        <div class="content__text">
+      <div class="left-panel">
+        <img class="close" src="../dist/asset/img/icon-close.png">
+        
+        <div class="content content-faucon">
           <h3>Le Faucon Pelerin</h3>
           <small>Falco peregrinus</small>
           <p>Le faucon pèlerin est un véritable acrobate des airs. Son corps aérodynamique et sa très grande agilité lui permettent de fendre l’air avec des pointes à plus de 200 km/h. Ces prouesses aériennes font de lui l’oiseau le plus rapide au monde.</p>
@@ -651,177 +570,259 @@
           <p>Ce rapace niche sur des parois rocheuses ou sur de hauts bâtiments, comme des tours de refroidissement, des églises ou des cathédrales. À Bruxelles, un couple s’est installé depuis 2004 sur la Cathédrale Saints-Michel-et-Gudule. L’Institut Royal des Sciences naturelles de Belgique y a installé des webcams. Durant la période de nidification, les passants peuvent ainsi suivre en direct les images du nid, situé 50 m plus haut.</p>
           <p>Le faucon pèlerin se porte donc bien en Belgique. Avec un bémol toutefois : ses effectifs réduits le rendent vulnérable face aux menaces futures, la survie de l’espèce n’est donc pas garantie.</p>
         </div>
-      </div>
-      
-      <div class="content content-rainette">
-        <div class="content__img rainette"></div>
-        <img class="zoom-mobile-close" src="../dist/asset/img/icon-arrow-left.svg">
-        <div class="content__text">
+        
+        <div class="content content-rainette">
           <h3>La Rainette Verte</h3>
           <small>Hyla arborea</small>
           <p>La rainette verte est une petite grenouille de couleur vert pomme, avec une bande sombre qui sépare le dos du ventre. Elle vit à proximité des mares et des étangs bordés de buissons. En journée, elle somnole, blottie sur une branche exposée au soleil. En fonction de la température, sa couleur peut varier du vert au jaune en passant par le brun. Au crépuscule et pendant la nuit, elle s’active et part à la chasse aux insectes. </p>
           <p>Jusqu’aux années 1980, la rainette verte était très répandue en Belgique. L’espèce a ensuite connu une baisse spectaculaire de sa population. À l’aube du 21e siècle, la situation était tout simplement dramatique. On dénombrait à peine 200 mâles chanteurs en Flandre. En Wallonie, l’espèce s’est même éteinte.</p>
           <p>Les autorités, les associations de protection de la nature et les gestionnaires des derniers terrains où l’espèce est présente mettent désormais tout en œuvre pour la sauver de l’extinction. Avec succès : les effectifs sont en progression grâce à la création d’étangs et de mares, à une gestion adéquate des plans d’eau et aux aménagements spécifiques dans les milieux environnants. Certains sites en Flandre, notamment au Limbourg, abritent désormais des populations stables de rainettes vertes, allant de quelques centaines à plusieurs milliers d’individus. À partir de ces sites, l’espèce pourra étendre son aire de répartition, notamment grâce à l’aménagement de corridors naturels. Ce réseau écologique favorisera les échanges d’individus et donc de matériel génétique entre les différentes populations. Grâce au maintien d’une large base génétique, les populations seront plus résistantes face aux perturbations du milieu.</p>  
         </div>
-      </div>
-      
-      <div class="content content-loup">
-        <div class="content__img loup"></div>
-        <img class="zoom-mobile-close" src="../dist/asset/img/icon-arrow-left.svg">
-        <div class="content__text">
+        
+        <div class="content content-loup">
           <h3>Le Loup</h3>
           <small>Canis lupus</small>
           <p>Le loup est de retour en Belgique. En 2017, la louve Naya a quitté sa meute en Allemagne pour s’établir à plus de 500 kilomètres de là, dans la province du Limbourg. Elle fut la première louve de retour en Belgique après plus de 100 ans d’absence. En 2018, on comptait au moins trois autres loups en Belgique. Le plus célèbre, le loup August, formait un couple avec Naya. En 2019 et 2020 également, plusieurs loups ont été observés chez nous, en provenance des pays voisins où le nombre de meutes augmente. Avec la naissance des louveteaux de Noëlla et d'August, une première meute est maintenant officiellement établie dans notre pays : une première depuis plus de 100 ans.</p>
           <p>Son retour est une très bonne nouvelle pour la nature : il joue un rôle clé au sein d’un écosystème naturel, équilibrant les populations de proies et de prédateurs. Le loup contribue à la bonne santé des populations qu’il cible, à savoir les herbivores, en chassant ses proies parmi les animaux malades ou affaiblis. En cas de présence de loups, les herbivores évitent certaines zones dans la forêt. À ces endroits, l’herbe n’est plus broutée, ce qui permet à la végétation et à la forêt de se régénérer. </p>
           <p>Mais tout n’est pas rose pour autant. Les éleveurs s’inquiètent pour leurs troupeaux. Après 100 ans d’absence, nous avons oublié comment cohabiter avec le loup. En 2019, Naya et ses louveteaux (à naître?) ont ainsi très probablement été tués délibérément. Il est crucial d’améliorer l’information et la communication avec les différents acteurs. Les associations Natuurpunt, Natagora et le WWF, ont créé la « Wolf Fencing Team », un réseau de bénévoles qui aide les éleveurs à mettre en place des mesures adéquates, en installant par exemple des clôtures pour protéger les troupeaux des attaques de loups. Ceci pour qu’une cohabitation harmonieuse soit possible.</p>
         </div>
-      </div>
-      
-      <div class="content content-alouette">
-        <div class="content__img alouette"></div>
-        <img class="zoom-mobile-close" src="../dist/asset/img/icon-arrow-left.svg">
-        <div class="content__text">
+        
+        <div class="content content-alouette">
           <h3>L’Alouette des Champs</h3>
           <small>Alauda arvensis</small>
           <p>L’alouette des champs est une des espèces emblématiques des milieux agricoles. En vous promenant dans les champs par une belle journée d’été, vous apercevrez peut-être un passereau s’élever dans les airs tout en chantant, jusqu’à une centaine de mètres de haut, avant de se laisser retomber tel un parachute. Ce petit oiseau affectionne particulièrement les espaces ouverts, loin des alignements d’arbres, bosquets et haies. Il construit son nid au sol en le dissimulant parmi la végétation, au sein même des cultures, dans les céréales et les hautes herbes.</p>
           <p>Jusqu’en 1970, l’alouette des champs était une espèce très abondante, mais en quarante ans, elle a perdu 70 % de ses effectifs belges. En cause : l’augmentation de la taille des parcelles cultivées et l’intensification de l’agriculture. L’alouette des champs a besoin de différents couverts végétaux, proches les uns des autres, qui diffèrent par leur structure et leur période de croissance, afin qu’elle trouve toujours suffisamment de nourriture et une végétation optimale pour la nidification. Avec l’uniformisation des cultures, l’alouette ne parvient plus à avoir ses deux à trois couvées par saison, indispensables au maintien des populations. Les chaumes, qui constituent un excellent garde-manger, deviennent également de plus en plus rares. La chasse et la capture des oiseaux dans les pays où l’alouette des champs hiverne, constituent une menace supplémentaire.</p>
           <p>Afin de rompre la monotonie des paysages agricoles, certains agriculteurs maintiennent de larges bandes végétalisées avec différentes espèces de graminées et d’herbes. Les premiers résultats sont déjà très concluants : en bordure des champs, les insectes, dont raffolent les oisillons, sont trois fois plus nombreux qu’au milieu des cultures.</p>
         </div>
+        
       </div>
-    </div>
-  </section>
-  <!-- END ZOOM -->
-  
-  <!-- BAR CHARTS DESKTOP & MOBILE -->
-  <section id="ipv" class="chart mt-5">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <h2 class="mb-5 text-center">Tendances par groupe taxonomique de 283 espèces composant l’ipv belge</h2>
-        </div>
-      </div>
-      <div class="row justify-content-center overflow-auto">
-        <div class="col-md-12 px-4 d-flex justify-content-center overflow-auto">
-          
-          <div id="animation_container_ipv" style="background-color:rgba(255, 255, 255, 1.00); width:600px; height:380px">
-            <canvas id="canvas_ipv" width="600" height="380" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-            <div id="dom_overlay_container_ipv" style="pointer-events:none; overflow:hidden; width:600px; height:380px; position: absolute; left: 0px; top: 0px; display: block;">
-            </div>
-          </div>
-          
-        </div>          
-      </div>
-    </div>
-  </section>
-  <!-- END BAR CHART -->
-  
-  <!-- TIPS BOX DESKTOP & MOBILE -->
-  <section class="tips mb-5">
-    <div class="container">
-      <div class="row">
-        <div id="tips" class="col-md-6 mt-0">
-          <div class="tips-box tips-box--noback">
-            <div class="tips-content">
-              <h2>Des astuces pour  préserver la  biodiversité !</h2>
-              <a href="#/" class="button button--secondary d-none d-md-block mt-3">
-                Découvrez toutes nos astuces
+    </section>
+    <!-- END ZOOM -->
+    
+    <!-- ZOOM MOBILE -->
+    <section class="zoom-mobile d-block d-md-none mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 zoom-col">
+            <h2 class="mb-4">Zoom sur</br>la faune belge</h2>
+            
+            <div id="zoom-slick" class="zoom-slick-container">
+              <a href="#faucon-zoom-mobile" class="zoom-slide" data-target="faucon">
+                <img class="zoom-slide__img" src="../dist/asset/img/faucon-pelerin.png">
+                <h3>Le Faucon Pelerin</h3>
+                <p>En 1973, le dernier faucon pèlerin nicheur a disparu de Belgique… Qu’en est-il aujourd’hui ?</p>
               </a>
+              <a href="#rainette-zoom-mobile" class="zoom-slide" data-target="rainette">
+                <img class="zoom-slide__img" src="../dist/asset/img/rainette-verte.png">
+                <h3>La Rainette Verte</h3>
+                <p>Quelles actions ont été mises en place pour la sauver de l’extinction ?</p>
+              </a>
+              <a href="#loup-zoom-mobile" class="zoom-slide" data-target="loup">
+                <img class="zoom-slide__img" src="../dist/asset/img/loup.png">
+                <h3>Le Loup</h3>
+                <p>Saviez-vous qu’après plus d’un siècle, y a une première meute en Belgique ? Découvrez son histoire !</p>
+              </a>
+              <a href="#alouette-zoom-mobile" class="zoom-slide" data-target="alouette">
+                <img class="zoom-slide__img" src="../dist/asset/img/alouette-des-champs.png">
+                <h3>L'Alouette des champs</h3>
+                <p>Pourquoi sa population a-t-elle diminué de 70% en 40 ans ?</p>
+              </a>
+              <div class="zoom-slide slide-link">
+                <p>Allez plus loin et découvrez toute la richesse de la faune belge !</p>
+                <p><a href="#/">Téléchargez notre rapport et l’ensemble de nos études de la vie sauvage.</a></p>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4">
-          <div class="tips-box">
-            <img class="tips-icon" src="../dist/asset/img/icon-banchemical.svg">
-            <div class="tips-content">
-              <p><span class="hit bold">Bannissez les pesticides et les engrais chimiques</span></br>qui contiennent des métaux lourds (plomb, mercure…)</p>
-            </div>
+            <img id="zoom-caret-r" class="caret right" src="../dist/asset/img/caret-right.svg">
+            <img id="zoom-caret-l" class="caret left" src="../dist/asset/img/caret-left.svg">
+            
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6 mt-4">
-          <div class="tips-box">
-            <img class="tips-icon" src="../dist/asset/img/icon-local.svg">
-            <div class="tips-content">
-              <p><span class="hit bold">Consommez local et privilégiez les circuits courts</span></br>pour réduire les émission de CO2 notamment</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4">
-          <div class="tips-box">
-            <img class="tips-icon" src="../dist/asset/img/icon-green.svg">
-            <div class="tips-content">
-              <p><span class="hit bold">Utilisez des produits d’entretien verts</span></br>pour éviter de polluer l’eau de nos rivières</p>
-            </div>
-          </div>
-          <a href="#/" class="button button--secondary button--block d-block d-md-none mt-4">
-            Découvrez toutes nos astuces
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- END TIPS BOX -->
-  
-  <!-- CYCLE CHART DESKTOP & MOBILE -->
-  <section class="chart cycle my-5">
-    <div class="row justify-content-center">
-      <div class="col-md-8 mb-5">
-        <h2 class="text-center">Intéractions entre climat et biodiversité</h2>
-        <p class="text-center">Le changement climatique à un impact sur la biodiversité, et vice versa.</p>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-12 px-4 d-flex justify-content-center">
+      <div class="zoom-panel-mobile">
         
-        <div id="animation_container_cycle" style="background-color:rgba(255, 255, 255, 1.00); width:620px; height:530px">
-          <canvas id="canvas_cycle" width="620" height="530" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-          <div id="dom_overlay_container_cycle" style="pointer-events:none; overflow:hidden; width:620px; height:530px; position: absolute; left: 0px; top: 0px; display: block;">
+        <div class="content content-faucon">
+          <div class="content__img faucon"></div>
+          <img class="zoom-mobile-close" src="../dist/asset/img/icon-arrow-left.svg">
+          <div class="content__text">
+            <h3>Le Faucon Pelerin</h3>
+            <small>Falco peregrinus</small>
+            <p>Le faucon pèlerin est un véritable acrobate des airs. Son corps aérodynamique et sa très grande agilité lui permettent de fendre l’air avec des pointes à plus de 200 km/h. Ces prouesses aériennes font de lui l’oiseau le plus rapide au monde.</p>
+            <p>Au début du 20e siècle, les faucons pèlerins ont été intensivement chassés. Pendant la Seconde Guerre mondiale, ils étaient systématiquement abattus pour protéger les pigeons porteurs de messages. L’usage intensif de pesticides comme le DDT (dans les années 1950-1970) a entraîné un déclin important de leurs populations.</p>
+            <p>En 1973, le dernier faucon pèlerin nicheur a disparu de Belgique, ce qui incita les défenseurs de la nature à tirer la sonnette d’alarme. Une directive européenne assure désormais la protection de l’espèce au sein de l’Union, les pesticides les plus dangereux ont été bannis, plusieurs programmes d’élevage et de réintroduction ont été lancés et des nichoirs ont été installés dans de nombreux endroits. Tous ces efforts ont porté leurs fruits. Depuis les années 1990, le faucon pèlerin a commencé à réapparaître dans le ciel belge. Aujourd’hui, on compte un peu plus de 80 couples nicheurs en Belgique.</p>
+            <p>Ce rapace niche sur des parois rocheuses ou sur de hauts bâtiments, comme des tours de refroidissement, des églises ou des cathédrales. À Bruxelles, un couple s’est installé depuis 2004 sur la Cathédrale Saints-Michel-et-Gudule. L’Institut Royal des Sciences naturelles de Belgique y a installé des webcams. Durant la période de nidification, les passants peuvent ainsi suivre en direct les images du nid, situé 50 m plus haut.</p>
+            <p>Le faucon pèlerin se porte donc bien en Belgique. Avec un bémol toutefois : ses effectifs réduits le rendent vulnérable face aux menaces futures, la survie de l’espèce n’est donc pas garantie.</p>
           </div>
         </div>
         
+        <div class="content content-rainette">
+          <div class="content__img rainette"></div>
+          <img class="zoom-mobile-close" src="../dist/asset/img/icon-arrow-left.svg">
+          <div class="content__text">
+            <h3>La Rainette Verte</h3>
+            <small>Hyla arborea</small>
+            <p>La rainette verte est une petite grenouille de couleur vert pomme, avec une bande sombre qui sépare le dos du ventre. Elle vit à proximité des mares et des étangs bordés de buissons. En journée, elle somnole, blottie sur une branche exposée au soleil. En fonction de la température, sa couleur peut varier du vert au jaune en passant par le brun. Au crépuscule et pendant la nuit, elle s’active et part à la chasse aux insectes. </p>
+            <p>Jusqu’aux années 1980, la rainette verte était très répandue en Belgique. L’espèce a ensuite connu une baisse spectaculaire de sa population. À l’aube du 21e siècle, la situation était tout simplement dramatique. On dénombrait à peine 200 mâles chanteurs en Flandre. En Wallonie, l’espèce s’est même éteinte.</p>
+            <p>Les autorités, les associations de protection de la nature et les gestionnaires des derniers terrains où l’espèce est présente mettent désormais tout en œuvre pour la sauver de l’extinction. Avec succès : les effectifs sont en progression grâce à la création d’étangs et de mares, à une gestion adéquate des plans d’eau et aux aménagements spécifiques dans les milieux environnants. Certains sites en Flandre, notamment au Limbourg, abritent désormais des populations stables de rainettes vertes, allant de quelques centaines à plusieurs milliers d’individus. À partir de ces sites, l’espèce pourra étendre son aire de répartition, notamment grâce à l’aménagement de corridors naturels. Ce réseau écologique favorisera les échanges d’individus et donc de matériel génétique entre les différentes populations. Grâce au maintien d’une large base génétique, les populations seront plus résistantes face aux perturbations du milieu.</p>  
+          </div>
+        </div>
+        
+        <div class="content content-loup">
+          <div class="content__img loup"></div>
+          <img class="zoom-mobile-close" src="../dist/asset/img/icon-arrow-left.svg">
+          <div class="content__text">
+            <h3>Le Loup</h3>
+            <small>Canis lupus</small>
+            <p>Le loup est de retour en Belgique. En 2017, la louve Naya a quitté sa meute en Allemagne pour s’établir à plus de 500 kilomètres de là, dans la province du Limbourg. Elle fut la première louve de retour en Belgique après plus de 100 ans d’absence. En 2018, on comptait au moins trois autres loups en Belgique. Le plus célèbre, le loup August, formait un couple avec Naya. En 2019 et 2020 également, plusieurs loups ont été observés chez nous, en provenance des pays voisins où le nombre de meutes augmente. Avec la naissance des louveteaux de Noëlla et d'August, une première meute est maintenant officiellement établie dans notre pays : une première depuis plus de 100 ans.</p>
+            <p>Son retour est une très bonne nouvelle pour la nature : il joue un rôle clé au sein d’un écosystème naturel, équilibrant les populations de proies et de prédateurs. Le loup contribue à la bonne santé des populations qu’il cible, à savoir les herbivores, en chassant ses proies parmi les animaux malades ou affaiblis. En cas de présence de loups, les herbivores évitent certaines zones dans la forêt. À ces endroits, l’herbe n’est plus broutée, ce qui permet à la végétation et à la forêt de se régénérer. </p>
+            <p>Mais tout n’est pas rose pour autant. Les éleveurs s’inquiètent pour leurs troupeaux. Après 100 ans d’absence, nous avons oublié comment cohabiter avec le loup. En 2019, Naya et ses louveteaux (à naître?) ont ainsi très probablement été tués délibérément. Il est crucial d’améliorer l’information et la communication avec les différents acteurs. Les associations Natuurpunt, Natagora et le WWF, ont créé la « Wolf Fencing Team », un réseau de bénévoles qui aide les éleveurs à mettre en place des mesures adéquates, en installant par exemple des clôtures pour protéger les troupeaux des attaques de loups. Ceci pour qu’une cohabitation harmonieuse soit possible.</p>
+          </div>
+        </div>
+        
+        <div class="content content-alouette">
+          <div class="content__img alouette"></div>
+          <img class="zoom-mobile-close" src="../dist/asset/img/icon-arrow-left.svg">
+          <div class="content__text">
+            <h3>L’Alouette des Champs</h3>
+            <small>Alauda arvensis</small>
+            <p>L’alouette des champs est une des espèces emblématiques des milieux agricoles. En vous promenant dans les champs par une belle journée d’été, vous apercevrez peut-être un passereau s’élever dans les airs tout en chantant, jusqu’à une centaine de mètres de haut, avant de se laisser retomber tel un parachute. Ce petit oiseau affectionne particulièrement les espaces ouverts, loin des alignements d’arbres, bosquets et haies. Il construit son nid au sol en le dissimulant parmi la végétation, au sein même des cultures, dans les céréales et les hautes herbes.</p>
+            <p>Jusqu’en 1970, l’alouette des champs était une espèce très abondante, mais en quarante ans, elle a perdu 70 % de ses effectifs belges. En cause : l’augmentation de la taille des parcelles cultivées et l’intensification de l’agriculture. L’alouette des champs a besoin de différents couverts végétaux, proches les uns des autres, qui diffèrent par leur structure et leur période de croissance, afin qu’elle trouve toujours suffisamment de nourriture et une végétation optimale pour la nidification. Avec l’uniformisation des cultures, l’alouette ne parvient plus à avoir ses deux à trois couvées par saison, indispensables au maintien des populations. Les chaumes, qui constituent un excellent garde-manger, deviennent également de plus en plus rares. La chasse et la capture des oiseaux dans les pays où l’alouette des champs hiverne, constituent une menace supplémentaire.</p>
+            <p>Afin de rompre la monotonie des paysages agricoles, certains agriculteurs maintiennent de larges bandes végétalisées avec différentes espèces de graminées et d’herbes. Les premiers résultats sont déjà très concluants : en bordure des champs, les insectes, dont raffolent les oisillons, sont trois fois plus nombreux qu’au milieu des cultures.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END ZOOM -->
+    
+    <!-- BAR CHARTS DESKTOP & MOBILE -->
+    <section id="ipv" class="chart mt-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <h2 class="mb-5 text-center">Tendances par groupe taxonomique de 283 espèces composant l’ipv belge</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center overflow-auto">
+          <div class="col-md-12 px-4 d-flex justify-content-center overflow-auto">
+            
+            <div id="animation_container_ipv" style="background-color:rgba(255, 255, 255, 1.00); width:600px; height:380px">
+              <canvas id="canvas_ipv" width="600" height="380" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+              <div id="dom_overlay_container_ipv" style="pointer-events:none; overflow:hidden; width:600px; height:380px; position: absolute; left: 0px; top: 0px; display: block;">
+              </div>
+            </div>
+            
+          </div>          
+        </div>
+      </div>
+    </section>
+    <!-- END BAR CHART -->
+    
+    <!-- TIPS BOX DESKTOP & MOBILE -->
+    <section class="tips mb-5">
+      <div class="container">
+        <div class="row">
+          <div id="tips" class="col-md-6 mt-0">
+            <div class="tips-box tips-box--noback">
+              <div class="tips-content">
+                <h2>Des astuces pour  préserver la  biodiversité !</h2>
+                <a href="#/" class="button button--secondary d-none d-md-block mt-3">
+                  Découvrez toutes nos astuces
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4">
+            <div class="tips-box">
+              <img class="tips-icon" src="../dist/asset/img/icon-banchemical.svg">
+              <div class="tips-content">
+                <p><span class="hit bold">Bannissez les pesticides et les engrais chimiques</span></br>qui contiennent des métaux lourds (plomb, mercure…)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mt-4">
+            <div class="tips-box">
+              <img class="tips-icon" src="../dist/asset/img/icon-local.svg">
+              <div class="tips-content">
+                <p><span class="hit bold">Consommez local et privilégiez les circuits courts</span></br>pour réduire les émission de CO2 notamment</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4">
+            <div class="tips-box">
+              <img class="tips-icon" src="../dist/asset/img/icon-green.svg">
+              <div class="tips-content">
+                <p><span class="hit bold">Utilisez des produits d’entretien verts</span></br>pour éviter de polluer l’eau de nos rivières</p>
+              </div>
+            </div>
+            <a href="#/" class="button button--secondary button--block d-block d-md-none mt-4">
+              Découvrez toutes nos astuces
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END TIPS BOX -->
+    
+    <!-- CYCLE CHART DESKTOP & MOBILE -->
+    <section class="chart cycle my-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 mb-5">
+          <h2 class="text-center">Intéractions entre climat et biodiversité</h2>
+          <p class="text-center">Le changement climatique à un impact sur la biodiversité, et vice versa.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-12 px-4 d-flex justify-content-center">
+          
+          <div id="animation_container_cycle" style="background-color:rgba(255, 255, 255, 1.00); width:620px; height:530px">
+            <canvas id="canvas_cycle" width="620" height="530" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+            <div id="dom_overlay_container_cycle" style="pointer-events:none; overflow:hidden; width:620px; height:530px; position: absolute; left: 0px; top: 0px; display: block;">
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <!-- END CYCLE CHART -->
+    
+    <!-- FOOTER DESKTOP & MOBILE -->
+    <footer>
+      <div class="footer-top">
+        <div class="logo-container">
+          <a href="https://wwf.be/fr/" target="_blank"><img class="wwf-logo" src="../dist/asset/img/logo_wwf.png"></a>
+          <a href="https://www.naturalsciences.be/fr" target="_blank"><img class="partner" src="../dist/asset/img/logo_museum.png"></a>
+          <a href="https://www.natagora.be/" target="_blank"><img class="partner" src="../dist/asset/img/logo_natagora.png"></a>
+          <a href="https://www.natuurpunt.be/" target="_blank"><img class="partner" src="../dist/asset/img/logo_natuurpunt.png"></a>
+          <a href="http://www.biodiversity.be/" target="_blank"><img class="partner" src="../dist/asset/img/logo_biodiversity.png"></a>
+        </div>
+        <div class="social-container">
+          <a href="#/"><img src="../dist/asset/img/icon_twitter.svg"></a>
+          <a href="#/"><img src="../dist/asset/img/icon_facebook.svg"></a>
+          <a href="#/"><img src="../dist/asset/img/icon_linkedin.svg"></a>       
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a href="https://wwf.be/fr/copyright/" target="_blank">©Tous droits réservés WWF</a>
+      </div>
+    </footer>
+    <!-- END FOOTER -->
+    
+    <!-- POPUP MESSAGE DESKTOP & MOBILE -->
+    <div class="popup">
+      <div class="popup__msg">
+        <span>La découverte de la faune vous intéresse ?</span></br>Parcourez la planète avec nous, à travers notre rapport sur la vie animale dans le monde !
+      </div>
+      <div class="popup__control">
+        <a id="popup-close" href="#close"><img src="../dist/asset/img/icon_cross.svg" ></a>
+        <a href="#/"><img src="../dist/asset/img/icon_arrow-right.svg" ></a>
       </div>
     </div>
-  </section>
-  <!-- END CYCLE CHART -->
-  
-  <!-- FOOTER DESKTOP & MOBILE -->
-  <footer>
-    <div class="footer-top">
-      <div class="logo-container">
-        <a href="https://wwf.be/fr/" target="_blank"><img class="wwf-logo" src="../dist/asset/img/logo_wwf.png"></a>
-        <a href="https://www.naturalsciences.be/fr" target="_blank"><img class="partner" src="../dist/asset/img/logo_museum.png"></a>
-        <a href="https://www.natagora.be/" target="_blank"><img class="partner" src="../dist/asset/img/logo_natagora.png"></a>
-        <a href="https://www.natuurpunt.be/" target="_blank"><img class="partner" src="../dist/asset/img/logo_natuurpunt.png"></a>
-        <a href="http://www.biodiversity.be/" target="_blank"><img class="partner" src="../dist/asset/img/logo_biodiversity.png"></a>
-      </div>
-      <div class="social-container">
-        <a href="#/"><img src="../dist/asset/img/icon_twitter.svg"></a>
-        <a href="#/"><img src="../dist/asset/img/icon_facebook.svg"></a>
-        <a href="#/"><img src="../dist/asset/img/icon_linkedin.svg"></a>       
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <a href="https://wwf.be/fr/copyright/" target="_blank">©Tous droits réservés WWF</a>
-    </div>
-  </footer>
-  <!-- END FOOTER -->
-  
-  <!-- POPUP MESSAGE DESKTOP & MOBILE -->
-  <div class="popup">
-    <div class="popup__msg">
-      <span>La découverte de la faune vous intéresse ?</span></br>Parcourez la planète avec nous, à travers notre rapport sur la vie animale dans le monde !
-    </div>
-    <div class="popup__control">
-      <a id="popup-close" href="#close"><img src="../dist/asset/img/icon_cross.svg" ></a>
-      <a href="#/"><img src="../dist/asset/img/icon_arrow-right.svg" ></a>
-    </div>
+    <!-- END POPUP MESSAGE -->
+    
   </div>
-  <!-- END POPUP MESSAGE -->
+  <!-- END MOBILE WRAPPER -->
   
-</div>
-<!-- END MOBILE WRAPPER -->
-
-<script src="../dist/asset/js/scripts.min.js"></script>
+  <script src="../dist/asset/js/scripts.min.js"></script>
 </body>
 </html>
