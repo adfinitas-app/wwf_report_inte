@@ -27,11 +27,11 @@ footer {
       .logo-container {
         @include flex-row-center;
         .wwf-logo {
-          width: 18%;
+          width: 70%;
         }
         .partner {
-          margin: 0 10px;
-          width: 12%;
+          margin: 10px 5px;
+          width: 80%;
         }
       }
       .social-container {
