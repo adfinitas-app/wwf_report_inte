@@ -12,12 +12,7 @@ function handleLanguage() {
   
   if (path == '/') {
       window.location.replace(url);
-      language = "fr"
   }
-  else if (path.indexOf('/fr') !== -1)
-      language = "fr"
-  else if (path.indexOf('/nl') !== -1)
-      language = "nl"
 }
 
 function toggleLanguage(lang) {
