@@ -12,6 +12,7 @@
       @include flex-row-center;
       cursor: pointer;
       width: 58.5px;
+      height: 46px;
       padding: 10px 0;
       border-right: 1px solid lighten($color: $color-black, $amount: 85%);
       transition: all .15s;

@@ -132,3 +132,30 @@ function moveSecond(id) {
       .width();
   $("#mini-navbar-second .slide1").css({ opacity: 1, left: +position.left, width: width });
 }
+
+$(document).click(function(e) {
+  let nav = $('.navigation__collapse')
+  let target = e.target
+
+  do {
+    if (target === nav) {
+      return
+    }
+    target = target.parentNode
+  } while (target)
+
+  let navWidth = $('.navigation__collapse').parent().outerWidth();
+  let collapseWidth = $('.navigation__collapse').outerWidth();
+  let navL = $('.navigation__collapse').position().left;
+  if (navL <= navWidth - collapseWidth) {
+    $('.navigation__collapse').animate({
+      left: +navWidth,
+    }, 500);
+    $('.popup').animate({
+      right: 40,
+    }, 500);
+    $('.toggler').removeClass('active');
+    if ($(window).width() < 576)
+    $('body').css('overflow-y', 'auto');
+  }
+})
