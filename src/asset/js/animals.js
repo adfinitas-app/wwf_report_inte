@@ -1,8 +1,8 @@
 let images = {
-  'faucon': '../dist/asset/img/faucon-pelerin.png',
-  'rainette': '../dist/asset/img/rainette-verte.png',
-  'loup': '../dist/asset/img/loup.png',
-  'alouette': '../dist/asset/img/alouette-des-champs.png'
+  'faucon': '../dist/asset/img/faucon-pelerin.jpg',
+  'rainette': '../dist/asset/img/rainette-verte.jpg',
+  'loup': '../dist/asset/img/loup.jpg',
+  'alouette': '../dist/asset/img/alouette-des-champs.jpg'
 }
 let zoom = $('.zoom__background');
 
