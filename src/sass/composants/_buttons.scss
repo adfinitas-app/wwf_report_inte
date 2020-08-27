@@ -92,3 +92,10 @@
     }
   }
 }
+
+#btn-nav-width {
+  width: 270.8px;
+  @media (max-width: 768px) {
+    width: auto;
+  }
+}
