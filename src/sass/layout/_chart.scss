@@ -19,3 +19,70 @@
     }
   }
 }
+
+.legend {
+  position: absolute;
+  bottom: 65px;
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    li {
+      position: relative;
+      margin: 0 20px;
+      color: lighten($color: #000000, $amount: 70%);
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: -15px;
+        top: 8px;
+        height: 10px;
+        width: 10px;
+        background-color: gray;
+      }
+      &.red {
+        &:before {
+          background-color: $chart-red;
+        }
+      }
+      &.green {
+        &:before {
+          background-color: $chart-green;
+        }
+      }
+      &.yellow {
+        &:before {
+          background-color: $chart-yellow;
+        }
+      }
+      &.gray {
+        &:before {
+          background-color: $chart-gray;
+        }
+      }
+    }
+  }
+}
+
+.legend-name {
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  left: -25px;
+  top: 120px;
+  transform: rotate(270deg);
+  color: lighten($color: #000000, $amount: 70%);
+@media (min-width: 576px) {
+  left: -25px;
+}
+@media (min-width: 768px) {
+  left: 0;
+}
+@media (min-width: 992px) {
+  left: 120px;
+}
+@media (min-width: 1200px) {
+  left: 200px;
+}
+}
