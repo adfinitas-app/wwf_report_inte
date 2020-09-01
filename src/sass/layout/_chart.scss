@@ -31,6 +31,7 @@
       position: relative;
       margin: 0 20px;
       color: lighten($color: #000000, $amount: 70%);
+      font-size: 13px;
       &:before {
         content: '';
         display: block;
