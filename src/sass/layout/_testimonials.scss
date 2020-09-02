@@ -60,41 +60,47 @@
     .caret {
       position: absolute;
       height: 30px;
-      right: 55px;
-      bottom: 90px;
+      top: 85px;
       z-index: -10;
+      &.right {
+        right: 55px;
+      }
+      &.left {
+        left: 55px;
+      }
     }
   }
-  .picture-container {
-    .profile-item-m {
-      position: relative;
-      padding: 0 auto;
+  .profile-item-m {
+    position: relative;
+    padding: 0;
+    height: 560px;
+    width: auto;
+    .image {
+      position: absolute;
+      right: 0;
+      left: 0;
+      top: 0;
+      margin: auto auto;
       height: 200px;
-      img {
-        position: absolute;
-        right: 0;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto auto;
-        height: 200px;
-        width: 200px;
-      }
+      width: 200px;
     }
   }
   &__content {
-    position: relative;
-    padding: 0 70px;
+    position: absolute;
+    top: 220px;
+    padding: 0 50px;
     min-height: 200px;
     .quote {
       position: absolute;
+      width: 20px;
+      height: 20px;
       &.q-open {
-        left: 10px;
+        left: 30px;
         top: 0;
       }
       &.q-close {
-        right: 10px;
-        bottom: 40px;
+        right: 30px;
+        bottom: 50px;
         @media (max-width: 578px) {
           bottom: 0;
         }
@@ -109,6 +115,7 @@
       small {
         display: flex;
         justify-content: center;
+        text-align: center;
         color: lighten($color: $color-black, $amount: 50%);
       }
     }

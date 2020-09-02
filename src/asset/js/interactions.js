@@ -340,7 +340,7 @@
   
   }).prototype = p = new lib.AnMovieClip();
   p.nominalBounds = new cjs.Rectangle(314.8,267.1,301.09999999999997,261.1);
-  // library properties:
+  // library properties_c_c:
   lib.properties_c = {
     id: '145FF931A6424EB9A014F105A132B87E',
     width: 620,
