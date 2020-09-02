@@ -133,8 +133,184 @@
   </script>
   <!-- END INTERACTIONS ANIMATION -->
   
+  <!-- IPV GLOBAL  -->
+  <script>
+    var canvas_ipv_g, stage, exportRoot_ipv_g, anim_container_ipv_g, dom_overlay_container_ipv_g, fnStartAnimation_ipv_g;
+    function init_ipv_global() {
+      canvas_ipv_g = document.getElementById("canvas_ipv_g");
+      anim_container_ipv_g = document.getElementById("animation_container_ipv_global");
+      dom_overlay_container_ipv_g = document.getElementById("dom_overlay_container_ipv_g");
+      var comp=AdobeAn.getComposition("8C383189973B404E86ED2108298EC733");
+      var lib=comp.getLibrary();
+      var loader = new createjs.LoadQueue(false);
+      loader.addEventListener("fileload", function(evt){handleFileLoad_ipv_g(evt,comp)});
+      loader.addEventListener("complete", function(evt){handleComplete_ipv_g(evt,comp)});
+      var lib=comp.getLibrary();
+      loader.loadManifest(lib.properties_ipv_g.manifest);
+    }
+    function handleFileLoad_ipv_g(evt, comp) {
+      var images=comp.getImages();	
+      if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+    }
+    function handleComplete_ipv_g(evt,comp) {
+      //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+      var lib=comp.getLibrary();
+      var ss=comp.getSpriteSheet();
+      var queue = evt.target;
+      var ssMetadata = lib.ssMetadata;
+      for(i=0; i<ssMetadata.length; i++) {
+        ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+      }
+      exportRoot_ipv_g = new lib.DataInteractionsIPVGeneral();
+      stage = new lib.Stage(canvas_ipv_g);	
+      //Registers the "tick" event listener.
+      fnStartAnimation_ipv_g = function() {
+        stage.addChild(exportRoot_ipv_g);
+        createjs.Ticker.framerate = lib.properties_ipv_g.fps;
+        createjs.Ticker.addEventListener("tick", stage);
+      }	    
+      //Code to support hidpi screens and responsive scaling.
+      AdobeAn.makeResponsive(false,'both',false,1,[canvas_ipv_g,anim_container_ipv_g,dom_overlay_container_ipv_g]);	
+      AdobeAn.compositionLoaded(lib.properties_ipv_g.id);
+      fnStartAnimation_ipv_g();
+    }
+  </script>
+  <!-- END IPV GLOBAL  -->
+  
+  <!-- IPV HUMIDITY  -->
+  <script>
+    var canvas_ipv_h, stage, exportRoot_ipv_h, anim_container_ipv_h, dom_overlay_container_ipv_h, fnStartAnimation_ipv_h;
+    function init_ipv_humidity() {
+      canvas_ipv_h = document.getElementById("canvas_ipv_h");
+      anim_container_ipv_h = document.getElementById("animation_container_ipv_h");
+      dom_overlay_container_ipv_h = document.getElementById("dom_overlay_container_ipv_h");
+      var comp=AdobeAn.getComposition("8C383189973B404E86ED2108298EC734");
+      var lib=comp.getLibrary();
+      var loader = new createjs.LoadQueue(false);
+      loader.addEventListener("fileload", function(evt){handleFileLoad_ipv_h(evt,comp)});
+      loader.addEventListener("complete", function(evt){handleComplete_ipv_h(evt,comp)});
+      var lib=comp.getLibrary();
+      loader.loadManifest(lib.properties_ipv_h.manifest);
+    }
+    function handleFileLoad_ipv_h(evt, comp) {
+      var images=comp.getImages();	
+      if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+    }
+    function handleComplete_ipv_h(evt,comp) {
+      //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+      var lib=comp.getLibrary();
+      var ss=comp.getSpriteSheet();
+      var queue = evt.target;
+      var ssMetadata = lib.ssMetadata;
+      for(i=0; i<ssMetadata.length; i++) {
+        ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+      }
+      exportRoot_ipv_h = new lib.DataInteractionsIPVZonesHumides();
+      stage = new lib.Stage(canvas_ipv_h);	
+      //Registers the "tick" event listener.
+      fnStartAnimation_ipv_h = function() {
+        stage.addChild(exportRoot_ipv_h);
+        createjs.Ticker.framerate = lib.properties_ipv_h.fps;
+        createjs.Ticker.addEventListener("tick", stage);
+      }	    
+      //Code to support hidpi screens and responsive scaling.
+      AdobeAn.makeResponsive(false,'both',false,1,[canvas_ipv_h,anim_container_ipv_h,dom_overlay_container_ipv_h]);	
+      AdobeAn.compositionLoaded(lib.properties_ipv_h.id);
+      fnStartAnimation_ipv_h();
+    }
+  </script>
+  <!-- END IPV HUMIDITY  -->
+  
+  <!-- IPV FOREST  -->
+  <script>
+    var canvas_ipv_f, stage, exportRoot_ipv_f, anim_container_ipv_f, dom_overlay_container_ipv_f, fnStartAnimation_ipv_f;
+    function init_ipv_forest() {
+      canvas_ipv_f = document.getElementById("canvas_ipv_f");
+      anim_container_ipv_f = document.getElementById("animation_container_ipv_f");
+      dom_overlay_container_ipv_f = document.getElementById("dom_overlay_container_ipv_f");
+      var comp=AdobeAn.getComposition("8C383189973B404E86ED2108298EC735");
+      var lib=comp.getLibrary();
+      var loader = new createjs.LoadQueue(false);
+      loader.addEventListener("fileload", function(evt){handleFileLoad_ipv_f(evt,comp)});
+      loader.addEventListener("complete", function(evt){handleComplete_ipv_f(evt,comp)});
+      var lib=comp.getLibrary();
+      loader.loadManifest(lib.properties_ipv_f.manifest);
+    }
+    function handleFileLoad_ipv_f(evt, comp) {
+      var images=comp.getImages();	
+      if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+    }
+    function handleComplete_ipv_f(evt,comp) {
+      //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+      var lib=comp.getLibrary();
+      var ss=comp.getSpriteSheet();
+      var queue = evt.target;
+      var ssMetadata = lib.ssMetadata;
+      for(i=0; i<ssMetadata.length; i++) {
+        ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+      }
+      exportRoot_ipv_f = new lib.DataInteractionsIPVForets();
+      stage = new lib.Stage(canvas_ipv_f);	
+      //Registers the "tick" event listener.
+      fnStartAnimation_ipv_f = function() {
+        stage.addChild(exportRoot_ipv_f);
+        createjs.Ticker.framerate = lib.properties_ipv_f.fps;
+        createjs.Ticker.addEventListener("tick", stage);
+      }	    
+      //Code to support hidpi screens and responsive scaling.
+      AdobeAn.makeResponsive(false,'both',false,1,[canvas_ipv_f,anim_container_ipv_f,dom_overlay_container_ipv_f]);	
+      AdobeAn.compositionLoaded(lib.properties_ipv_f.id);
+      fnStartAnimation_ipv_f();
+    }
+  </script>
+  <!-- END IPV FOREST  -->
+  
+  <!-- IPV FIELD  -->
+  <script>
+    var canvas_ipv_a, stage, exportRoot_ipv_a, anim_container_ipv_a, dom_overlay_container_ipv_a, fnStartAnimation_ipv_a;
+    function init_ipv_field() {
+      canvas_ipv_a = document.getElementById("canvas_ipv_a");
+      anim_container_ipv_a = document.getElementById("animation_container");
+      dom_overlay_container_ipv_a = document.getElementById("dom_overlay_container_ipv_a");
+      var comp=AdobeAn.getComposition("8C383189973B404E86ED2108298EC736");
+      var lib=comp.getLibrary();
+      var loader = new createjs.LoadQueue(false);
+      loader.addEventListener("fileload", function(evt){handleFileLoad_ipv_a(evt,comp)});
+      loader.addEventListener("complete", function(evt){handleComplete_ipv_a(evt,comp)});
+      var lib=comp.getLibrary();
+      loader.loadManifest(lib.properties_ipv_a.manifest);
+    }
+    function handleFileLoad_ipv_a(evt, comp) {
+      var images=comp.getImages();	
+      if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+    }
+    function handleComplete_ipv_a(evt,comp) {
+      //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+      var lib=comp.getLibrary();
+      var ss=comp.getSpriteSheet();
+      var queue = evt.target;
+      var ssMetadata = lib.ssMetadata;
+      for(i=0; i<ssMetadata.length; i++) {
+        ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+      }
+      exportRoot_ipv_a = new lib.DataInteractionsIPVAgriculture();
+      stage = new lib.Stage(canvas_ipv_a);	
+      //Registers the "tick" event listener.
+      fnStartAnimation_ipv_a = function() {
+        stage.addChild(exportRoot_ipv_a);
+        createjs.Ticker.framerate = lib.properties_ipv_a.fps;
+        createjs.Ticker.addEventListener("tick", stage);
+      }	    
+      //Code to support hidpi screens and responsive scaling.
+      AdobeAn.makeResponsive(false,'both',false,1,[canvas_ipv_a,anim_container_ipv_a,dom_overlay_container_ipv_a]);	
+      AdobeAn.compositionLoaded(lib.properties_ipv_a.id);
+      fnStartAnimation_ipv_a();
+    }
+  </script>
+  <!-- END IPV FIELD  -->
+  
 </head>
-<body onload="init_cycle();">
+<body onload="init_cycle();init_ipv_global();">
   
   <!-- Google Tag Manager (noscript) -->
   <noscript>
@@ -221,7 +397,7 @@
     <header>
       <div class="container h-100">
         <div class="row h-100">
-          <div class="col-xl-4 col-lg-5 col-sm-7 my-auto header-col align-self-center">
+          <div class="col-xl-5 col-lg-6 col-sm-8 col-xs-9 my-auto header-col align-self-center">
             <h1>Connaître notre biodiversité  pour mieux la préserver !</h1>
             <p>Natuur in België: ontdek het</br>« Living Planet Report »</p>
             <a id="header-download" href="test.html" class="button button--primary">
@@ -306,10 +482,10 @@
           <div class="col-12 d-flex justify-content-center">
             <div class="ipv-controls">
               <ul class="ipv-menu">
-                <li data-target="all" class="ipv-btn first active"><img src="../dist/asset/img/icon-ipv-all.svg"></li>
-                <li data-target="humidity" class="ipv-btn"><img src="../dist/asset/img/icon-ipv-humidity.svg"></li>
-                <li data-target="forest" class="ipv-btn"><img src="../dist/asset/img/icon-ipv-tree.svg"></li>
-                <li data-target="field" class="ipv-btn"><img src="../dist/asset/img/icon-ipv-wheet.svg"></li>
+                <li onclick="init_ipv_global();" data-target="all" class="ipv-btn first active"><img src="../dist/asset/img/icon-ipv-all.svg"></li>
+                <li onclick="init_ipv_humidity();" data-target="humidity" class="ipv-btn"><img src="../dist/asset/img/icon-ipv-humidity.svg"></li>
+                <li onclick="init_ipv_forest();" data-target="forest" class="ipv-btn"><img src="../dist/asset/img/icon-ipv-tree.svg"></li>
+                <li onclick="init_ipv_field();" data-target="field" class="ipv-btn"><img src="../dist/asset/img/icon-ipv-wheet.svg"></li>
               </ul>
               <img id="ipv-help" src="../dist/asset/img/icon-question.svg">
             </div>
@@ -319,7 +495,11 @@
         <div class="ipv-chart ipv-all">
           <div class="row d-none d-sm-block">
             <div class="col-12 p-0 d-flex justify-content-center">
-              <img src="../dist/asset/img/ipv-chart-all.svg">
+              <div id="animation_container_ipv_global" style="background-color:rgba(255, 255, 255, 1.00); width:750px; height:400px">
+                <canvas id="canvas_ipv_g" width="750" height="400" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+                <div id="dom_overlay_container_ipv_g" style="pointer-events:none; overflow:hidden; width:750px; height:400px; position: absolute; left: 0px; top: 0px; display: block;">
+                </div>
+              </div>
             </div>
           </div>
           <div class="row d-block d-sm-none">
@@ -332,7 +512,11 @@
         <div class="ipv-chart ipv-humidity">
           <div class="row d-none d-sm-block">
             <div class="col-12 p-0 d-flex justify-content-center">
-              <img src="../dist/asset/img/ipv-chart-humidity.svg">
+              <div id="animation_container_ipv_h" style="background-color:rgba(255, 255, 255, 1.00); width:750px; height:400px">
+                <canvas id="canvas_ipv_h" width="750" height="400" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+                <div id="dom_overlay_container_ipv_h" style="pointer-events:none; overflow:hidden; width:750px; height:400px; position: absolute; left: 0px; top: 0px; display: block;">
+                </div>
+              </div>
             </div>
           </div>
           <div class="row d-block d-sm-none">
@@ -345,7 +529,11 @@
         <div class="ipv-chart ipv-forest">
           <div class="row d-none d-sm-block">
             <div class="col-12 p-0 d-flex justify-content-center">
-              <img src="../dist/asset/img/ipv-chart-forest.svg">
+              <div id="animation_container_ipv_f" style="background-color:rgba(255, 255, 255, 1.00); width:750px; height:400px">
+                <canvas id="canvas_ipv_f" width="750" height="400" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+                <div id="dom_overlay_container_ipv_f" style="pointer-events:none; overflow:hidden; width:750px; height:400px; position: absolute; left: 0px; top: 0px; display: block;">
+                </div>
+              </div>
             </div>
           </div>
           <div class="row d-block d-sm-none">
@@ -358,7 +546,11 @@
         <div class="ipv-chart ipv-field">
           <div class="row d-none d-sm-block">
             <div class="col-12 p-0 d-flex justify-content-center">
-              <img src="../dist/asset/img/ipv-chart-field.svg">
+              <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:750px; height:400px">
+                <canvas id="canvas_ipv_a" width="750" height="400" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+                <div id="dom_overlay_container_ipv_a" style="pointer-events:none; overflow:hidden; width:750px; height:400px; position: absolute; left: 0px; top: 0px; display: block;">
+                </div>
+              </div>
             </div>
           </div>
           <div class="row d-block d-sm-none">
@@ -729,13 +921,15 @@
           <div class="col-12 px-4 d-flex justify-content-center overflow-auto">
             
             <div class="legend-name">Aantal soorten</div>
-
-            <div id="animation_container_ipv" style="background-color:rgba(255, 255, 255, 1.00); width:600px; height:380px">
-              <canvas id="canvas_ipv" width="600" height="380" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-              <div id="dom_overlay_container_ipv" style="pointer-events:none; overflow:hidden; width:600px; height:380px; position: absolute; left: 0px; top: 0px; display: block;">
+            
+            <div id="ipv_container">
+              <div id="animation_container_ipv" style="background-color:rgba(255, 255, 255, 1.00); width:600px; height:380px">
+                <canvas id="canvas_ipv" width="600" height="380" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+                <div id="dom_overlay_container_ipv" style="pointer-events:none; overflow:hidden; width:600px; height:380px; position: absolute; left: 0px; top: 0px; display: block;">
+                </div>
               </div>
             </div>
-
+            
             <div class="legend">
               <ul>
                 <li class="red">Dalend</li>
@@ -810,14 +1004,16 @@
       <div class="row justify-content-center">
         <div class="col-md-12 px-4 d-flex justify-content-center">
           
-          <!-- <div id="animation_container_cycle" style="background-color:rgba(255, 255, 255, 1.00); width:620px; height:530px">
-            <canvas id="canvas_cycle" width="620" height="530" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-            <div id="dom_overlay_container_cycle" style="pointer-events:none; overflow:hidden; width:620px; height:530px; position: absolute; left: 0px; top: 0px; display: block;">
-            </div>
+          <!-- <div id="ipv_container">
+            <div id="animation_container_cycle" style="background-color:rgba(255, 255, 255, 1.00); width:620px; height:530px">
+              <canvas id="canvas_cycle" width="620" height="530" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+              <div id="dom_overlay_container_cycle" style="pointer-events:none; overflow:hidden; width:620px; height:530px; position: absolute; left: 0px; top: 0px; display: block;">
+              </div>
+            </div> 
           </div> -->
-  
+          
           <img style="width: 620px; height: 530px;" src="../dist/asset/img/chart-placeholder.png">
-
+          
         </div>
       </div>
     </section>

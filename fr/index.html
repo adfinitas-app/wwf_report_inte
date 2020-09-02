@@ -8,7 +8,7 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WZPGWR');</script>
   <!-- End Google Tag Manager -->
-
+  
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,7 +90,6 @@
   
   <!-- INTERACTIONS ANIMATION  -->
   <script>
-    var canvas_c, stage, exportRoot_c, anim_container_c, dom_overlay_container_c, fnStartAnimation_c;
     function init_cycle() {
       canvas_c = document.getElementById("canvas_cycle");
       anim_container_c = document.getElementById("animation_container_cycle");
@@ -132,7 +131,7 @@
     }
   </script>
   <!-- END INTERACTIONS ANIMATION -->
-
+  
   <!-- IPV GLOBAL  -->
   <script>
     var canvas_ipv_g, stage, exportRoot_ipv_g, anim_container_ipv_g, dom_overlay_container_ipv_g, fnStartAnimation_ipv_g;
@@ -176,7 +175,7 @@
     }
   </script>
   <!-- END IPV GLOBAL  -->
-
+  
   <!-- IPV HUMIDITY  -->
   <script>
     var canvas_ipv_h, stage, exportRoot_ipv_h, anim_container_ipv_h, dom_overlay_container_ipv_h, fnStartAnimation_ipv_h;
@@ -264,7 +263,7 @@
     }
   </script>
   <!-- END IPV FOREST  -->
-
+  
   <!-- IPV FIELD  -->
   <script>
     var canvas_ipv_a, stage, exportRoot_ipv_a, anim_container_ipv_a, dom_overlay_container_ipv_a, fnStartAnimation_ipv_a;
@@ -308,7 +307,7 @@
     }
   </script>
   <!-- END IPV FIELD  -->
-
+  
 </head>
 <body onload="init_cycle();init_ipv_global();">
   
@@ -397,7 +396,7 @@
     <header>
       <div class="container h-100">
         <div class="row h-100">
-          <div class="col-xl-4 col-lg-5 col-sm-7 my-auto header-col align-self-center">
+          <div class="col-xl-5 col-lg-6 col-sm-8 col-xs-9 my-auto header-col align-self-center">
             <h1>Connaître notre biodiversité  pour mieux la préserver !</h1>
             <p>La nature en Belgique : découvrez le</br>« Rapport Planète Vivante »</p>
             <a id="header-download" href="test.html" class="button button--primary">
@@ -633,29 +632,75 @@
       <div class="container p-0">
         <div class="row justify-content-center">
           <div class="col-12 col-testimonials">
-            
-            <div id="testimonials-slick" class="picture-container">
+            <img id="testimonials-caret-l" class="caret left" src="../dist/asset/img/caret-left.svg">
+            <div id="testimonials-slick">
+              
               <div class="profile-item-m">
-                <img src="../dist/asset/img/Hilde Eggermont.png">
+                <img class="image" src="../dist/asset/img/Hilde Eggermont.png">
+                <div class="testimonials-mobile__content">
+                  <img class="quote q-open" src="../dist/asset/img/quote-open.png">
+                  <div class="testimonials-text mob" id="M-HE">
+                    <p>En plus d’apporter des informations essentielles sur l’état actuel et les tendances de la biodiversité en Belgique, le “Raport Planète Vivante - La nature en Belgique” a également donné une impulsion majeure à la coopération et à un dialogue renforcé entre les différentes organisations et parties prenantes à travers le pays.</p>
+                    <small>Hilde Eggermont, Belgian Biodiversity Platform</small>
+                  </div>
+                  <img class="quote q-close" src="../dist/asset/img/quote-close.png">
+                </div>
               </div>
+              
               <div class="profile-item-m">
-                <img src="../dist/asset/img/Hendrik Segers.png">
+                <img class="image" src="../dist/asset/img/Hendrik Segers.png">
+                <div class="testimonials-mobile__content">
+                  <img class="quote q-open" src="../dist/asset/img/quote-open.png">
+                  <div class="testimonials-text mob" id="M-HS">
+                    <p>Ce “Rapport Planète Vivante” envoie un message concret, scientifiquement fondé et indépendant, qui démontre à quel point il est nécessaire d’agir plus et mieux, si nous voulons nous engager à véritablement relever la courbe de la perte de biodiversité.</p>
+                    <small>Hendrik Segers, Institut royal des Sciences naturelles de Belgique</small>
+                  </div>
+                  <img class="quote q-close" src="../dist/asset/img/quote-close.png">
+                </div>
               </div>
+              
               <div class="profile-item-m">
-                <img src="../dist/asset/img/Jean-Yves Paquet.png">
+                <img class="image" src="../dist/asset/img/Jean-Yves Paquet.png">
+                <div class="testimonials-mobile__content">
+                  <img class="quote q-open" src="../dist/asset/img/quote-open.png">
+                  <div class="testimonials-text mob" id="M-JYP">
+                    <p>Le “Rapport Planète Vivante – La nature en Belgique” est un magnifique exemple de mobilisation des données récoltées sur le terrain par les naturalistes afin de mieux comprendre comment évolue la nature dans notre pays.</p>
+                    <small>Jean-Yves Paquet, Natagora</small>
+                  </div>
+                  <img class="quote q-close" src="../dist/asset/img/quote-close.png">
+                </div>
               </div>
+              
               <div class="profile-item-m">
-                <img src="../dist/asset/img/Marc Herremans.png">
+                <img class="image" src="../dist/asset/img/Marc Herremans.png">
+                <div class="testimonials-mobile__content">
+                  <img class="quote q-open" src="../dist/asset/img/quote-open.png">
+                  <div class="testimonials-text mob" id="M-MH">
+                    <p>Rassembler toutes les données disponibles (et moins disponibles) sur la biodiversité et essayer d'en tirer les meilleures tendances pour créer un Index Planète Vivante était le plus grand défi de ce projet.</p>
+                    <small>Marc Herremans, Natuurpunt</small>
+                  </div>
+                  <img class="quote q-close" src="../dist/asset/img/quote-close.png">
+                </div>
               </div>
+              
               <div class="profile-item-m">
-                <img src="../dist/asset/img/Olga Szczodry.png">
+                <img class="image" src="../dist/asset/img/Olga Szczodry.png">
+                <div class="testimonials-mobile__content">
+                  <img class="quote q-open" src="../dist/asset/img/quote-open.png">
+                  <div class="testimonials-text mob" id="M-OS">
+                    <p>L’élaboration du “Rapport Planète Vivante – La nature en Belgique” est une belle démonstration de volonté de travailler ensemble pour améliorer l’état de la biodiversité en Belgique. Ce rapport sans précédent est un premier pas dans cette direction.</p>
+                    <small>Olga Szczodry, WWF-Belgique</small>
+                  </div>
+                  <img class="quote q-close" src="../dist/asset/img/quote-close.png">
+                </div>
               </div>
+              
             </div>
-            <img id="testimonials-caret" class="caret" src="../dist/asset/img/caret-right.svg">
+            <img id="testimonials-caret-r" class="caret right" src="../dist/asset/img/caret-right.svg">
             
           </div>
         </div>
-        <div class="row mt-5 justify-content-center p-2">
+        <!-- <div class="row mt-5 justify-content-center p-2">
           <div class="col-12">
             <div class="testimonials-mobile__content">
               <img class="quote q-open" src="../dist/asset/img/quote-open.png">
@@ -688,7 +733,7 @@
               <img class="quote q-close" src="../dist/asset/img/quote-close.png">
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <!-- END TESTIMONIALS -->
@@ -917,14 +962,16 @@
             <h2 class="mb-5 text-center">Tendances par groupe taxonomique de 283 espèces composant l’ipv belge</h2>
           </div>
         </div>
-        <div class="row justify-content-center overflow-auto">
-          <div class="col-md-12 px-4 d-flex justify-content-center overflow-auto">
+        <div class="row justify-content-center overflow-chart">
+          <div class="col-md-12 px-4 d-flex justify-content-center overflow-chart">
             
             <div class="legend-name">Nombre d’espèces</div>
-
-            <div id="animation_container_ipv" style="background-color:rgba(255, 255, 255, 1.00); width:600px; height:380px">
-              <canvas id="canvas_ipv" width="600" height="380" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-              <div id="dom_overlay_container_ipv" style="pointer-events:none; overflow:hidden; width:600px; height:380px; position: absolute; left: 0px; top: 0px; display: block;">
+            
+            <div id="ipv_container">
+              <div id="animation_container_ipv" style="background-color:rgba(255, 255, 255, 1.00); width:600px; height:380px">
+                <canvas id="canvas_ipv" width="600" height="380" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+                <div id="dom_overlay_container_ipv" style="pointer-events:none; overflow:hidden; width:600px; height:380px; position: absolute; left: 0px; top: 0px; display: block;">
+                </div>
               </div>
             </div>
             
@@ -936,7 +983,7 @@
                 <li class="gray">Incertain</li>
               </ul>
             </div>
-
+            
           </div>          
         </div>
       </div>
@@ -1002,9 +1049,11 @@
       <div class="row justify-content-center">
         <div class="col-md-12 px-4 d-flex justify-content-center">
           
-          <div id="animation_container_cycle" style="background-color:rgba(255, 255, 255, 1.00); width:620px; height:530px">
-            <canvas id="canvas_cycle" width="620" height="530" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-            <div id="dom_overlay_container_cycle" style="pointer-events:none; overflow:hidden; width:620px; height:530px; position: absolute; left: 0px; top: 0px; display: block;">
+          <div id="cycle_container">
+            <div id="animation_container_cycle" style="background-color:rgba(255, 255, 255, 1.00); width:620px; height:530px">
+              <canvas id="canvas_cycle" width="620" height="530" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+              <div id="dom_overlay_container_cycle" style="pointer-events:none; overflow:hidden; width:620px; height:530px; position: absolute; left: 0px; top: 0px; display: block;">
+              </div>
             </div>
           </div>
           

@@ -29,8 +29,8 @@
   &--primary {
     font-size: 22px;
     padding: 10px 20px;
-    background-color: $color-primary;
-    border-color: $color-primary;
+    background-color: map-get($map: $colors, $key: C);
+    border-color: map-get($map: $colors, $key: C);
     color: $color-white;
     transition: all .30s;
     &:hover {

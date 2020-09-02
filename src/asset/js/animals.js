@@ -60,18 +60,20 @@ let oldZoom = null;
 let caretZoom = true;
 $('#zoom-caret-l').hide();
 $('#zoom-slick').on('afterChange', function(event, slick, currentSlide, nextSlide){
-  if (currentSlide != 0) {
-    $('#zoom-caret-r').fadeOut(100);
-    caretZoom = false;
-  } else {
-    $('#zoom-caret-r').fadeIn(100);
-    caretZoom = true;
-  }
+  // if (currentSlide != 0) {
+  //   $('#zoom-caret-r').fadeOut(100);
+  //   caretZoom = false;
+  // } else {
+  //   $('#zoom-caret-r').fadeIn(100);
+  //   caretZoom = true;
+  // }
   if (currentSlide != 4) {
     $('#zoom-caret-l').fadeOut(100);
+    $('#zoom-caret-r').fadeIn(100);
     caretZoom = false;
   } else {
     $('#zoom-caret-l').fadeIn(100);
+    $('#zoom-caret-r').fadeOut(100);
     caretZoom = true;
   }
 oldZoom = currentSlide;

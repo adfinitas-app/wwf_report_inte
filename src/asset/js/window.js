@@ -25,8 +25,9 @@ $(document).ready(function(){
   let navWidth = $('.navigation__collapse').parent().outerWidth();
   $('.navigation__collapse').css({left: +navWidth})
   $('.navigation__collapse').css({display: 'flex'})
+  $('#testimonials-caret-l').hide();
   $('.testimonials-text').each(function() {
-    if (!$(this).is('#M-HE'))
+    if (!$(this).is('#M-HE') && !$(this).hasClass('mob'))
       $(this).hide();
   });
   $('#HE').show();
