@@ -340,8 +340,8 @@
   
   }).prototype = p = new lib.AnMovieClip();
   p.nominalBounds = new cjs.Rectangle(314.8,267.1,301.09999999999997,261.1);
-  // library properties_c_c:
-  lib.properties_c = {
+  // library properties_cycle:
+  lib.properties_cycle = {
     id: '145FF931A6424EB9A014F105A132B87E',
     width: 620,
     height: 530,
@@ -367,10 +367,10 @@
   }
   p.play = function() { this.tickEnabled = true; this.getChildAt(0).gotoAndPlay(this.getTimelinePosition()) }
   p.stop = function(ms) { if(ms) this.seek(ms); this.tickEnabled = false; }
-  p.seek = function(ms) { this.tickEnabled = true; this.getChildAt(0).gotoAndStop(lib.properties_c.fps * ms / 1000); }
-  p.getDuration = function() { return this.getChildAt(0).totalFrames / lib.properties_c.fps * 1000; }
+  p.seek = function(ms) { this.tickEnabled = true; this.getChildAt(0).gotoAndStop(lib.properties_cycle.fps * ms / 1000); }
+  p.getDuration = function() { return this.getChildAt(0).totalFrames / lib.properties_cycle.fps * 1000; }
   
-  p.getTimelinePosition = function() { return this.getChildAt(0).currentFrame / lib.properties_c.fps * 1000; }
+  p.getTimelinePosition = function() { return this.getChildAt(0).currentFrame / lib.properties_cycle.fps * 1000; }
   
   an.bootcompsLoaded = an.bootcompsLoaded || [];
   if(!an.bootstrapListeners) {
@@ -411,7 +411,7 @@
     window.addEventListener('resize', resizeCanvas);		
     resizeCanvas();		
     function resizeCanvas() {			
-      var w = lib.properties_c.width, h = lib.properties_c.height;			
+      var w = lib.properties_cycle.width, h = lib.properties_cycle.height;			
       var iw = window.innerWidth, ih=window.innerHeight;			
       var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
       if(isResp) {                
