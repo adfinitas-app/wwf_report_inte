@@ -45,7 +45,6 @@
   
   <!-- TENDANCE IPV ANIMATION  -->
   <script>
-    var canvas_c, stage, exportRoot_c, anim_container_c, dom_overlay_container_c, fnStartAnimation_c;
     var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
     function init_ipv() {
       canvas = document.getElementById("canvas_ipv");
@@ -90,10 +89,11 @@
   
   <!-- INTERACTIONS ANIMATION  -->
   <script>
+    var canvas_cycle, stage, exportRoot_cycle, anim_container_cycle, dom_overlay_container_cycle, fnStartAnimation_cycle;
     function init_cycle() {
-      canvas_c = document.getElementById("canvas_cycle");
-      anim_container_c = document.getElementById("animation_container_cycle");
-      dom_overlay_container_c = document.getElementById("dom_overlay_container_cycle");
+      canvas_cycle = document.getElementById("canvas_cycle");
+      anim_container_cycle = document.getElementById("animation_container_cycle");
+      dom_overlay_container_cycle = document.getElementById("dom_overlay_container_cycle");
       var comp=AdobeAn.getComposition("145FF931A6424EB9A014F105A132B87E");
       var lib=comp.getLibrary();
       createjs.MotionGuidePlugin.install();
@@ -101,7 +101,7 @@
       loader.addEventListener("fileload", function(evt){handleFileLoad_cycle(evt,comp)});
       loader.addEventListener("complete", function(evt){handleComplete_cycle(evt,comp)});
       var lib=comp.getLibrary();
-      loader.loadManifest(lib.properties_c.manifest);
+      loader.loadManifest(lib.properties_cycle.manifest);
     }
     function handleFileLoad_cycle(evt, comp) {
       var images=comp.getImages();	
@@ -116,18 +116,18 @@
       for(i=0; i<ssMetadata.length; i++) {
         ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
       }
-      exportRoot_c = new lib.DataInteractions();
-      stage = new lib.Stage(canvas_c);	
+      exportRoot_cycle = new lib.DataInteractions();
+      stage = new lib.Stage(canvas_cycle);	
       //Registers the "tick" event listener.
-      fnStartAnimation = function() {
-        stage.addChild(exportRoot_c);
-        createjs.Ticker.framerate = lib.properties_c.fps;
+      fnStartAnimation_cycle = function() {
+        stage.addChild(exportRoot_cycle);
+        createjs.Ticker.framerate = lib.properties_cycle.fps;
         createjs.Ticker.addEventListener("tick", stage);
       }	    
       //Code to support hidpi screens and responsive scaling.
-      AdobeAn.makeResponsive(false,'both',false,1,[canvas_c,anim_container_c,dom_overlay_container_c]);	
-      AdobeAn.compositionLoaded(lib.properties_c.id);
-      fnStartAnimation();
+      AdobeAn.makeResponsive(false,'both',false,1,[canvas_cycle,anim_container_cycle,dom_overlay_container_cycle]);	
+      AdobeAn.compositionLoaded(lib.properties_cycle.id);
+      fnStartAnimation_cycle();
     }
   </script>
   <!-- END INTERACTIONS ANIMATION -->
@@ -494,6 +494,7 @@
         <div class="ipv-chart ipv-all">
           <div class="row d-none d-sm-block">
             <div class="col-12 p-0 d-flex justify-content-center">
+              <h5>Générale</h5>
               <div id="animation_container_ipv_global" style="background-color:rgba(255, 255, 255, 1.00); width:750px; height:400px">
                 <canvas id="canvas_ipv_g" width="750" height="400" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
                 <div id="dom_overlay_container_ipv_g" style="pointer-events:none; overflow:hidden; width:750px; height:400px; position: absolute; left: 0px; top: 0px; display: block;">
@@ -503,7 +504,8 @@
           </div>
           <div class="row d-block d-sm-none">
             <div class="col-12 p-0 d-flex justify-content-center">
-              <img src="../dist/asset/img/ipv-chart-all-m.svg">
+              <h5>Générale</h5>
+              <img src="../dist/asset/img/ipv-chart-all-m.png">
             </div>
           </div>
         </div>
@@ -511,6 +513,7 @@
         <div class="ipv-chart ipv-humidity">
           <div class="row d-none d-sm-block">
             <div class="col-12 p-0 d-flex justify-content-center">
+              <h5>Zones humides</h5>
               <div id="animation_container_ipv_h" style="background-color:rgba(255, 255, 255, 1.00); width:750px; height:400px">
                 <canvas id="canvas_ipv_h" width="750" height="400" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
                 <div id="dom_overlay_container_ipv_h" style="pointer-events:none; overflow:hidden; width:750px; height:400px; position: absolute; left: 0px; top: 0px; display: block;">
@@ -520,7 +523,8 @@
           </div>
           <div class="row d-block d-sm-none">
             <div class="col-12 p-0 d-flex justify-content-center">
-              <img src="../dist/asset/img/ipv-chart-humidity-m.svg">
+              <h5>Zones humides</h5>
+              <img src="../dist/asset/img/ipv-chart-humidity-m.png">
             </div>
           </div>
         </div>
@@ -528,6 +532,7 @@
         <div class="ipv-chart ipv-forest">
           <div class="row d-none d-sm-block">
             <div class="col-12 p-0 d-flex justify-content-center">
+              <h5>Forets</h5>
               <div id="animation_container_ipv_f" style="background-color:rgba(255, 255, 255, 1.00); width:750px; height:400px">
                 <canvas id="canvas_ipv_f" width="750" height="400" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
                 <div id="dom_overlay_container_ipv_f" style="pointer-events:none; overflow:hidden; width:750px; height:400px; position: absolute; left: 0px; top: 0px; display: block;">
@@ -537,7 +542,8 @@
           </div>
           <div class="row d-block d-sm-none">
             <div class="col-12 p-0 d-flex justify-content-center">
-              <img src="../dist/asset/img/ipv-chart-forest-m.svg">
+              <h5>Forets</h5>
+              <img src="../dist/asset/img/ipv-chart-forest-m.png">
             </div>
           </div>
         </div>
@@ -545,6 +551,7 @@
         <div class="ipv-chart ipv-field">
           <div class="row d-none d-sm-block">
             <div class="col-12 p-0 d-flex justify-content-center">
+              <h5>AGRICULTURE</h5>
               <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:750px; height:400px">
                 <canvas id="canvas_ipv_a" width="750" height="400" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
                 <div id="dom_overlay_container_ipv_a" style="pointer-events:none; overflow:hidden; width:750px; height:400px; position: absolute; left: 0px; top: 0px; display: block;">
@@ -554,7 +561,8 @@
           </div>
           <div class="row d-block d-sm-none">
             <div class="col-12 p-0 d-flex justify-content-center">
-              <img src="../dist/asset/img/ipv-chart-field-m.svg">
+              <h5>AGRICULTURE</h5>
+              <img src="../dist/asset/img/ipv-chart-field-m.png">
             </div>
           </div>
         </div>
@@ -751,18 +759,18 @@
     
     <!-- ZOOM DESKTOP -->
     <section class="zoom d-none d-md-block mt-5">
-      <img class="zoom__background h-100" src="../dist/asset/img/rainette-verte.jpg">
+      <img class="zoom__background h-100" src="../dist/asset/img/faucon-pelerin.jpg">
       <div class="container h-100">
         <div class="row h-100">
           <div class="col-xl-4 col-lg-5 col-sm-7 align-self-center custom-breakpoint">
             <h2 class="mb-5">Zoom sur</br>la faune belge</h2>
-            <a href="#/" class="button button--block button--light btn-animals" data-image="faucon">
+            <a href="#/" class="button button--block button--light btn-animals active" data-image="faucon">
               Le Faucon Pelerin
               <div class="btn-roll-over">
                 En 1973, le dernier faucon pèlerin nicheur a disparu de Belgique... Qu’en est-il aujourd’hui ?
               </div>
             </a>
-            <a href="#/" class="button button--block button--light btn-animals active" data-image="rainette">
+            <a href="#/" class="button button--block button--light btn-animals" data-image="rainette">
               La Rainette Verte
               <div class="btn-roll-over">
                 Quelles actions ont été mises en place pour la sauver de l’extinction ?
@@ -1005,15 +1013,17 @@
     <!-- END TIPS BOX -->
     
     <!-- CYCLE CHART DESKTOP & MOBILE -->
-    <section class="chart cycle my-5">
+    <section class="chart cycle">
       <div class="row justify-content-center">
         <div class="col-md-8 mb-5">
           <h2 class="text-center">Intéractions entre climat et biodiversité</h2>
           <p class="text-center">Le changement climatique à un impact sur la biodiversité, et vice versa.</p>
         </div>
       </div>
+      
+
       <div class="row justify-content-center">
-        <div class="col-md-12 px-4 d-flex justify-content-center">
+        <div class="col-md-6 d-flex justify-content-center">
           
           <div id="cycle_container">
             <div id="animation_container_cycle" style="background-color:rgba(255, 255, 255, 1.00); width:620px; height:530px">
@@ -1025,6 +1035,7 @@
           
         </div>
       </div>
+
     </section>
     <!-- END CYCLE CHART -->
     

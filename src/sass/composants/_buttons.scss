@@ -34,8 +34,8 @@
     color: $color-white;
     transition: all .30s;
     &:hover {
-      background-color: darken($color: $color-primary, $amount: 10%);
-      border-color: darken($color: $color-primary, $amount: 10%);
+      background-color: lighten($color: map-get($map: $colors, $key: C), $amount: 10%);
+      border-color: lighten($color: map-get($map: $colors, $key: C), $amount: 10%);
       color: $color-white;
     }
   }
