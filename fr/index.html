@@ -45,24 +45,24 @@
   
   <!-- TENDANCE IPV ANIMATION  -->
   <script>
-    var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+    var canvas_tend, stage_tend, exportRoot_tend, anim_container_tend, dom_overlay_container_tend, fnStartAnimation_tend;
     function init_ipv() {
-      canvas = document.getElementById("canvas_ipv");
-      anim_container = document.getElementById("animation_container_ipv");
-      dom_overlay_container = document.getElementById("dom_overlay_container_ipv");
+      canvas_tend = document.getElementById("canvas_tend");
+      anim_container_tend = document.getElementById("animation_container_tend");
+      dom_overlay_container_tend = document.getElementById("dom_overlay_container_tend");
       var comp=AdobeAn.getComposition("F961DBA2F3CC440497BAE7A4CEF54ABE");
       var lib=comp.getLibrary();
       var loader = new createjs.LoadQueue(false);
-      loader.addEventListener("fileload", function(evt){handleFileLoad_ipv(evt,comp)});
-      loader.addEventListener("complete", function(evt){handleComplete_ipv(evt,comp)});
+      loader.addEventListener("fileload", function(evt){handleFileLoad_tend(evt,comp)});
+      loader.addEventListener("complete", function(evt){handleComplete_tend(evt,comp)});
       var lib=comp.getLibrary();
       loader.loadManifest(lib.properties.manifest);
     }
-    function handleFileLoad_ipv(evt, comp) {
+    function handleFileLoad_tend(evt, comp) {
       var images=comp.getImages();	
       if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
     }
-    function handleComplete_ipv(evt,comp) {
+    function handleComplete_tend(evt,comp) {
       //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
       var lib=comp.getLibrary();
       var ss=comp.getSpriteSheet();
@@ -71,37 +71,36 @@
       for(i=0; i<ssMetadata.length; i++) {
         ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
       }
-      exportRoot = new lib.DataTendancesIPV();
-      stage = new lib.Stage(canvas);	
+      exportRoot_tend = new lib.DataTendancesIPV();
+      stage_tend = new lib.Stage(canvas_tend);	
       //Registers the "tick" event listener.
-      fnStartAnimation = function() {
-        stage.addChild(exportRoot);
+      fnStartAnimation_tend = function() {
+        stage_tend.addChild(exportRoot_tend);
         createjs.Ticker.framerate = lib.properties.fps;
-        createjs.Ticker.addEventListener("tick", stage);
-      }	    
+        createjs.Ticker.addEventListener("tick", stage_tend);
+      }
       //Code to support hidpi screens and responsive scaling.
-      AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+      AdobeAn.makeResponsive_tend(false,'both',false,1,[canvas_tend,anim_container_tend,dom_overlay_container_tend]);	
       AdobeAn.compositionLoaded(lib.properties.id);
-      fnStartAnimation();
+      fnStartAnimation_tend();
     }
   </script>
   <!-- END TENDANCE IPV ANIMATION -->
   
   <!-- INTERACTIONS ANIMATION  -->
   <script>
-    var canvas_cycle, stage, exportRoot_cycle, anim_container_cycle, dom_overlay_container_cycle, fnStartAnimation_cycle;
+    var canvas_cycle, stage_cycle, exportRoot_cycle, anim_container_cycle, dom_overlay_container_cycle, fnStartAnimation_cycle;
     function init_cycle() {
       canvas_cycle = document.getElementById("canvas_cycle");
       anim_container_cycle = document.getElementById("animation_container_cycle");
       dom_overlay_container_cycle = document.getElementById("dom_overlay_container_cycle");
       var comp=AdobeAn.getComposition("145FF931A6424EB9A014F105A132B87E");
-      var lib=comp.getLibrary();
       createjs.MotionGuidePlugin.install();
       var loader = new createjs.LoadQueue(false);
       loader.addEventListener("fileload", function(evt){handleFileLoad_cycle(evt,comp)});
       loader.addEventListener("complete", function(evt){handleComplete_cycle(evt,comp)});
-      var lib=comp.getLibrary();
-      loader.loadManifest(lib.properties_cycle.manifest);
+      var lib_cycle=comp.getLibrary();
+      loader.loadManifest(lib_cycle.properties_cycle.manifest);
     }
     function handleFileLoad_cycle(evt, comp) {
       var images=comp.getImages();	
@@ -109,24 +108,24 @@
     }
     function handleComplete_cycle(evt,comp) {
       //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
-      var lib=comp.getLibrary();
+      var lib_cycle=comp.getLibrary();
       var ss=comp.getSpriteSheet();
       var queue = evt.target;
-      var ssMetadata = lib.ssMetadata;
+      var ssMetadata = lib_cycle.ssMetadata;
       for(i=0; i<ssMetadata.length; i++) {
         ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
       }
-      exportRoot_cycle = new lib.DataInteractions();
-      stage = new lib.Stage(canvas_cycle);	
+      exportRoot_cycle = new lib_cycle.DataInteractions();
+      stage_cycle = new lib_cycle.Stage(canvas_cycle);	
       //Registers the "tick" event listener.
       fnStartAnimation_cycle = function() {
-        stage.addChild(exportRoot_cycle);
-        createjs.Ticker.framerate = lib.properties_cycle.fps;
-        createjs.Ticker.addEventListener("tick", stage);
+        stage_cycle.addChild(exportRoot_cycle);
+        createjs.Ticker.framerate = lib_cycle.properties_cycle.fps;
+        createjs.Ticker.addEventListener("tick", stage_cycle);
       }	    
       //Code to support hidpi screens and responsive scaling.
       AdobeAn.makeResponsive(false,'both',false,1,[canvas_cycle,anim_container_cycle,dom_overlay_container_cycle]);	
-      AdobeAn.compositionLoaded(lib.properties_cycle.id);
+      AdobeAn.compositionLoaded(lib_cycle.properties_cycle.id);
       fnStartAnimation_cycle();
     }
   </script>
@@ -169,7 +168,7 @@
         createjs.Ticker.addEventListener("tick", stage);
       }	    
       //Code to support hidpi screens and responsive scaling.
-      AdobeAn.makeResponsive(false,'both',false,1,[canvas_ipv_g,anim_container_ipv_g,dom_overlay_container_ipv_g]);	
+      AdobeAn.makeResponsive_ipv(false,'both',false,1,[canvas_ipv_g,anim_container_ipv_g,dom_overlay_container_ipv_g]);	
       AdobeAn.compositionLoaded(lib.properties_ipv_g.id);
       fnStartAnimation_ipv_g();
     }
@@ -213,7 +212,7 @@
         createjs.Ticker.addEventListener("tick", stage);
       }	    
       //Code to support hidpi screens and responsive scaling.
-      AdobeAn.makeResponsive(false,'both',false,1,[canvas_ipv_h,anim_container_ipv_h,dom_overlay_container_ipv_h]);	
+      AdobeAn.makeResponsive_ipv(false,'both',false,1,[canvas_ipv_h,anim_container_ipv_h,dom_overlay_container_ipv_h]);	
       AdobeAn.compositionLoaded(lib.properties_ipv_h.id);
       fnStartAnimation_ipv_h();
     }
@@ -257,7 +256,7 @@
         createjs.Ticker.addEventListener("tick", stage);
       }	    
       //Code to support hidpi screens and responsive scaling.
-      AdobeAn.makeResponsive(false,'both',false,1,[canvas_ipv_f,anim_container_ipv_f,dom_overlay_container_ipv_f]);	
+      AdobeAn.makeResponsive_ipv(false,'both',false,1,[canvas_ipv_f,anim_container_ipv_f,dom_overlay_container_ipv_f]);	
       AdobeAn.compositionLoaded(lib.properties_ipv_f.id);
       fnStartAnimation_ipv_f();
     }
@@ -301,7 +300,7 @@
         createjs.Ticker.addEventListener("tick", stage);
       }	    
       //Code to support hidpi screens and responsive scaling.
-      AdobeAn.makeResponsive(false,'both',false,1,[canvas_ipv_a,anim_container_ipv_a,dom_overlay_container_ipv_a]);	
+      AdobeAn.makeResponsive_ipv(false,'both',false,1,[canvas_ipv_a,anim_container_ipv_a,dom_overlay_container_ipv_a]);	
       AdobeAn.compositionLoaded(lib.properties_ipv_a.id);
       fnStartAnimation_ipv_a();
     }
@@ -941,14 +940,16 @@
             
             <div class="legend-name">Nombre d’espèces</div>
             
-            <div id="ipv_container">
-              <div id="animation_container_ipv" style="background-color:rgba(255, 255, 255, 1.00); width:600px; height:380px">
-                <canvas id="canvas_ipv" width="600" height="380" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-                <div id="dom_overlay_container_ipv" style="pointer-events:none; overflow:hidden; width:600px; height:380px; position: absolute; left: 0px; top: 0px; display: block;">
-                </div>
+            <div id="animation_container_tend" style="background-color:rgba(255, 255, 255, 1.00); width:600px; height:380px">
+              <canvas id="canvas_tend" width="600" height="380" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+              <div id="dom_overlay_container_tend" style="pointer-events:none; overflow:hidden; width:600px; height:380px; position: absolute; left: 0px; top: 0px; display: block;">
               </div>
             </div>
             
+          </div>       
+        </div>
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-6">
             <div class="legend">
               <ul>
                 <li class="red">Diminution</li>
@@ -956,9 +957,8 @@
                 <li class="yellow">Stable</li>
                 <li class="gray">Incertain</li>
               </ul>
-            </div>
-            
-          </div>          
+            </div>   
+          </div>
         </div>
       </div>
     </section>
@@ -1021,21 +1021,18 @@
         </div>
       </div>
       
-
       <div class="row justify-content-center">
-        <div class="col-md-6 d-flex justify-content-center">
+        <div class="col-md-12 px-4 mb-0 mb-md-5 d-flex justify-content-center">
           
-          <div id="cycle_container">
             <div id="animation_container_cycle" style="background-color:rgba(255, 255, 255, 1.00); width:620px; height:530px">
               <canvas id="canvas_cycle" width="620" height="530" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
               <div id="dom_overlay_container_cycle" style="pointer-events:none; overflow:hidden; width:620px; height:530px; position: absolute; left: 0px; top: 0px; display: block;">
               </div>
             </div>
-          </div>
           
         </div>
       </div>
-
+      
     </section>
     <!-- END CYCLE CHART -->
     

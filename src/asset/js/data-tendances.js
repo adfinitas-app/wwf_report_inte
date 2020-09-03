@@ -1027,7 +1027,7 @@
   p.nominalBounds = new cjs.Rectangle(0,0,591.2,279.1);
   
   
-  // stage content:
+  // stage_tend content:
   (lib.DataTendancesIPV = function(mode,startPosition,loop,reversed) {
   if (loop == null) { loop = true; }
   if (reversed == null) { reversed = false; }
@@ -1253,7 +1253,7 @@
     color: "#FFFFFF",
     opacity: 1.00,
     manifest: [
-      {src:"../dist/asset/img/Data_Tendances IPV_atlas_1.png", id:"Data _ Tendances IPV_atlas_1"}
+      {src:"../dist/asset/img/Data_Tendances IPV_atlas_1.png?1598959953508", id:"Data _ Tendances IPV_atlas_1"}
     ],
     preloads: []
   };
@@ -1292,7 +1292,7 @@
   
   an.compositions = an.compositions || {};
   an.compositions['F961DBA2F3CC440497BAE7A4CEF54ABE'] = {
-    getStage: function() { return exportRoot.stage; },
+    getStage: function() { return exportRoot.stage_tend; },
     getLibrary: function() { return lib; },
     getSpriteSheet: function() { return ss; },
     getImages: function() { return img; }
@@ -1310,7 +1310,7 @@
   }
   
   
-  an.makeResponsive = function(isResp, respDim, isScale, scaleType, domContainers) {		
+  an.makeResponsive_tend = function(isResp, respDim, isScale, scaleType, domContainers) {		
     var lastW, lastH, lastS=1;		
     window.addEventListener('resize', resizeCanvas);		
     resizeCanvas();		
@@ -1339,17 +1339,17 @@
         container.style.width = w * sRatio + 'px';				
         container.style.height = h * sRatio + 'px';			
       });
-      stage.scaleX = pRatio*sRatio;			
-      stage.scaleY = pRatio*sRatio;
+      stage_tend.scaleX = pRatio*sRatio;			
+      stage_tend.scaleY = pRatio*sRatio;
       lastW = iw; lastH = ih; lastS = sRatio;            
-      stage.tickOnUpdate = false;            
-      stage.update();            
-      stage.tickOnUpdate = true;		
+      stage_tend.tickOnUpdate = false;            
+      stage_tend.update();            
+      stage_tend.tickOnUpdate = true;		
     }
   }
   an.handleSoundStreamOnTick = function(event) {
     if(!event.paused){
-      var stageChild = stage.getChildAt(0);
+      var stageChild = stage_tend.getChildAt(0);
       if(!stageChild.paused){
         stageChild.syncStreamSounds();
       }

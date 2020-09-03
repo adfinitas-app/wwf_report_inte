@@ -276,7 +276,7 @@
   p.nominalBounds = new cjs.Rectangle(-25.5,-19.4,170.6,120);
   
   
-  // stage content:
+  // stage_cycle content:
   (lib.DataInteractions = function(mode,startPosition,loop,reversed) {
   if (loop == null) { loop = true; }
   if (reversed == null) { reversed = false; }
@@ -349,7 +349,7 @@
     color: "#FFFFFF",
     opacity: 1.00,
     manifest: [
-      {src:"../dist/asset/img/Data_Interactions_atlas_1.png", id:"Data _ Interactions_atlas_1"}
+      {src:"../dist/asset/img/Data_Interactions_atlas_1.png?1598960070545", id:"Data _ Interactions_atlas_1"}
     ],
     preloads: []
   };
@@ -388,7 +388,7 @@
   
   an.compositions = an.compositions || {};
   an.compositions['145FF931A6424EB9A014F105A132B87E'] = {
-    getStage: function() { return exportRoot.stage; },
+    getStage: function() { return exportRoot.stage_cycle; },
     getLibrary: function() { return lib; },
     getSpriteSheet: function() { return ss; },
     getImages: function() { return img; }
@@ -435,17 +435,17 @@
         container.style.width = w * sRatio + 'px';				
         container.style.height = h * sRatio + 'px';			
       });
-      stage.scaleX = pRatio*sRatio;			
-      stage.scaleY = pRatio*sRatio;
+      stage_cycle.scaleX = pRatio*sRatio;			
+      stage_cycle.scaleY = pRatio*sRatio;
       lastW = iw; lastH = ih; lastS = sRatio;            
-      stage.tickOnUpdate = false;            
-      stage.update();            
-      stage.tickOnUpdate = true;		
+      stage_cycle.tickOnUpdate = false;            
+      stage_cycle.update();            
+      stage_cycle.tickOnUpdate = true;		
     }
   }
   an.handleSoundStreamOnTick = function(event) {
     if(!event.paused){
-      var stageChild = stage.getChildAt(0);
+      var stageChild = stage_cycle.getChildAt(0);
       if(!stageChild.paused){
         stageChild.syncStreamSounds();
       }
