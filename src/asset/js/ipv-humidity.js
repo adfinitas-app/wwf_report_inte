@@ -755,7 +755,7 @@
   }
   
   
-  an.makeResponsive = function(isResp, respDim, isScale, scaleType, domContainers) {		
+  an.makeResponsive_ipv = function(isResp, respDim, isScale, scaleType, domContainers) {		
     var lastW, lastH, lastS=1;		
     window.addEventListener('resize', resizeCanvas);		
     resizeCanvas();		
