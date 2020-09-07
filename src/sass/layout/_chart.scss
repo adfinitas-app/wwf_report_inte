@@ -64,6 +64,18 @@
           background-color: map-get($map: $colors, $key: D);
         }
       }
+      &.line.line-dark {
+        &:before {
+          height: 2px;
+          background-color: $color-black;
+          top: 10px
+        }
+      }
+      &.dark-green {
+        &:before {
+          background-color: map-get($map: $colors, $key: B);
+        }
+      }
     }
   }
 }
