@@ -457,7 +457,7 @@
               <h3 class="d-block d-md-none mt-5">Hoe ?</h3>
               <p>Het 'Living Planet Report – Natuur in België' is het resultaat van bijna twee jaar intense samenwerking tussen belangrijke actoren uit de wetenschappelijke wereld en natuurbehoudsorganisaties.</p>
               <p>Vijf vooraanstaande organisaties – het Belgisch Biodiversiteitsplatform, het Koninklijk Belgisch Instituut voor Natuurwetenschappen, Natagora, Natuurpunt en WWF – hebben de handen in elkaar geslagen om samen met een groot aantal wetenschappers de kwaliteit en de relevantie van dit unieke rapport te garanderen.</p>
-              <a class="link" href="#a">We willen iedereen die heeft meegewerkt aan dit uitzonderlijke project dan ook van harte bedanken.</a>
+              <a class="link" href="#a" onclick="view_thanks_box('nl')">We willen iedereen die heeft meegewerkt aan dit uitzonderlijke project dan ook van harte bedanken.</a>
             </br>
             <a href="#" class="button mt-4">
               Lees alles over de gebruikte methodiek
@@ -680,7 +680,7 @@
         <div class="row justify-content-center">
           <div class="col-12 col-testimonials">
             <img id="testimonials-caret-l" class="caret left" src="../dist/asset/img/caret-left.svg">
-
+            
             <div id="testimonials-slick" class="picture-container">
               <div class="profile-item-m">
                 <img class="image" src="../dist/asset/img/Hilde Eggermont.png">
@@ -693,7 +693,7 @@
                   <img class="quote q-close" src="../dist/asset/img/quote-close.png">
                 </div>
               </div>
-
+              
               <div class="profile-item-m">
                 <img class="image" src="../dist/asset/img/Hendrik Segers.png">
                 <div class="testimonials-mobile__content">
@@ -976,11 +976,11 @@
             
             <div class="legend-name">Aantal soorten</div>
             
-              <div id="animation_container_tend" style="background-color:rgba(255, 255, 255, 1.00); width:600px; height:380px">
-                <canvas id="canvas_tend" width="600" height="380" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-                <div id="dom_overlay_container_tend" style="pointer-events:none; overflow:hidden; width:600px; height:380px; position: absolute; left: 0px; top: 0px; display: block;">
-                </div>
+            <div id="animation_container_tend" style="background-color:rgba(255, 255, 255, 1.00); width:600px; height:380px">
+              <canvas id="canvas_tend" width="600" height="380" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+              <div id="dom_overlay_container_tend" style="pointer-events:none; overflow:hidden; width:600px; height:380px; position: absolute; left: 0px; top: 0px; display: block;">
               </div>
+            </div>
             
           </div>          
         </div>
@@ -1039,7 +1039,7 @@
                 <p><span class="hit bold">Gebruik ecologische schoonmaakmiddelen,</span></br>zodat het water van onze rivieren niet vervuild wordt.</p>
               </div>
             </div> -->
-
+            
             <div class="tips-box">
               <img class="tips-icon" src="../dist/asset/img/beachcleanup.svg">
               <div class="tips-content">
@@ -1050,7 +1050,7 @@
                 Ik doe mee !
               </a>
             </div>
-
+            
             <a href="#/" class="button button--secondary button--block d-block d-md-none mt-4">
               Découvrez toutes nos astuces
             </a>
@@ -1121,6 +1121,10 @@
       </div>
     </div>
     <!-- END POPUP MESSAGE -->
+    
+    <!-- THANKS MESSAGE DESKTOP & MOBILE -->
+    <div class="thanks-container"></div>
+    <!-- END THANKS MESSAGE DESKTOP & MOBILE -->
     
   </div>
   <!-- END MOBILE WRAPPER -->
