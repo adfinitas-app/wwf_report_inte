@@ -1,0 +1,21 @@
+.thanks-container {
+  position: relative;
+  width: 100%;
+  background-color: $color-white;
+  overflow-y: scroll;
+  h4 {
+    font-family: "WWF", sans-serif;
+    text-transform: uppercase;
+    font-size: 45px;
+    margin-bottom: 25px;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+  .thx-close {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    cursor: pointer;
+  }
+}

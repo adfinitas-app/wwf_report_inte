@@ -326,9 +326,9 @@
         <a href="https://wwf.be/fr/" target="_blank"><img class="nav-wwf-logo" src="../dist/asset/img/logo_wwf.svg"></a>
         <div class="partner-container">
           <a href="https://www.naturalsciences.be/fr" target="_blank"><img src="../dist/asset/img/logo_museum.svg"></a>
-          <a href="https://www.natagora.be/" target="_blank"><img src="../dist/asset/img/logo_natagora.svg"></a>
-          <a href="https://www.natuurpunt.be/" target="_blank"><img src="../dist/asset/img/logo_natuurpunt.svg"></a>
-          <a href="http://www.biodiversity.be/" target="_blank"><img src="../dist/asset/img/logo_biodiversity.svg"></a>
+          <a class="fix-size" href="https://www.natagora.be/" target="_blank"><img src="../dist/asset/img/logo_natagora.svg"></a>
+          <a class="fix-size" href="https://www.natuurpunt.be/" target="_blank"><img src="../dist/asset/img/logo_natuurpunt.svg"></a>
+          <a class="fix-size" href="http://www.biodiversity.be/" target="_blank"><img src="../dist/asset/img/logo_biodiversity.svg"></a>
         </div>
         <div class="nav-items">
           <div class="nav-desktop">
@@ -396,7 +396,7 @@
       <div class="container h-100">
         <div class="row h-100">
           <div class="col-xl-5 col-lg-6 col-sm-8 col-xs-9 my-auto header-col align-self-center">
-            <h1>Connaître notre biodiversité  pour mieux la préserver !</h1>
+            <h1>Mieux connaître notre biodiversité pour mieux la préserver !</h1>
             <p>La nature en Belgique : découvrez le</br>« Rapport Planète Vivante »</p>
             <a id="header-download" href="test.html" class="button button--primary">
               <img src="../dist/asset/img/icon_download.svg">
@@ -418,7 +418,7 @@
     -->
     <div class="h_iframe">
       <img class="ratio" src="../dist/asset/img/16x9.png"/>
-      <iframe width="100%" src="https://www.youtube-nocookie.com/embed/F-1weFCiYBA?start=8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="100%" src="https://www.youtube-nocookie.com/embed/bxSV2WH4OC4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <!-- END VIDEO -->
     
@@ -457,7 +457,7 @@
               <h3 class="d-block d-md-none mt-5">Comment ?</h3>
               <p>Le « Rapport Planète Vivante – La nature en Belgique » est le fruit d’une collaboration de près de 2 ans entre des acteurs clés du monde scientifique et de la protection de la biodiversité.</p>
               <p>5 organisations de référence - Natagora, Natuurpunt, l’Institut Royal des Sciences Naturelles de Belgique, et la Plate-forme belge pour la biodiversité - ont uni leurs forces et réuni de nombreux experts pour garantir la pertinence d’un rapport sans précédent.</p>
-              <a class="link" href="#a">Un immense merci à celles et ceux qui ont rendu possible ce projet hors normes.</a>
+              <a class="link" href="#/" onclick="view_thanks_box('fr')">Un immense merci à celles et ceux qui ont rendu possible ce projet hors normes.</a>
             </br>
             <a href="#" class="button mt-4">
               Accédez à notre méthodologie complète
@@ -504,7 +504,17 @@
           <div class="row d-block d-sm-none">
             <div class="col-12 p-0 d-flex justify-content-center">
               <h5>Générale</h5>
-              <img src="../dist/asset/img/ipv-chart-all-m.png">
+              <img src="../dist/asset/img/ipv-chart-all-fr-m.svg">
+            </div>
+          </div>
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-6">
+              <div class="legend">
+                <ul>
+                  <li class="line line-dark">IPV Belgique</li>
+                  <li class="dark-green">Intervalle de confiance (95%)</li>
+                </ul>
+              </div>   
             </div>
           </div>
         </div>
@@ -523,7 +533,17 @@
           <div class="row d-block d-sm-none">
             <div class="col-12 p-0 d-flex justify-content-center">
               <h5>Zones humides</h5>
-              <img src="../dist/asset/img/ipv-chart-humidity-m.png">
+              <img src="../dist/asset/img/ipv-chart-humidity-fr-m.svg">
+            </div>
+          </div>
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-6">
+              <div class="legend">
+                <ul>
+                  <li class="line line-dark">IPV Belgique – Zones Humides</li>
+                  <li class="dark-green">Intervalle de confiance (95%)</li>
+                </ul>
+              </div>   
             </div>
           </div>
         </div>
@@ -531,7 +551,7 @@
         <div class="ipv-chart ipv-forest">
           <div class="row d-none d-sm-block">
             <div class="col-12 p-0 d-flex justify-content-center">
-              <h5>Forets</h5>
+              <h5>Forêts</h5>
               <div id="animation_container_ipv_f" style="background-color:rgba(255, 255, 255, 1.00); width:750px; height:400px">
                 <canvas id="canvas_ipv_f" width="750" height="400" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
                 <div id="dom_overlay_container_ipv_f" style="pointer-events:none; overflow:hidden; width:750px; height:400px; position: absolute; left: 0px; top: 0px; display: block;">
@@ -541,8 +561,18 @@
           </div>
           <div class="row d-block d-sm-none">
             <div class="col-12 p-0 d-flex justify-content-center">
-              <h5>Forets</h5>
-              <img src="../dist/asset/img/ipv-chart-forest-m.png">
+              <h5>Forêts</h5>
+              <img src="../dist/asset/img/ipv-chart-forest-fr-m.svg">
+            </div>
+          </div>
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-6">
+              <div class="legend">
+                <ul>
+                  <li class="line line-dark">IPV Belgique – Forêts</li>
+                  <li class="dark-green">Intervalle de confiance (95%)</li>
+                </ul>
+              </div>   
             </div>
           </div>
         </div>
@@ -561,7 +591,17 @@
           <div class="row d-block d-sm-none">
             <div class="col-12 p-0 d-flex justify-content-center">
               <h5>AGRICULTURE</h5>
-              <img src="../dist/asset/img/ipv-chart-field-m.png">
+              <img src="../dist/asset/img/ipv-chart-field-fr-m.svg">
+            </div>
+          </div>
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-6">
+              <div class="legend">
+                <ul>
+                  <li class="line line-dark">IPV Belgique – Agriculture</li>
+                  <li class="dark-green">Intervalle de confiance (95%)</li>
+                </ul>
+              </div>   
             </div>
           </div>
         </div>
@@ -997,12 +1037,24 @@
             </div>
           </div>
           <div class="col-md-6 mt-4">
-            <div class="tips-box">
+            <!-- <div class="tips-box">
               <img class="tips-icon" src="../dist/asset/img/icon-green.svg">
               <div class="tips-content">
                 <p><span class="hit bold">Utilisez des produits d’entretien verts</span></br>pour éviter de polluer l’eau de nos rivières</p>
               </div>
+            </div> -->
+
+            <div class="tips-box">
+              <img class="tips-icon" src="../dist/asset/img/beachcleanup.svg">
+              <div class="tips-content">
+                <p><span class="hit bold">Le samedi 19 septembre, World Cleanup Day</span></br>vient avec ta “bulle” nettoyer la plage de Blankenberge.</p>
+              </div>
+              <div class="tips-line"></div>
+              <a class="tips-btn" href="">
+                Je participe
+              </a>
             </div>
+
             <a href="#/" class="button button--secondary button--block d-block d-md-none mt-4">
               Découvrez toutes nos astuces
             </a>
@@ -1063,7 +1115,7 @@
     <!-- POPUP MESSAGE DESKTOP & MOBILE -->
     <div class="popup">
       <div class="popup__msg">
-        <span>La découverte de la faune vous intéresse ?</span></br>Parcourez la planète avec nous, à travers notre rapport sur la vie animale dans le monde !
+        <span>Vous vous sentez concerné par l’état du monde naturel ?</span> Parcourez la planète avec nous, à travers notre rapport sur la biodiversité mondiale !
       </div>
       <div class="popup__control">
         <a id="popup-close" href="#close"><img src="../dist/asset/img/icon_cross.svg" ></a>
@@ -1071,6 +1123,10 @@
       </div>
     </div>
     <!-- END POPUP MESSAGE -->
+
+    <!-- THANKS MESSAGE DESKTOP & MOBILE -->
+    <div class="thanks-container"></div>
+    <!-- END THANKS MESSAGE DESKTOP & MOBILE -->
     
   </div>
   <!-- END MOBILE WRAPPER -->

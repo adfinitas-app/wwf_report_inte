@@ -14,6 +14,7 @@ let path = {
     src: [
       'node_modules/bootstrap/dist/css/bootstrap.min.css',
       'node_modules/slick-carousel/slick/slick.css',
+      'src/asset/css/*.css',
       'src/sass/*.scss',
       'src/sass/**/*.scss'
     ],
