@@ -349,12 +349,10 @@
     color: "#FFFFFF",
     opacity: 1.00,
     manifest: [
-      {src:"../dist/asset/img/Data_Interactions_atlas_1.png?1598960070545", id:"Data _ Interactions_atlas_1"}
+      {src:"../dist/asset/img/Data_Interactions_atlas_1_fr.png", id:"Data _ Interactions_atlas_1"}
     ],
     preloads: []
-  };
-  
-  
+  }; 
   
   // bootstrap callback support:
   

@@ -94,13 +94,13 @@
       canvas_cycle = document.getElementById("canvas_cycle");
       anim_container_cycle = document.getElementById("animation_container_cycle");
       dom_overlay_container_cycle = document.getElementById("dom_overlay_container_cycle");
-      var comp=AdobeAn.getComposition("145FF931A6424EB9A014F105A132B87E");
+      var comp=AdobeAn.getComposition("145FF931A6424EB9A014F105A132B8NL");
       createjs.MotionGuidePlugin.install();
       var loader = new createjs.LoadQueue(false);
       loader.addEventListener("fileload", function(evt){handleFileLoad_cycle(evt,comp)});
       loader.addEventListener("complete", function(evt){handleComplete_cycle(evt,comp)});
-      var lib_cycle=comp.getLibrary();
-      loader.loadManifest(lib_cycle.properties_cycle.manifest);
+      var lib=comp.getLibrary();
+      loader.loadManifest(lib.properties_cycle_nl.manifest);
     }
     function handleFileLoad_cycle(evt, comp) {
       var images=comp.getImages();	
@@ -108,24 +108,24 @@
     }
     function handleComplete_cycle(evt,comp) {
       //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
-      var lib_cycle=comp.getLibrary();
+      var lib=comp.getLibrary();
       var ss=comp.getSpriteSheet();
       var queue = evt.target;
-      var ssMetadata = lib_cycle.ssMetadata;
+      var ssMetadata = lib.ssMetadata;
       for(i=0; i<ssMetadata.length; i++) {
         ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
       }
-      exportRoot_cycle = new lib_cycle.DataInteractions();
-      stage_cycle = new lib_cycle.Stage(canvas_cycle);	
+      exportRoot_cycle = new lib.DataInteractionsNL();
+      stage_cycle = new lib.Stage(canvas_cycle);	
       //Registers the "tick" event listener.
       fnStartAnimation_cycle = function() {
         stage_cycle.addChild(exportRoot_cycle);
-        createjs.Ticker.framerate = lib_cycle.properties_cycle.fps;
+        createjs.Ticker.framerate = lib.properties_cycle_nl.fps;
         createjs.Ticker.addEventListener("tick", stage_cycle);
       }	    
       //Code to support hidpi screens and responsive scaling.
       AdobeAn.makeResponsive(false,'both',false,1,[canvas_cycle,anim_container_cycle,dom_overlay_container_cycle]);	
-      AdobeAn.compositionLoaded(lib_cycle.properties_cycle.id);
+      AdobeAn.compositionLoaded(lib.properties_cycle_nl.id);
       fnStartAnimation_cycle();
     }
   </script>
@@ -856,6 +856,7 @@
           <p>De wolf is terug in het land. In 2017 verliet Naya haar roedel in Duitsland om zich500 kilometer verderop te vestigen in de provincie Limburg. Ze was de eerste wolvin in België in meer dan 100 jaar. In 2018 bezochten nog minstens drie andere wolven ons land. De bekendste is August, die samen met Naya een koppel vormde. Ook in 2019 en 2020 trekken er opnieuw wolven door het land vanuit het groeiende aantal roedels in onze buurlanden. Met de geboorte van de welpjes van Noëlla & August is ook de eerste roedel sinds zo'n 100 jaar in ons land een feit.</p>
           <p>Voor de natuur is de terugkeer van de wolf goed nieuws: hij speelt een sleutelrol in een natuurlijk ecosysteem met roofdieren en prooidieren. Wolven houden de populatie prooidieren, in dit geval grazers, gezond door jacht te maken op zieke en verzwakte individuen. De grazers op hun beurt vermijden door de aanwezigheid van de wolf bepaalde zones in het bos. Op die plaatsen wordt er minder gegraasd en krijgt natuurlijke verjonging van de vegetatie en bosontwikkeling opnieuw kansen.</p>
           <p>Maar het is niet allemaal rozengeur en maneschijn. Veehouders maken zich zorgen over hun vee. Na 100 jaar afwezigheid zijn we vergeten hoe we met de wolf kunnen samenleven. In 2019 zijn Naya en haar (ongeboren?) welpen hoogstwaarschijnlijk opzettelijk om het leven gebracht. Er is nood aan goede informatie en communicatie. Natuurpunt, Natagora en WWF riepen samen het ‘Wolf Fencing Team Belgium’ in het leven. Dat vrijwilligersinitiatief ondersteunt veehouders bij het nemen van maatregelen om hun vee te beschermen, zoals het plaatsen van een wolfbestendige omheining. Dit om het vreedzaam samenleven van de mens en de wolf te bewerkstelligen.</p>
+          <p>Foto van Akela, de wolf die zich in de Hoge Venen heeft gevestigd.</p>
         </div>
         
         <div class="content content-alouette">
@@ -946,6 +947,7 @@
             <p>De wolf is terug in het land. In 2017 verliet Naya haar roedel in Duitsland om zich500 kilometer verderop te vestigen in de provincie Limburg. Ze was de eerste wolvin in België in meer dan 100 jaar. In 2018 bezochten nog minstens drie andere wolven ons land. De bekendste is August, die samen met Naya een koppel vormde. Ook in 2019 en 2020 trekken er opnieuw wolven door het land vanuit het groeiende aantal roedels in onze buurlanden. Met de geboorte van de welpjes van Noëlla & August is ook de eerste roedel sinds zo'n 100 jaar in ons land een feit.</p>
             <p>Voor de natuur is de terugkeer van de wolf goed nieuws: hij speelt een sleutelrol in een natuurlijk ecosysteem met roofdieren en prooidieren. Wolven houden de populatie prooidieren, in dit geval grazers, gezond door jacht te maken op zieke en verzwakte individuen. De grazers op hun beurt vermijden door de aanwezigheid van de wolf bepaalde zones in het bos. Op die plaatsen wordt er minder gegraasd en krijgt natuurlijke verjonging van de vegetatie en bosontwikkeling opnieuw kansen.</p>
             <p>Maar het is niet allemaal rozengeur en maneschijn. Veehouders maken zich zorgen over hun vee. Na 100 jaar afwezigheid zijn we vergeten hoe we met de wolf kunnen samenleven. In 2019 zijn Naya en haar (ongeboren?) welpen hoogstwaarschijnlijk opzettelijk om het leven gebracht. Er is nood aan goede informatie en communicatie. Natuurpunt, Natagora en WWF riepen samen het ‘Wolf Fencing Team Belgium’ in het leven. Dat vrijwilligersinitiatief ondersteunt veehouders bij het nemen van maatregelen om hun vee te beschermen, zoals het plaatsen van een wolfbestendige omheining. Dit om het vreedzaam samenleven van de mens en de wolf te bewerkstelligen.</p>
+            <p>Foto van Akela, de wolf die zich in de Hoge Venen heeft gevestigd.</p>
           </div>
         </div>
         
@@ -1047,7 +1049,7 @@
                 <p><span class="hit bold">Kom op zaterdag 19 september, op de World Cleanup Day</span></br>met je familie (bubbel) het strand van Blankenberge schoonmaken.</p>
               </div>
               <div class="tips-line"></div>
-              <a class="tips-btn" href="">
+              <a class="tips-btn" href="https://rangerclub.be/nl/activiteiten/world-cleanup-day/">
                 Ik doe mee !
               </a>
             </div>
@@ -1072,15 +1074,14 @@
       <div class="row justify-content-center">
         <div class="col-md-12 px-4 mb-0 mb-md-5 d-flex justify-content-center">
           
-          <!--
-            <div id="animation_container_cycle" style="background-color:rgba(255, 255, 255, 1.00); width:620px; height:530px">
-              <canvas id="canvas_cycle" width="620" height="530" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-              <div id="dom_overlay_container_cycle" style="pointer-events:none; overflow:hidden; width:620px; height:530px; position: absolute; left: 0px; top: 0px; display: block;">
-              </div>
-            </div> 
-          -->
           
-          <img style="width: 620px; height: 530px;" src="../dist/asset/img/chart-placeholder.png">
+          <div id="animation_container_cycle" style="background-color:rgba(255, 255, 255, 1.00); width:620px; height:530px">
+            <canvas id="canvas_cycle" width="620" height="530" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+            <div id="dom_overlay_container_cycle" style="pointer-events:none; overflow:hidden; width:620px; height:530px; position: absolute; left: 0px; top: 0px; display: block;">
+            </div>
+          </div> 
+          
+          <!-- <img style="width: 620px; height: 530px;" src="../dist/asset/img/chart-placeholder.png"> -->
           
         </div>
       </div>
