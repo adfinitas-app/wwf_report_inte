@@ -41,6 +41,9 @@ $('#ipv-help').hover(function() {
     containerHelp.text(text[currentTarget]['fr'])
   }
   containerHelp.removeClass('d-none')
+  containerHelp.click(function() {
+    $(this).addClass('d-none')
+  })
   containerHelp.mouseleave(function() {
     $(this).addClass('d-none')
   })
