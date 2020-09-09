@@ -800,6 +800,7 @@
     <!-- ZOOM DESKTOP -->
     <section class="zoom d-none d-md-block mt-5">
       <img class="zoom__background h-100" src="../dist/asset/img/faucon-pelerin.jpg">
+      <small class="zoom__copyright-desktop">© Vilda Photo/ Rollin Verlinde</small>
       <div class="container h-100">
         <div class="row h-100">
           <div class="col-xl-4 col-lg-5 col-sm-7 align-self-center custom-breakpoint">
@@ -918,6 +919,7 @@
         
         <div class="content content-faucon">
           <div class="content__img faucon"></div>
+          <small class="zoom__copyright-mobile">© Vilda Photo/ Rollin Verlinde</small>
           <img class="zoom-mobile-close" src="../dist/asset/img/icon-arrow-left.svg">
           <div class="content__text">
             <h3>De Slechtvalk</h3>
@@ -932,6 +934,7 @@
         
         <div class="content content-rainette">
           <div class="content__img rainette"></div>
+          <small class="zoom__copyright-mobile">© Pieter-Jan Alles</small>
           <img class="zoom-mobile-close" src="../dist/asset/img/icon-arrow-left.svg">
           <div class="content__text">
             <h3>De Boomkikker</h3>
@@ -944,6 +947,7 @@
         
         <div class="content content-loup">
           <div class="content__img loup"></div>
+          <small class="zoom__copyright-mobile">© Roger Herman</small>
           <img class="zoom-mobile-close" src="../dist/asset/img/icon-arrow-left.svg">
           <div class="content__text">
             <h3>De Wolf</h3>
@@ -957,6 +961,7 @@
         
         <div class="content content-alouette">
           <div class="content__img alouette"></div>
+          <small class="zoom__copyright-mobile">© Philippe Clément</small>
           <img class="zoom-mobile-close" src="../dist/asset/img/icon-arrow-left.svg">
           <div class="content__text">
             <h3>De Veldleeuwerik</h3>
@@ -1131,6 +1136,20 @@
     <!-- THANKS MESSAGE DESKTOP & MOBILE -->
     <div class="thanks-container"></div>
     <!-- END THANKS MESSAGE DESKTOP & MOBILE -->
+    
+    <!-- MODAL VIDEO -->
+    <div class="modal fade" id="video-modal" tabindex="-1" aria-labelledby="video-modal" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img data-dismiss="modal" aria-label="Close" class="close modal-close" src="../dist/asset/img/icon-close.svg">
+          <video controls width="100%">
+            <source src="../dist/asset/videos/video-placeholder.mp4"
+            type="video/mp4">
+          </video> 
+        </div>
+      </div>
+    </div>
+    <!-- END MODAL VIDEO -->
     
   </div>
   <!-- END MOBILE WRAPPER -->
