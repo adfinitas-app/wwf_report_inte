@@ -1,10 +1,23 @@
 let images = {
-  'faucon': '../dist/asset/img/faucon-pelerin.jpg',
-  'rainette': '../dist/asset/img/rainette-verte.jpg',
-  'loup': '../dist/asset/img/loup.jpg',
-  'alouette': '../dist/asset/img/alouette-des-champs.jpg'
+  'faucon': {
+    img: '../dist/asset/img/faucon-pelerin.jpg',
+    copyright: '© Vilda Photo/ Rollin Verlinde'
+  },
+  'rainette': {
+    img: '../dist/asset/img/rainette-verte.jpg',
+    copyright: '© Pieter-Jan Alles'
+  },
+  'loup': {
+    img: '../dist/asset/img/loup.jpg',
+    copyright: '© Roger Herman'
+  },
+  'alouette': {
+    img: '../dist/asset/img/alouette-des-champs.jpg',
+    copyright: '© Philippe Clément'
+  },
 }
 let zoom = $('.zoom__background');
+let copyright_container = $('.zoom__copyright-desktop')
 
 let width = $('.close')
 .parent()
@@ -15,9 +28,10 @@ $('.btn-animals').each(function(index) {
   
   $(this).mouseenter(function() {
     let index = this.dataset['image'];
-    if (zoom.attr('src') != images[index]) {
+    if (zoom.attr('src') != images[index]['img']) {
       zoom.fadeOut(200, function() {
-        zoom.attr('src', images[index]);
+        zoom.attr('src', images[index]['img']);
+        copyright_container.text(images[index]['copyright'])
       })
       .fadeIn(200);
       $('.btn-animals').each(function() {
