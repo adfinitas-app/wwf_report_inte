@@ -1,7 +1,5 @@
 $('.nav-button').hide();
 let headOffSet = $('#header-download')[0].offsetTop;
-let ipvOffset = $('#ipv')[0].offsetTop;
-let done = false;
 window.onscroll = function() {
   if (window.pageYOffset > headOffSet) {
     $('.nav-items').addClass('with-button');
@@ -9,10 +7,6 @@ window.onscroll = function() {
   } else {
     $('.nav-items').removeClass('with-button');
     $('.nav-button').hide();
-  }
-  if (window.pageYOffset > ipvOffset && done != true) {
-    done = true;
-    init_ipv();
   }
 };
 

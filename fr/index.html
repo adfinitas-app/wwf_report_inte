@@ -491,7 +491,7 @@
           </div>
         </div>
         
-
+        
         <div class="ipv-chart ipv-all">
           <div class="legend-name curve d-none d-md-block">Index multi-espèces (1990 = 1)</div>
           <div class="row d-none d-md-block">
@@ -1056,7 +1056,7 @@
                 <p><span class="hit bold">Utilisez des produits d’entretien verts</span></br>pour éviter de polluer l’eau de nos rivières</p>
               </div>
             </div> -->
-
+            
             <div class="tips-box">
               <img class="tips-icon" src="../dist/asset/img/beachcleanup.svg">
               <div class="tips-content">
@@ -1067,7 +1067,7 @@
                 Je participe
               </a>
             </div>
-
+            
             <a href="#/" class="button button--secondary button--block d-block d-md-none mt-4">
               Découvrez toutes nos astuces
             </a>
@@ -1089,11 +1089,11 @@
       <div class="row justify-content-center">
         <div class="col-md-12 px-4 mb-0 mb-md-5 d-flex justify-content-center">
           
-            <div id="animation_container_cycle" style="background-color:rgba(255, 255, 255, 1.00); width:620px; height:530px">
-              <canvas id="canvas_cycle" width="620" height="530" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-              <div id="dom_overlay_container_cycle" style="pointer-events:none; overflow:hidden; width:620px; height:530px; position: absolute; left: 0px; top: 0px; display: block;">
-              </div>
+          <div id="animation_container_cycle" style="background-color:rgba(255, 255, 255, 1.00); width:620px; height:530px">
+            <canvas id="canvas_cycle" width="620" height="530" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+            <div id="dom_overlay_container_cycle" style="pointer-events:none; overflow:hidden; width:620px; height:530px; position: absolute; left: 0px; top: 0px; display: block;">
             </div>
+          </div>
           
         </div>
       </div>
@@ -1136,10 +1136,24 @@
       </div>
     </div>
     <!-- END POPUP MESSAGE -->
-
+    
     <!-- THANKS MESSAGE DESKTOP & MOBILE -->
     <div class="thanks-container"></div>
     <!-- END THANKS MESSAGE DESKTOP & MOBILE -->
+    
+    <!-- MODAL VIDEO -->
+    <div class="modal fade" id="video-modal" tabindex="-1" aria-labelledby="video-modal" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img data-dismiss="modal" aria-label="Close" class="close modal-close" src="../dist/asset/img/icon-close.svg">
+          <video controls width="100%">
+            <source src="../dist/asset/videos/video-placeholder.mp4"
+            type="video/mp4">
+          </video> 
+        </div>
+      </div>
+    </div>
+    <!-- END MODAL VIDEO -->
     
   </div>
   <!-- END MOBILE WRAPPER -->
