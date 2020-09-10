@@ -1,0 +1,11 @@
+.copyright-tag {
+  position: absolute;
+  color: $color-white;
+  right: 15px;
+  bottom: 10px;
+  &.mini {
+    font-size: 10px;
+    bottom: 3px;
+    right: 9px;
+  }
+}
