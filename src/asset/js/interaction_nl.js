@@ -249,7 +249,7 @@
   p.nominalBounds = new cjs.Rectangle(-25.5,-19.4,170.6,120);
   
   
-  // stage content:
+  // stage_cycle content:
   (lib.DataInteractionsNL = function(mode,startPosition,loop,reversed) {
   if (loop == null) { loop = true; }
   if (reversed == null) { reversed = false; }
@@ -360,7 +360,7 @@
   
   an.compositions = an.compositions || {};
   an.compositions['145FF931A6424EB9A014F105A132B8NL'] = {
-    getStage: function() { return exportRoot.stage; },
+    getStage: function() { return exportRoot.stage_cycle; },
     getLibrary: function() { return lib; },
     getSpriteSheet: function() { return ss; },
     getImages: function() { return img; }
@@ -378,7 +378,7 @@
   }
   
   
-  an.makeResponsive = function(isResp, respDim, isScale, scaleType, domContainers) {		
+  an.makeResponsive_cycle_nl = function(isResp, respDim, isScale, scaleType, domContainers) {		
     var lastW, lastH, lastS=1;		
     window.addEventListener('resize', resizeCanvas);		
     resizeCanvas();		
@@ -407,17 +407,17 @@
         container.style.width = w * sRatio + 'px';				
         container.style.height = h * sRatio + 'px';			
       });
-      stage.scaleX = pRatio*sRatio;			
-      stage.scaleY = pRatio*sRatio;
+      stage_cycle.scaleX = pRatio*sRatio;			
+      stage_cycle.scaleY = pRatio*sRatio;
       lastW = iw; lastH = ih; lastS = sRatio;            
-      stage.tickOnUpdate = false;            
-      stage.update();            
-      stage.tickOnUpdate = true;		
+      stage_cycle.tickOnUpdate = false;            
+      stage_cycle.update();            
+      stage_cycle.tickOnUpdate = true;		
     }
   }
   an.handleSoundStreamOnTick = function(event) {
     if(!event.paused){
-      var stageChild = stage.getChildAt(0);
+      var stageChild = stage_cycle.getChildAt(0);
       if(!stageChild.paused){
         stageChild.syncStreamSounds();
       }

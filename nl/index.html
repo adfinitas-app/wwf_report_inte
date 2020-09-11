@@ -97,16 +97,16 @@
       var comp=AdobeAn.getComposition("145FF931A6424EB9A014F105A132B8NL");
       createjs.MotionGuidePlugin.install();
       var loader = new createjs.LoadQueue(false);
-      loader.addEventListener("fileload", function(evt){handleFileLoad_cycle(evt,comp)});
-      loader.addEventListener("complete", function(evt){handleComplete_cycle(evt,comp)});
+      loader.addEventListener("fileload", function(evt){handleFileLoad_cycle_nl(evt,comp)});
+      loader.addEventListener("complete", function(evt){handleComplete_cycle_nl(evt,comp)});
       var lib=comp.getLibrary();
       loader.loadManifest(lib.properties_cycle_nl.manifest);
     }
-    function handleFileLoad_cycle(evt, comp) {
-      var images=comp.getImages();	
+    function handleFileLoad_cycle_nl(evt, comp) {
+      var images=comp.getImages();
       if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
     }
-    function handleComplete_cycle(evt,comp) {
+    function handleComplete_cycle_nl(evt,comp) {
       //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
       var lib=comp.getLibrary();
       var ss=comp.getSpriteSheet();
@@ -124,7 +124,7 @@
         createjs.Ticker.addEventListener("tick", stage_cycle);
       }	    
       //Code to support hidpi screens and responsive scaling.
-      AdobeAn.makeResponsive(false,'both',false,1,[canvas_cycle,anim_container_cycle,dom_overlay_container_cycle]);	
+      AdobeAn.makeResponsive_cycle_nl(false,'both',false,1,[canvas_cycle,anim_container_cycle,dom_overlay_container_cycle]);	
       AdobeAn.compositionLoaded(lib.properties_cycle_nl.id);
       fnStartAnimation_cycle();
     }
