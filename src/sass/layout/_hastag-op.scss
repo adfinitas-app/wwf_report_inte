@@ -1,0 +1,18 @@
+.hastag-op {
+  margin: 75px 0;
+  h2 {
+    font-family: "WWF", sans-serif;
+    font-size: 45px;
+    line-height: 41px;
+    text-transform: uppercase;
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+  }
+  .hastag-accent {
+    font-family: "WWF", sans-serif;
+    font-size: 35px;
+    line-height: 31px;
+    text-transform: uppercase;
+  }
+}
