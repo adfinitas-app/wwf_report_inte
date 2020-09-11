@@ -89,18 +89,19 @@
   
   <!-- INTERACTIONS ANIMATION  -->
   <script>
-    var canvas_cycle, stage_cycle, exportRoot_cycle, anim_container_cycle, dom_overlay_container_cycle, fnStartAnimation_cycle;
+    var canvas_cycle, stage, exportRoot_cycle, anim_container_cycle, dom_overlay_container_cycle, fnStartAnimation_cycle;
     function init_cycle() {
       canvas_cycle = document.getElementById("canvas_cycle");
-      anim_container_cycle = document.getElementById("animation_container_cycle");
+      anim_container_cycle = document.getElementById("animation_container");
       dom_overlay_container_cycle = document.getElementById("dom_overlay_container_cycle");
       var comp=AdobeAn.getComposition("145FF931A6424EB9A014F105A132B87E");
+      var lib=comp.getLibrary();
       createjs.MotionGuidePlugin.install();
       var loader = new createjs.LoadQueue(false);
       loader.addEventListener("fileload", function(evt){handleFileLoad_cycle(evt,comp)});
       loader.addEventListener("complete", function(evt){handleComplete_cycle(evt,comp)});
-      var lib_cycle=comp.getLibrary();
-      loader.loadManifest(lib_cycle.properties_cycle.manifest);
+      var lib=comp.getLibrary();
+      loader.loadManifest(lib.properties_cycle.manifest);
     }
     function handleFileLoad_cycle(evt, comp) {
       var images=comp.getImages();	
@@ -108,24 +109,24 @@
     }
     function handleComplete_cycle(evt,comp) {
       //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
-      var lib_cycle=comp.getLibrary();
+      var lib=comp.getLibrary();
       var ss=comp.getSpriteSheet();
       var queue = evt.target;
-      var ssMetadata = lib_cycle.ssMetadata;
+      var ssMetadata = lib.ssMetadata;
       for(i=0; i<ssMetadata.length; i++) {
         ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
       }
-      exportRoot_cycle = new lib_cycle.DataInteractions();
-      stage_cycle = new lib_cycle.Stage(canvas_cycle);	
+      exportRoot_cycle = new lib.DataInteractions();
+      stage = new lib.Stage(canvas_cycle);
       //Registers the "tick" event listener.
       fnStartAnimation_cycle = function() {
-        stage_cycle.addChild(exportRoot_cycle);
-        createjs.Ticker.framerate = lib_cycle.properties_cycle.fps;
-        createjs.Ticker.addEventListener("tick", stage_cycle);
+        stage.addChild(exportRoot_cycle);
+        createjs.Ticker.framerate = lib.properties_cycle.fps;
+        createjs.Ticker.addEventListener("tick", stage);
       }	    
       //Code to support hidpi screens and responsive scaling.
-      AdobeAn.makeResponsive(false,'both',false,1,[canvas_cycle,anim_container_cycle,dom_overlay_container_cycle]);	
-      AdobeAn.compositionLoaded(lib_cycle.properties_cycle.id);
+      AdobeAn.makeResponsive_cycle_fr(false,'both',false,1,[canvas_cycle,anim_container_cycle,dom_overlay_container_cycle]);	
+      AdobeAn.compositionLoaded(lib.properties_cycle.id);
       fnStartAnimation_cycle();
     }
   </script>
@@ -863,7 +864,7 @@
       </div>
     </section>
     <!-- NEW OP BIODIVERSITY -->
-
+    
     <!-- ZOOM DESKTOP -->
     <section class="zoom d-none d-md-block mt-5">
       <img class="zoom__background h-100" src="../dist/asset/img/faucon-pelerin.jpg">

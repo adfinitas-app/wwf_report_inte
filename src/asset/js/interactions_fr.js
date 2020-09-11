@@ -3,7 +3,7 @@
   var p; // shortcut to reference prototypes
   var lib={};var ss={};var img={};
   lib.ssMetadata = [
-      {name:"Data _ Interactions_atlas_1", frames: [[431,0,515,277],[431,279,476,297],[0,0,429,353]]}
+      {name:"Data _ Interactions_atlas_1", frames: [[441,0,515,277],[441,279,476,297],[0,0,439,353]]}
   ];
   
   
@@ -26,21 +26,21 @@
   
   
   
-  (lib.CachedBmp_45 = function() {
+  (lib.CachedBmp_3 = function() {
     this.initialize(ss["Data _ Interactions_atlas_1"]);
     this.gotoAndStop(0);
   }).prototype = p = new cjs.Sprite();
   
   
   
-  (lib.CachedBmp_44 = function() {
+  (lib.CachedBmp_2 = function() {
     this.initialize(ss["Data _ Interactions_atlas_1"]);
     this.gotoAndStop(1);
   }).prototype = p = new cjs.Sprite();
   
   
   
-  (lib.CachedBmp_43 = function() {
+  (lib.CachedBmp_1 = function() {
     this.initialize(ss["Data _ Interactions_atlas_1"]);
     this.gotoAndStop(2);
   }).prototype = p = new cjs.Sprite();
@@ -107,7 +107,7 @@
     cjs.MovieClip.apply(this,[props]);
   
     // Layer_1
-    this.instance = new lib.CachedBmp_45();
+    this.instance = new lib.CachedBmp_3();
     this.instance.setTransform(2.25,10.45,0.5,0.5);
   
     this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -130,7 +130,7 @@
     cjs.MovieClip.apply(this,[props]);
   
     // Layer_1
-    this.instance = new lib.CachedBmp_44();
+    this.instance = new lib.CachedBmp_2();
     this.instance.setTransform(2.1,16,0.5,0.5);
   
     this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -153,7 +153,7 @@
     cjs.MovieClip.apply(this,[props]);
   
     // Layer_1
-    this.instance = new lib.CachedBmp_43();
+    this.instance = new lib.CachedBmp_1();
     this.instance.setTransform(0,0,0.5,0.5);
   
     this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -161,7 +161,7 @@
     this._renderFirstFrame();
   
   }).prototype = p = new cjs.MovieClip();
-  p.nominalBounds = new cjs.Rectangle(0,0,214.5,176.5);
+  p.nominalBounds = new cjs.Rectangle(0,0,219.5,176.5);
   
   
   (lib.Symbol8 = function(mode,startPosition,loop,reversed) {
@@ -207,7 +207,7 @@
     this.instance.setTransform(111.7,88.2,1,1,0,0,0,111.7,88.2);
   
     this.shape = new cjs.Shape();
-    this.shape.graphics.f("#92B546").s().p("AABBwQgBgCgEACQgGABgEAAIgNgBIgHgBIgBgBIADgFQAFgHABgHQAAgIADgKIABgNQAAgJACgHQAEghgBghQACgSAEgNQADgGACgHQAEgTAAgFIAAgMIAmgLIgJAJQgNAMgGANQgEAFgBAJQgBAJgBACQgDAIACAIQAAABAAAAQAAABAAAAQAAAAAAABQAAAAAAAAIACACIgBAFQgBAGgBABIgFAcQAAAJgCAGIgIA+QgCASAFAAIAUAFIgBAHQgDAAgCgCg");
+    this.shape.graphics.f("#EC754B").s().p("AABBwQgBgCgEACQgGABgEAAIgNgBIgHgBIgBgBIADgFQAFgHABgHQAAgIADgKIABgNQAAgJACgHQAEghgBghQACgSAEgNQADgGACgHQAEgTAAgFIAAgMIAmgLIgJAJQgNAMgGANQgEAFgBAJQgBAJgBACQgDAIACAIQAAABAAAAQAAABAAAAQAAAAAAABQAAAAAAAAIACACIgBAFQgBAGgBABIgFAcQAAAJgCAGIgIA+QgCASAFAAIAUAFIgBAHQgDAAgCgCg");
     this.shape.setTransform(143.925,164.15);
   
     this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape},{t:this.instance}]}).wait(1));
@@ -215,7 +215,7 @@
     this._renderFirstFrame();
   
   }).prototype = p = new cjs.MovieClip();
-  p.nominalBounds = new cjs.Rectangle(0,0,214.5,176.5);
+  p.nominalBounds = new cjs.Rectangle(0,0,219.5,176.5);
   
   
   (lib.Symbol9 = function(mode,startPosition,loop,reversed) {
@@ -276,7 +276,7 @@
   p.nominalBounds = new cjs.Rectangle(-25.5,-19.4,170.6,120);
   
   
-  // stage_cycle content:
+  // stage content:
   (lib.DataInteractions = function(mode,startPosition,loop,reversed) {
   if (loop == null) { loop = true; }
   if (reversed == null) { reversed = false; }
@@ -352,7 +352,9 @@
       {src:"../dist/asset/img/Data_Interactions_atlas_1_fr.png", id:"Data _ Interactions_atlas_1"}
     ],
     preloads: []
-  }; 
+  };
+  
+  
   
   // bootstrap callback support:
   
@@ -386,7 +388,7 @@
   
   an.compositions = an.compositions || {};
   an.compositions['145FF931A6424EB9A014F105A132B87E'] = {
-    getStage: function() { return exportRoot.stage_cycle; },
+    getStage: function() { return exportRoot.stage; },
     getLibrary: function() { return lib; },
     getSpriteSheet: function() { return ss; },
     getImages: function() { return img; }
@@ -404,7 +406,7 @@
   }
   
   
-  an.makeResponsive = function(isResp, respDim, isScale, scaleType, domContainers) {		
+  an.makeResponsive_cycle_fr = function(isResp, respDim, isScale, scaleType, domContainers) {		
     var lastW, lastH, lastS=1;		
     window.addEventListener('resize', resizeCanvas);		
     resizeCanvas();		
@@ -433,17 +435,17 @@
         container.style.width = w * sRatio + 'px';				
         container.style.height = h * sRatio + 'px';			
       });
-      stage_cycle.scaleX = pRatio*sRatio;			
-      stage_cycle.scaleY = pRatio*sRatio;
+      stage.scaleX = pRatio*sRatio;			
+      stage.scaleY = pRatio*sRatio;
       lastW = iw; lastH = ih; lastS = sRatio;            
-      stage_cycle.tickOnUpdate = false;            
-      stage_cycle.update();            
-      stage_cycle.tickOnUpdate = true;		
+      stage.tickOnUpdate = false;            
+      stage.update();            
+      stage.tickOnUpdate = true;		
     }
   }
   an.handleSoundStreamOnTick = function(event) {
     if(!event.paused){
-      var stageChild = stage_cycle.getChildAt(0);
+      var stageChild = stage.getChildAt(0);
       if(!stageChild.paused){
         stageChild.syncStreamSounds();
       }
